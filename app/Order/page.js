@@ -271,7 +271,7 @@ const Order = () => {
                   Pesanan anda sudah terkirim!
                 </h1>
                 <strong className="text-red-600 text-lg">
-                  Pastikan nomer whatsapp aktif dan akan kami kirimkan pesan{" "}
+                  Pastikan nomer whatsapp anda aktif dan akan kami kirimkan pesan{" "}
                   <span className="font-bold text-green-700">KONFIRMASI</span>{" "}
                   paling Lambat 1 jam setelah pesanan ini dilakukan.
                 </strong>

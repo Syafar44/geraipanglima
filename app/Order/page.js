@@ -295,11 +295,11 @@ const Order = () => {
                 <h1 className="text-red-700 text-2xl">
                   Pesanan anda Gagal terkirim!
                 </h1>
-                <strong className="text-lg">
-                  Pastikan nomer whatsapp aktif dan akan kami kirimkan pesan{" "}
-                  <span className="font-bold text-green-700">KONFIRMASI</span>{" "}
-                  paling Lambat 1 jam setelah pesanan ini dilakukan.
-                </strong>
+                <p className="text-lg">
+                  Coba kirim ulang pesanan anda atau Hubungi kami pada nomer
+                  whatsapp berikut :
+                </p>
+                <p>082250851457</p>
                 <h3 className="mt-5">Terimakasih.</h3>
               </div>
               <div className="modal-action">

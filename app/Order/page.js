@@ -104,17 +104,17 @@ const Order = () => {
     };
 
     const request = new XMLHttpRequest();
-    request.open("POST", "api/sendMessage", true);
-    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    request.onreadystatechange = function () {
-      if (request.readyState === 4 && request.status === 200) {
-        openModalSucces();
-      } else if (request.readyState === 4) {
-        openModalError();
-      }
-    };
-    request.send(JSON.stringify(data));
+  request.open("POST", "/api/sendMessage", true); // Pastikan URL sudah benar
+  request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  request.onreadystatechange = function () {
+    if (request.readyState === 4 && request.status === 200) {
+      openModalSucces();
+    } else if (request.readyState === 4) {
+      openModalError();
+    }
   };
+  request.send(JSON.stringify(data));
+};
 
   const rupiah = (number) => {
     return new Intl.NumberFormat("id-ID", {

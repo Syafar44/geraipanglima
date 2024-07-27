@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-tes{
+    background-image: url(../public/tes-5.jpg);
+}
+
+.bg-outlet{
+    background-image: url(../public/outlet-jajan.jpg);
+}

@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import emailjs from "emailjs-com";
+import Wa from "../components/Wa";
 
 const Contact = () => {
   const form = useRef();
@@ -15,6 +16,10 @@ const Contact = () => {
     const userEmail = form.current.user_email.value;
     const message = form.current.message.value;
 
+    const openModal = () => {
+      document.getElementById("my_modal").showModal();
+    };
+
     if (userName && userEmail && message) {
       emailjs
         .sendForm(
@@ -25,7 +30,7 @@ const Contact = () => {
         )
         .then(
           (result) => {
-            alert("Email successfully sent!", result.text);
+            openModal();
             form.current.reset();
           },
           (error) => {
@@ -40,13 +45,13 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <section className="flex mx-auto lg:mt-20 lg:mb-32">
-        <div className="flex flex-col lg:justify-center px-6 py-4 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center z-20 bg-white w-full">
+      <section className="flex mx-auto lg:mt-10 xl:mt-20 lg:mb-32">
+        <div className="flex flex-col lg:justify-center px-6 lg:px-20 py-4 mx-auto space-y-6 lg:h-[32rem] xl:py-16 lg:flex-row lg:items-center z-20 bg-white w-full">
           <div className="flex items-center justify-end w-full h-96 lg:w-1/2">
             <img
               className=" w-full max-w-xl rounded-md"
               src="pesan.png"
-              alt="apple watch photo"
+              alt="message foto"
             />
           </div>
           <div className="mt-8 lg:w-2/3 lg:mx-6">
@@ -115,7 +120,31 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <dialog id="my_modal" className="modal">
+        <div className="modal-box">
+          <h3 className="font-bold text-xl text-kuning bg-hitam rounded-xl text-center py-2">
+            Hay Sobat Jajan
+          </h3>
+          <div className="py-4 font-semibold text-xl">
+            <h1 className="text-red-700 text-2xl">
+              Pesanan anda sudah kami terima!
+            </h1>
+            <p className="text-lg">
+              Terimakasih atas kritik dan masukannya akan kami kirim balasan secepatnya
+            </p>
+            <h3 className="mt-5">Terimakasih.</h3>
+          </div>
+          <div className="modal-action">
+            <form method="dialog">
+              <button className="btn bg-black text-kuning rounded-xl">
+                Tutup
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
       <Footer />
+      <Wa />
     </>
   );
 };

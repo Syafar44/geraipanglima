@@ -9,21 +9,22 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Footer from "../components/Footer";
+import Wa from "../components/Wa";
 
 const Location = () => {
   return (
     <>
       <Navbar />
-      <section className="mt-10 mx-5 lg:mx-52">
+       <section className="mt-10 mx-5 lg:px-20 2xl:px-52">
         <h1 className="text-3xl lg:text-5xl font-bold">Outlet Location</h1>
-        <div className="grid grid-cols-2 lg:grid-cols-4 mt-6 gap-2 lg:gap-5 lg:mx-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 mt-6 gap-2 lg:gap-5">
           <Link
             target="_blink"
             href="https://maps.app.goo.gl/o1gBH83qrr8HCJaT7"
           >
             <Card
               shadow={false}
-              className="relative grid h-[15rem] lg:h-[20rem] w-full max-w-[18rem] items-end justify-center overflow-hidden text-center shadow-2xl"
+              className="relative grid h-[15rem] xl:h-[17rem] 2xl:h-[20rem] w-full  items-end justify-center overflow-hidden text-center shadow-2xl"
             >
               <CardHeader
                 floated={false}
@@ -50,7 +51,7 @@ const Location = () => {
           >
             <Card
               shadow={false}
-              className="relative grid h-[15rem] lg:h-[20rem] w-full max-w-[18rem] items-end justify-center overflow-hidden text-center shadow-2xl"
+              className="relative grid h-[15rem] xl:h-[17rem] 2xl:h-[20rem] w-full items-end justify-center overflow-hidden text-center shadow-2xl"
             >
               <CardHeader
                 floated={false}
@@ -77,7 +78,7 @@ const Location = () => {
           >
             <Card
               shadow={false}
-              className="relative grid h-[15rem] lg:h-[20rem] w-full max-w-[18rem] items-end justify-center overflow-hidden text-center shadow-2xl"
+              className="relative grid h-[15rem] xl:h-[17rem] 2xl:h-[20rem] w-full items-end justify-center overflow-hidden text-center shadow-2xl"
             >
               <CardHeader
                 floated={false}
@@ -104,7 +105,7 @@ const Location = () => {
           >
             <Card
               shadow={false}
-              className="relative grid h-[15rem] lg:h-[20rem] w-full max-w-[18rem] items-end justify-center overflow-hidden text-center shadow-2xl"
+              className="relative grid h-[15rem] xl:h-[17rem] 2xl:h-[20rem] w-full items-end justify-center overflow-hidden text-center shadow-2xl"
             >
               <CardHeader
                 floated={false}
@@ -131,7 +132,7 @@ const Location = () => {
           >
             <Card
               shadow={false}
-              className="relative grid h-[15rem] lg:h-[20rem] w-full max-w-[18rem] items-end justify-center overflow-hidden text-center shadow-2xl"
+              className="relative grid h-[15rem] xl:h-[17rem] 2xl:h-[20rem] w-full items-end justify-center overflow-hidden text-center shadow-2xl"
             >
               <CardHeader
                 floated={false}
@@ -158,7 +159,7 @@ const Location = () => {
           >
             <Card
               shadow={false}
-              className="relative grid h-[15rem] lg:h-[20rem] w-full max-w-[18rem] items-end justify-center overflow-hidden text-center shadow-2xl"
+              className="relative grid h-[15rem] xl:h-[17rem] 2xl:h-[20rem] w-full items-end justify-center overflow-hidden text-center shadow-2xl"
             >
               <CardHeader
                 floated={false}
@@ -185,7 +186,7 @@ const Location = () => {
           >
             <Card
               shadow={false}
-              className="relative grid h-[15rem] lg:h-[20rem] w-full max-w-[18rem] items-end justify-center overflow-hidden text-center shadow-2xl"
+              className="relative grid h-[15rem] xl:h-[17rem] 2xl:h-[20rem] w-full items-end justify-center overflow-hidden text-center shadow-2xl"
             >
               <CardHeader
                 floated={false}
@@ -212,7 +213,7 @@ const Location = () => {
           >
             <Card
               shadow={false}
-              className="relative grid h-[15rem] lg:h-[20rem] w-full max-w-[18rem] items-end justify-center overflow-hidden text-center shadow-2xl"
+              className="relative grid h-[15rem] xl:h-[17rem] 2xl:h-[20rem] w-full items-end justify-center overflow-hidden text-center shadow-2xl"
             >
               <CardHeader
                 floated={false}
@@ -236,6 +237,7 @@ const Location = () => {
         </div>
       </section>
       <Footer />
+      <Wa />
     </>
   );
 };

@@ -15,6 +15,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="icon"
+          href="https://raw.githubusercontent.com/Syafar44/assets/main/assets/image/LOGO%20JAJAN%20Panglima-01.png"
+          type="image/png"
+          sizes="16x16"
+        />
+      </head>
       <body className={teko.className}>{children}</body>
     </html>
   );

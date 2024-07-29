@@ -265,7 +265,7 @@ const Navbar = () => {
                             All
                           </ListItem>
                         </Link>
-                        <Link href="/Product/Roti-gembung">
+                        <Link href="/Product/Gembung">
                           <ListItem>
                             <ListItemPrefix>
                               <ChevronRightIcon

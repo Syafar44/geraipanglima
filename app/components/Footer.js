@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Footer = () => {
   return (
     <footer class="mt-10 bg-kuning dark:bg-gray-900">
@@ -9,10 +8,10 @@ const Footer = () => {
           <div class="w-full -mx-6 lg:w-2/5">
             <div class="px-6">
               <div className="flex gap-10">
-                <a href="#">
+                <a href="/">
                   <img
                     class="w-auto h-20"
-                    src="logo/LOGO-JAJAN-Panglima-01.png"
+                    src="https://raw.githubusercontent.com/Syafar44/assets/main/assets/image/LOGO%20JAJAN%20Panglima-01.png"
                     alt=""
                   />
                 </a>
@@ -26,7 +25,8 @@ const Footer = () => {
 
               <div class="flex mt-6 -mx-2">
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://www.instagram.com/jajanpanglima"
                   class="mx-2 text-hitam transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                   aria-label="Reddit"
                 >
@@ -44,7 +44,8 @@ const Footer = () => {
                 </a>
 
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://www.youtube.com/channel/UCbl6mJTsu77ACwLFp6Nd8uw"
                   class="mx-2 text-hitam transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                   aria-label="Facebook"
                 >
@@ -60,7 +61,8 @@ const Footer = () => {
                 </a>
 
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://www.facebook.com/jajanpanglima/"
                   class="mx-2 text-hitam transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                   aria-label="Github"
                 >
@@ -76,7 +78,8 @@ const Footer = () => {
                 </a>
 
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://www.tiktok.com/@jajanpanglimasamarinda"
                   class="mx-2 text-hitam transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                   aria-label="Github"
                 >
@@ -119,9 +122,7 @@ const Footer = () => {
               </div>
 
               <div>
-                <h3 class="text-hitam uppercase dark:text-white">
-                  Products
-                </h3>
+                <h3 class="text-hitam uppercase dark:text-white">Products</h3>
                 <a
                   href="/Product/Gembung"
                   class="block mt-2 text-sm text-hitam dark:text-gray-400 hover:underline"

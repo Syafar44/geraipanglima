@@ -1,20 +1,24 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Wa from "../components/Wa";
 
 const About = () => {
   return (
     <>
       <Navbar />
-      <section className="bg-putih dark:bg-gray-900 lg:-mt-32">
+      <section className="bg-putih dark:bg-gray-900 xl:-mt-32">
         <div className="relative flex lg:z-10">
           <div className="lg:min-h-screen lg:w-1/3"></div>
           <div className="hidden w-3/4 min-h-screen bg-gray-100 dark:bg-gray-800 lg:block"></div>
 
-          <div className="container flex flex-col justify-center w-full min-h-screen px-6 py-10 mx-auto lg:absolute lg:inset-x-0">
+          <div className="container flex flex-col justify-center w-full min-h-screen px-6 lg:px-20 py-10 mx-auto lg:absolute lg:inset-x-0">
             <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
-              Jajan <span className="text-kuning bg-hitam p-1 rounded-lg opacity-80">Panglima</span> <br />{" "}
-              Teman asik ngemil bersama
+              Jajan{" "}
+              <span className="text-kuning bg-hitam px-1 rounded-lg opacity-80">
+                Panglima
+              </span>{" "}
+              <br /> Teman asik ngemil bersama
             </h1>
 
             <div className="mt-10 lg:mt-10 lg:flex lg:items-center">
@@ -24,10 +28,12 @@ const About = () => {
                 alt=""
               />
 
-              <div className="mt-8 px-2 lg:px-10 lg:mt-0  text-gray-800">
+              <div className="mt-8 px-2 lg:px-10 xl:mt-0  text-gray-800">
                 <h1 className="text-4xl font-bold dark:text-putih lg:w-72">
-                   Visi Misi <br />
-                  <span className="text-2xl text-kuning bg-hitam p-1 rounded-lg opacity-80">Jajan Panglima</span>{" "}
+                  Visi Misi <br />
+                  <span className="text-2xl text-kuning bg-hitam p-1 rounded-lg opacity-80">
+                    Jajan Panglima
+                  </span>{" "}
                 </h1>
                 <h3 className="text-3xl font-semibold mt-6">Visi</h3>
                 <p className="max-w-lg  text-gray-600 dark:text-gray-400">
@@ -55,56 +61,69 @@ const About = () => {
         </div>
       </section>
 
-      <section className="bg-putih dark:bg-gray-900 lg:-mt-80 -mt-10 -mb-10">
+      <section className="bg-putih dark:bg-gray-900 xl:-mt-36 2xl:-mt-72 -mt-10 -mb-10 z-20">
         <div className="relative flex">
           <div className="min-h-screen lg:w-1/3"></div>
           <div className="hidden w-3/4 min-h-screen bg-gray-100 dark:bg-gray-800 lg:block"></div>
 
-          <div className="container flex flex-col justify-center w-full min-h-screen px-6 py-10 mx-auto lg:absolute lg:inset-x-0">
+          <div className="container flex flex-col justify-center w-full min-h-screen px-6 lg:px-20 py-10 mx-auto lg:absolute lg:inset-x-0">
             <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
-              Core <span className="text-kuning bg-hitam p-1 rounded-lg opacity-80">Value</span> <br />
+              Core
+              <span className="text-kuning bg-hitam px-1 rounded-lg opacity-80">
+                Value
+              </span>
+              <br />
               Janan Panglima
             </h1>
 
-            <div className="lg:mt-10 lg:flex lg:items-center lg:ml-20">
-              <div className=" lg:px-10 lg:mt-0 text-gray-800">
-                <ul className="text-gray-800 text-lg lg:text-xl font-bold p-2">
+            <div className="lg:mt-10 lg:flex justify-between lg:items-center xl:ml-20">
+              <div className="xl:px-10 lg:mt-0 text-gray-800">
+                <ul className="text-gray-800 text-lg lg:text-xl 2xl:text-2xl font-bold p-2">
                   <li>
-                    <span className="text-3xl lg:text-5xl">P</span>roduktif diiringi inovasi
+                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">P</span>
+                    roduktif diiringi inovasi
                   </li>
                   <li>
-                    <span className="text-3xl lg:text-5xl">R</span>asa saling menghormati
+                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">R</span>
+                    asa saling menghormati
                   </li>
                   <li>
-                    <span className="text-3xl lg:text-5xl">O</span>ptimis
+                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">O</span>
+                    ptimis
                   </li>
                   <li>
-                    <span className="text-3xl lg:text-5xl">G</span>esit & Tangguh
+                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">G</span>
+                    esit & Tangguh
                   </li>
                   <li>
-                    <span className="text-3xl lg:text-5xl">R</span>asional & dapat diandalkan
+                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">R</span>
+                    asional & dapat diandalkan
                   </li>
                   <li>
-                    <span className="text-3xl lg:text-5xl">E</span>mpati melayani sepenuh hati
+                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">E</span>
+                    mpati melayani sepenuh hati
                   </li>
                   <li>
-                    <span className="text-3xl lg:text-5xl">S</span>mpati melayani sepenuh hati
+                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">S</span>
+                    mpati melayani sepenuh hati
                   </li>
                   <li>
-                    <span className="text-3xl lg:text-5xl">S</span>yar‘i
+                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">S</span>
+                    yar‘i
                   </li>
                 </ul>
               </div>
               <img
-                className="object-cover object-center lg:ml-40 w-full lg:w-[32rem] rounded-lg h-96"
+                className="object-cover object-center 2xl:ml-40 w-full lg:w-[30rem] 2xl:w-[32rem] rounded-lg h-96"
                 src="outlet-jajan.jpg"
-                alt=""
+                alt="outlet juanda"
               />
             </div>
           </div>
         </div>
       </section>
       <Footer />
+      <Wa />
     </>
   );
 };

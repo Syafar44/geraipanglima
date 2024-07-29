@@ -1,13 +1,11 @@
 "use client";
 import React from "react";
-
 import Link from "next/link";
 import {
   Card,
   CardHeader,
   CardBody,
   Typography,
-  Avatar,
 } from "@material-tailwind/react";
 
 import { Carousel } from "@material-tailwind/react";
@@ -16,7 +14,7 @@ const Jajan = () => {
   return (
     <>
       {/* Carausel layar Lebar */}
-      <section className="container px-10 mx-auto py-16 -mt-6 h-[50rem] hidden lg:block">
+      <section className="container mx-auto py-16 -mt-6 hidden lg:block lg:h-[580px] xl:h-[700px] 2xl:h-[800px]">
         <Carousel loop={true} autoplay={true} className="rounded-xl">
           <img
             src="1.png"
@@ -68,10 +66,10 @@ const Jajan = () => {
           </p>
         </div>
         <div className="w-full mt-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 lg:mx-72 gap-3 lg:gap-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 lg:px-14 xl:px-10 2xl:px-60 gap-3 2xl:gap-10">
             <Card
               shadow={false}
-              className="relative grid lg:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
+              className="relative grid lg:h-[15rem] xl:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
             >
               <CardHeader
                 floated={false}
@@ -93,7 +91,7 @@ const Jajan = () => {
             </Card>
             <Card
               shadow={false}
-              className="relative grid lg:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
+              className="relative grid lg:h-[15rem] xl:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
             >
               <CardHeader
                 floated={false}
@@ -115,7 +113,7 @@ const Jajan = () => {
             </Card>
             <Card
               shadow={false}
-              className="relative grid lg:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
+              className="relative grid lg:h-[15rem] xl:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
             >
               <CardHeader
                 floated={false}
@@ -137,7 +135,7 @@ const Jajan = () => {
             </Card>
             <Card
               shadow={false}
-              className="relative grid lg:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
+              className="relative grid lg:h-[15rem] xl:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
             >
               <CardHeader
                 floated={false}
@@ -159,7 +157,7 @@ const Jajan = () => {
             </Card>
             <Card
               shadow={false}
-              className="relative grid lg:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
+              className="relative grid lg:h-[15rem] xl:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
             >
               <CardHeader
                 floated={false}
@@ -181,7 +179,7 @@ const Jajan = () => {
             </Card>
             <Card
               shadow={false}
-              className="relative grid lg:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
+              className="relative grid lg:h-[15rem] xl:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
             >
               <CardHeader
                 floated={false}
@@ -203,7 +201,7 @@ const Jajan = () => {
             </Card>
             <Card
               shadow={false}
-              className="relative grid lg:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
+              className="relative grid lg:h-[15rem] xl:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
             >
               <CardHeader
                 floated={false}
@@ -225,7 +223,7 @@ const Jajan = () => {
             </Card>
             <Card
               shadow={false}
-              className="relative grid lg:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
+              className="relative grid lg:h-[15rem] xl:h-[20rem] w-full max-w-[18rem] items-end overflow-hidden text-center"
             >
               <CardHeader
                 floated={false}

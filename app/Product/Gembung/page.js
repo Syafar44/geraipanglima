@@ -11,6 +11,7 @@ import {
   Chip,
 } from "@material-tailwind/react";
 import Footer from "../../components/Footer";
+import Wa from "@/app/components/Wa";
 
 const products = [
   {
@@ -81,18 +82,23 @@ const Gembung = () => {
   return (
     <>
       <Navbar />
-      <section className="mt-12 mx-5 lg:mx-52">
-        <h1 className="text-2xl lg:text-5xl font-bold">Product Gembung</h1>
-        <div className="grid grid-cols-2 lg:grid-cols-4 mt-6 gap-5 lg:mx-20">
+      <section className="mt-12 px-5  lg:px-20 xl:px-30 2xl:px-60">
+        <h1 className="text-2xl lg:text-3xl xl:text-4xl font-bold">
+          Product Gembung
+        </h1>
+        <div className="grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 mt-6 gap-5">
           {products.map((product) => {
             const cartItem = cart.find((item) => item.id === product.id);
             return (
-              <Card key={product.id} className="lg:w-72">
-                <CardHeader floated={false} className="lg:h-60">
+              <Card key={product.id}>
+                <CardHeader floated={false}>
                   <img src={product.gambar} alt={product.nama} />
                 </CardHeader>
                 <CardBody className="text-center">
-                  <Typography variant="h4" className="font-teko text-sm lg:text-xl">
+                  <Typography
+                    variant="h4"
+                    className="font-teko text-sm lg:text-xl"
+                  >
                     {product.nama}
                   </Typography>
                   <Typography variant="h5" className="-mt-1 font-teko">
@@ -145,6 +151,7 @@ const Gembung = () => {
         </div>
       </section>
       <Footer />
+      <Wa />
     </>
   );
 };

@@ -9,69 +9,92 @@ import {
 } from "@material-tailwind/react";
 import Link from "next/link";
 import Footer from "../components/Footer";
+import Wa from "../components/Wa";
 
 const Product = () => {
   return (
     <>
       <Navbar />
-      <section className="mt-12 mx-5 lg:mx-52">
-        <h1 className="text-2xl lg:text-5xl font-bold">Product Kategori</h1>
-        <div className="grid grid-cols-2 lg:grid-cols-4 mt-6 gap-5 lg:mx-20">
+      <section className="mt-12 px-5 md:px-20 xl:px-30 2xl:px-52">
+        <h1 className="text-2xl lg:text-4xl xl:text-5xl font-bold">
+          Product Kategori
+        </h1>
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mt-6 gap-2 lg:gap-5">
           <Link href="/Product/Gembung">
-            <Card className="lg:w-72">
-              <CardHeader floated={false} className="lg:h-60 ">
+            <Card>
+              <CardHeader floated={false} className=" ">
                 <img src="tes-5.jpg" alt="roti gembung" />
               </CardHeader>
               <CardBody className="text-center">
-                <Typography variant="h5" color="blue-gray" className="mb-2">
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="-my-2 lg:my-0"
+                >
                   Gembung
                 </Typography>
               </CardBody>
             </Card>
           </Link>
           <Link href="/Product/Pizza">
-            <Card className="lg:w-72">
-              <CardHeader floated={false} className="lg:h-60">
+            <Card>
+              <CardHeader floated={false}>
                 <img src="tes-5.jpg" alt="roti gembung" />
               </CardHeader>
               <CardBody className="text-center">
-                <Typography variant="h5" color="blue-gray" className="mb-2">
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="-my-2 lg:my-0"
+                >
                   Pizza
                 </Typography>
               </CardBody>
             </Card>
           </Link>
           <Link href="/Product/Bakpia">
-            <Card className="lg:w-72">
-              <CardHeader floated={false} className="lg:h-60">
+            <Card>
+              <CardHeader floated={false}>
                 <img src="tes-5.jpg" alt="roti gembung" />
               </CardHeader>
               <CardBody className="text-center">
-                <Typography variant="h5" color="blue-gray" className="mb-2">
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="-my-2 lg:my-0"
+                >
                   Bakpia
                 </Typography>
               </CardBody>
             </Card>
           </Link>
           <Link href="/Product/Cromboloni">
-            <Card className="lg:w-72">
-              <CardHeader floated={false} className="lg:h-60">
+            <Card>
+              <CardHeader floated={false}>
                 <img src="tes-5.jpg" alt="roti gembung" />
               </CardHeader>
               <CardBody className="text-center">
-                <Typography variant="h5" color="blue-gray" className="mb-2">
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="-my-2 lg:my-0"
+                >
                   Cromboloni
                 </Typography>
               </CardBody>
             </Card>
           </Link>
           <Link href="/Product/Donat">
-            <Card className="lg:w-72">
-              <CardHeader floated={false} className="lg:h-60">
+            <Card>
+              <CardHeader floated={false}>
                 <img src="tes-5.jpg" alt="roti gembung" />
               </CardHeader>
               <CardBody className="text-center">
-                <Typography variant="h5" color="blue-gray" className="mb-2">
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="-my-2 lg:my-0"
+                >
                   Donat
                 </Typography>
               </CardBody>
@@ -80,6 +103,7 @@ const Product = () => {
         </div>
       </section>
       <Footer />
+      <Wa />
     </>
   );
 };

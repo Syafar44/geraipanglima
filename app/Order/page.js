@@ -15,6 +15,7 @@ import {
 } from "@material-tailwind/react";
 import Footer from "../components/Footer";
 import { Teko } from "next/font/google";
+import Wa from "../components/Wa";
 
 const teko = Teko({
   weight: ["300", "700"],
@@ -128,7 +129,7 @@ const Order = () => {
   return (
     <>
       <Navbar />
-      <Card className="lg:mx-96">
+      <Card className="lg:mx-20 xl:mx-52 2xl:mx-96">
         <div className="p-5 lg:py-10 mb-2 bg-hitam flex justify-between text-putih font-bold lg:px-7">
           <h1 className="text-sm lg:text-base">Produk</h1>
           <div className="flex gap-2 text-sm lg:text-base lg:gap-12">
@@ -182,7 +183,7 @@ const Order = () => {
           ))}
         </List>
         <div className="py-5 bg-hitam flex justify-between text-putih font-bold p-7">
-          <h1>Total Harga</h1>
+          <h1>Total Harga Keseluruhan</h1>
           <h1 className="text-kuning">{rupiah(calculateTotal())}</h1>
         </div>
         <div className="relative p-5 gap-3 grid grid-cols-6">
@@ -280,7 +281,7 @@ const Order = () => {
               <div className="modal-action">
                 <form method="dialog">
                   <button className="btn bg-black text-kuning rounded-xl">
-                    Close
+                    Tutup
                   </button>
                 </form>
               </div>
@@ -305,7 +306,7 @@ const Order = () => {
               <div className="modal-action">
                 <form method="dialog">
                   <button className="btn bg-black text-kuning rounded-xl">
-                    Close
+                    Tutup
                   </button>
                 </form>
               </div>
@@ -314,6 +315,7 @@ const Order = () => {
         </div>
       </Card>
       <Footer />
+      <Wa />
     </>
   );
 };

@@ -14,7 +14,7 @@ const rupiah = (number) => {
 export default async (req, res) => {
   if (req.method === "POST") {
     const { nama, nomer, total, metod, alamat, produk, pembayaran } = req.body;
-    let message = `*JAJAN PANGLIMA*\nNama Penerima: *${nama}.*\nNomer: ${nomer}\nAlamat: _${alamat}._\nProduk:\n`;
+    let message = `*GERAI PANGLIMA*\nNama Penerima: *${nama}.*\nNomer: ${nomer}\nAlamat: _${alamat}._\nProduk:\n`;
     produk.forEach((item, index) => {
       message += `${index + 1}. Nama Produk: *${item.nama}*, Harga: ${rupiah(
         item.harga

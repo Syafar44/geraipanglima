@@ -20,7 +20,7 @@ module.exports = withMT({
   plugins: [require("daisyui")],
   theme: {
     colors: {
-      kuning: "#fce011",
+      kuning: "#b91c1c",
       hitam: "#221e1f",
       putih: "#fdfefc",
       abu: "gray-400",

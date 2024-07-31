@@ -130,7 +130,7 @@ const Order = () => {
     <>
       <Navbar />
       <Card className="lg:mx-20 xl:mx-52 2xl:mx-96">
-        <div className="p-5 lg:py-10 mb-2 bg-hitam flex justify-between text-putih font-bold lg:px-7">
+        <div className="p-5 lg:py-10 mb-2 bg-red-700 flex justify-between text-putih font-bold lg:px-7">
           <h1 className="text-sm lg:text-base">Produk</h1>
           <div className="flex gap-2 text-sm lg:text-base lg:gap-12">
             <h1>Harga Satuan</h1>
@@ -160,7 +160,7 @@ const Order = () => {
                     value={product.quantity}
                     variant="ghost"
                     size="lg"
-                    className="rounded-lg"
+                    className="rounded-lg text-putih"
                   />
 
                   <Button
@@ -182,7 +182,7 @@ const Order = () => {
             </ListItem>
           ))}
         </List>
-        <div className="py-5 bg-hitam flex justify-between text-putih font-bold p-7">
+        <div className="py-5 flex justify-between border-4 rounded-xl border-red-700 font-bold p-7">
           <h1>Total Harga Keseluruhan</h1>
           <h1 className="text-kuning">{rupiah(calculateTotal())}</h1>
         </div>
@@ -265,7 +265,7 @@ const Order = () => {
           <dialog id="my_modal_1" className="modal">
             <div className="modal-box">
               <h3 className="font-bold text-xl text-kuning bg-hitam rounded-xl text-center py-2">
-                Hay Sobat Jajan
+                Hay Sobat Gerai Panglima
               </h3>
               <div className="py-4 font-semibold text-xl">
                 <h1 className="text-green-700 text-2xl font-bold">
@@ -290,7 +290,7 @@ const Order = () => {
           <dialog id="my_modal_2" className="modal">
             <div className="modal-box">
               <h3 className="font-bold text-xl text-kuning bg-hitam rounded-xl text-center py-2">
-                Hay Sobat Jajan
+                Hay Sobat Gerai Panglima
               </h3>
               <div className="py-4 font-semibold text-xl">
                 <h1 className="text-red-700 text-2xl">

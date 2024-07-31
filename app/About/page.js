@@ -7,121 +7,121 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <section className="bg-putih dark:bg-gray-900 xl:-mt-32">
-        <div className="relative flex lg:z-10">
-          <div className="lg:min-h-screen lg:w-1/3"></div>
-          <div className="hidden w-3/4 min-h-screen bg-gray-100 dark:bg-gray-800 lg:block"></div>
+      <section className="hero mt-32 my-8 lg:my-10">
+        <header className="hero-content text-neutral-content text-center">
+          <figur className="flex items-center">
+            <img
+              className="w-60 lg:w-96"
+              src="https://raw.githubusercontent.com/Syafar44/assets/main/assets/image/LOGO%20GERAI%20PANGLIMA-02.png"
+            />
+          </figur>
+        </header>
+      </section>
 
-          <div className="container flex flex-col justify-center w-full min-h-screen px-6 lg:px-20 py-10 mx-auto lg:absolute lg:inset-x-0">
-            <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
-              Jajan{" "}
-              <span className="text-kuning bg-hitam px-1 rounded-lg opacity-80">
-                Panglima
-              </span>{" "}
-              <br /> Teman asik ngemil bersama
-            </h1>
+      <section>
+        <subsection className="hero bg-red-700">
+          <div className="hero-content my-4 lg:my-20">
+            <div>
+              <h1 className="text-3xl lg:text-5xl font-bold text-center text-white">
+                Differentation
+              </h1>
+              <p className="text-xl lg:text-3xl text-gray-100 font-semibold text-center">
+                Gerai Panglima
+              </p>
+              <ul className="list-disc py-4 text-sm lg:text-xl text-gray-200 mx-5 ">
+                <li>Produk berkualitas wahid dengan pricing Value for Money</li>
+                <li>Rapid Experimentation new product</li>
+                <li>Strong Data Analytic to measure the Goals</li>
+                <li>Tersedia Menu Anak Muda</li>
+                <li>Loyalty Program dengan Personalized Offer</li>
+                <li>Program Promo Rutin</li>
+                <li>
+                  Kemasan Unik & mengangkat budaya lokal dengan menggandeng
+                  komunitas
+                </li>
+                <li>
+                  Mudah Didapat dengan tersebar dibanyak area mendekati
+                  pemukiman padatpenduduk
+                </li>
+                <li>Aktif di Social Media Facebook & Instagram</li>
+              </ul>
+            </div>
+          </div>
+        </subsection>
+      </section>
 
-            <div className="mt-10 lg:mt-10 lg:flex lg:items-center">
-              <img
-                className="object-cover object-center w-full lg:w-[32rem] rounded-lg h-96"
-                src="tes-1.jpg"
-                alt=""
-              />
-
-              <div className="mt-8 px-2 lg:px-10 xl:mt-0  text-gray-800">
-                <h1 className="text-4xl font-bold dark:text-putih lg:w-72">
-                  Visi Misi <br />
-                  <span className="text-2xl text-kuning bg-hitam p-1 rounded-lg opacity-80">
-                    Jajan Panglima
-                  </span>{" "}
-                </h1>
-                <h3 className="text-3xl font-semibold mt-6">Visi</h3>
-                <p className="max-w-lg  text-gray-600 dark:text-gray-400">
-                  Menginspirasi Indonesia! Menjadi Perusahaan Syariah kelas
-                  dunia dicintai, berperan nyata dalam peradaban mulia dan
-                  mensejahterakan karyawan.
-                </p>
-                <h3 className="text-3xl font-semibold mt-3">Misi</h3>
-                <ul className="list-disc text-gray-600 ml-4">
-                  <li>
-                    Mengelola perusahaan murni sesuai syariat islam oleh
-                    individu yang saleh dengan standart kelas dunia
-                  </li>
-                  <li>
-                    Menyediakan produk yang halal, berkualitas dan memberi nilai
-                    yang terbaik bagi pelanggan
-                  </li>
-                  <li>
-                    Menyebar manfaat serta berperan nyata dalam peradaban mulia
-                  </li>
-                </ul>
-              </div>
+      <section>
+        <div className="lg:hero my-4 lg:my-20">
+          <div className="hero-content flex-col lg:flex-row">
+            <img src="assets/img-gembung.png" className="lg:max-w-sm" />
+            <div>
+              <h1 className="text-3xl lg:text-5xl font-bold">Marketing Mix</h1>
+              <p className="text-xl lg:text-3xl font-semibold text-red-700">
+                Gerai Panglima
+              </p>
+              <ul className="lg:py-6 text-wrap text-sm">
+                <li className="py-2">
+                  <h4 className="font-bold text-xl">Product</h4>
+                  <p className="mr-3">
+                    Roti Gembung berkualitas wahid dengan varian yang selalu
+                    di-update dengan kemasan modern & mengangkat budaya lokal
+                  </p>
+                </li>
+                <li className="">
+                  <h4 className="font-bold text-xl">Price</h4>
+                  <p className="mr-3">
+                    Strategi harga Value for Money dengan range harga lebar
+                    mulai dari produk promo sangat murah hingga produk premium
+                  </p>
+                </li>
+                <li className="py-2">
+                  <h4 className="font-bold text-xl">Place</h4>
+                  <p className="mr-3">
+                    Outlet tersebar di banyak titik pemukiman padat penduduk
+                    (ubiquitous network strategy) dengan jam buka panjang
+                    06.30-21.00
+                  </p>
+                </li>
+                <li className="py-2">
+                  <h4 className="font-bold text-xl">Promotion</h4>
+                  <ul className="list-disc ml-8">
+                    <li>Sales promotion untuk umum & khusus member</li>
+                    <li>Social media Facebook & Instagram</li>
+                    <li>Photo & Video Contest</li>
+                    <li>Selebgram endorse</li>
+                    <li>Selebgram endorse</li>
+                    <li>Public Event booth & print out spreading</li>
+                    <li>Event Sponsorship</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-putih dark:bg-gray-900 xl:-mt-36 2xl:-mt-72 -mt-10 -mb-10 z-20">
-        <div className="relative flex">
-          <div className="min-h-screen lg:w-1/3"></div>
-          <div className="hidden w-3/4 min-h-screen bg-gray-100 dark:bg-gray-800 lg:block"></div>
-
-          <div className="container flex flex-col justify-center w-full min-h-screen px-6 lg:px-20 py-10 mx-auto lg:absolute lg:inset-x-0">
-            <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
-              Core
-              <span className="text-kuning bg-hitam px-1 rounded-lg opacity-80">
-                Value
-              </span>
-              <br />
-              Janan Panglima
-            </h1>
-
-            <div className="lg:mt-10 lg:flex justify-between lg:items-center xl:ml-20">
-              <div className="xl:px-10 lg:mt-0 text-gray-800">
-                <ul className="text-gray-800 text-lg lg:text-xl 2xl:text-2xl font-bold p-2">
-                  <li>
-                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">P</span>
-                    roduktif diiringi inovasi
-                  </li>
-                  <li>
-                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">R</span>
-                    asa saling menghormati
-                  </li>
-                  <li>
-                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">O</span>
-                    ptimis
-                  </li>
-                  <li>
-                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">G</span>
-                    esit & Tangguh
-                  </li>
-                  <li>
-                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">R</span>
-                    asional & dapat diandalkan
-                  </li>
-                  <li>
-                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">E</span>
-                    mpati melayani sepenuh hati
-                  </li>
-                  <li>
-                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">S</span>
-                    mpati melayani sepenuh hati
-                  </li>
-                  <li>
-                    <span className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">S</span>
-                    yar‘i
-                  </li>
-                </ul>
-              </div>
-              <img
-                className="object-cover object-center 2xl:ml-40 w-full lg:w-[30rem] 2xl:w-[32rem] rounded-lg h-96"
-                src="outlet-jajan.jpg"
-                alt="outlet juanda"
-              />
+      <section>
+        <div className="hero bg-red-700 text-center -mb-20 lg:px-20">
+          <div className="hero-content my-4 lg:my-20">
+            <div>
+              <h1 className="text-3xl lg:text-5xl font-bold text-center text-white">
+                Position
+              </h1>
+              <p className="text-xl lg:text-3xl text-gray-100 font-semibold text-center">
+                Jajan Panglima
+              </p>
+              <p className="py-4 text-sm lg:text-xl text-gray-200">
+                Untuk Middle Class Urban berusia 20-45 tahun yang sudah tinggal
+                di Kaltim ≻ 3 tahun, Jajan Panglima adalah Outlet Roti Gembung
+                Zaman Now yang menghadirkan produk berkualitas & Rapid
+                Experimentation New Product dengan strategi pricing Value for
+                Money
+              </p>
             </div>
           </div>
         </div>
       </section>
+
       <Footer />
       <Wa />
     </>

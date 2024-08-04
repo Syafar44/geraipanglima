@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -8,12 +8,13 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <section className="">
+      <section>
         <header>
           <figure className="flex items-center -mt-10">
             <img
               className="w-full"
               src="https://raw.githubusercontent.com/Syafar44/assets/main/assets/image/bg-tentang-2.jpg"
+              alt="Background Tentang Gerai Panglima"
             />
           </figure>
         </header>
@@ -23,15 +24,24 @@ const About = () => {
         <div className="hero bg-red-700">
           <div className="hero-content my-4 lg:my-20">
             <div className="lg:flex gap-20 items-center">
-              <div data-aos="fade-right" data-aos-duration="1800" data-aos-easing="ease-in-out">
+              <div
+                data-aos="fade-right"
+                data-aos-duration="1800"
+                data-aos-easing="ease-in-out"
+              >
                 <h1 className="text-3xl lg:text-6xl font-bold text-center text-white">
-                  Differentation
+                  Differentiation
                 </h1>
                 <p className="text-xl lg:text-3xl text-gray-100 font-semibold text-center">
                   Gerai Panglima
                 </p>
               </div>
-              <ul className="list-disc py-4 text-sm lg:text-2xl text-gray-200 mx-5 " data-aos="fade-left" data-aos-duration="1800" data-aos-easing="ease-in-out">
+              <ul
+                className="list-disc py-4 text-sm lg:text-2xl text-gray-200 mx-5"
+                data-aos="fade-left"
+                data-aos-duration="1800"
+                data-aos-easing="ease-in-out"
+              >
                 <li>Produk berkualitas wahid dengan pricing Value for Money</li>
                 <li>Rapid Experimentation new product</li>
                 <li>Strong Data Analytic to measure the Goals</li>
@@ -43,8 +53,8 @@ const About = () => {
                   komunitas
                 </li>
                 <li>
-                  Mudah Didapat dengan tersebar dibanyak area mendekati
-                  pemukiman padatpenduduk
+                  Mudah Didapat dengan tersebar di banyak area mendekati
+                  pemukiman padat penduduk
                 </li>
                 <li>Aktif di Social Media Facebook & Instagram</li>
               </ul>
@@ -56,8 +66,19 @@ const About = () => {
       <section>
         <div className="lg:hero my-4 lg:my-20">
           <div className="hero-content flex-col lg:flex-row lg:gap-10 lg:items-center">
-            <img src="assets/img-gembung.png" className="w-3/4 lg:max-w-sm" data-aos="fade-right" data-aos-duration="1800" data-aos-easing="ease-in-out"/>
-            <div data-aos="fade-left" data-aos-duration="1800" data-aos-easing="ease-in-out">
+            <img
+              src="assets/img-gembung.png"
+              className="w-3/4 lg:max-w-sm"
+              data-aos="fade-right"
+              data-aos-duration="1800"
+              data-aos-easing="ease-in-out"
+              alt="Image Gembung"
+            />
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1800"
+              data-aos-easing="ease-in-out"
+            >
               <h1 className="text-3xl lg:text-5xl font-bold">Marketing Mix</h1>
               <p className="text-xl lg:text-3xl font-semibold text-red-700">
                 Gerai Panglima
@@ -70,7 +91,7 @@ const About = () => {
                     di-update dengan kemasan modern & mengangkat budaya lokal
                   </p>
                 </li>
-                <li className="">
+                <li className="py-2">
                   <h4 className="font-bold text-xl">Price</h4>
                   <p className="mr-3">
                     Strategi harga Value for Money dengan range harga lebar
@@ -92,7 +113,6 @@ const About = () => {
                     <li>Social media Facebook & Instagram</li>
                     <li>Photo & Video Contest</li>
                     <li>Selebgram endorse</li>
-                    <li>Selebgram endorse</li>
                     <li>Public Event booth & print out spreading</li>
                     <li>Event Sponsorship</li>
                   </ul>
@@ -104,9 +124,9 @@ const About = () => {
       </section>
 
       <section>
-        <div className="hero bg-red-700 text-center -mb-10 lg:px-20" >
+        <div className="hero bg-red-700 text-center -mb-10 lg:px-20">
           <div className="my-4 lg:my-20 px-10">
-            <div >
+            <div>
               <h1 className="text-3xl lg:text-5xl font-bold text-center text-white">
                 Position
               </h1>

@@ -2,16 +2,17 @@
 import React from "react";
 import Link from "next/link";
 import { Carousel } from "@material-tailwind/react";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
-AOS.init();
 
-const Jajan = () => {
+const Gerai = () => {
   return (
     <>
       {/* Carausel layar Lebar */}
-      <section className="container mx-auto py-16 -mt-6 hidden lg:block lg:px-20 lg:h-[580px] xl:h-[700px] 2xl:h-[800px]" data-aos="fade-down" data-aos-duration="1800" data-aos-easing="ease-in-out">
+      <section
+        className="container mx-auto py-16 -mt-6 hidden lg:block lg:px-20 lg:h-[580px] xl:h-[700px] 2xl:h-[800px]"
+        data-aos="fade-down"
+        data-aos-duration="1800"
+        data-aos-easing="ease-in-out"
+      >
         <Carousel loop={true} autoplay={true} className="rounded-xl">
           <img
             src="1.png"
@@ -31,7 +32,12 @@ const Jajan = () => {
         </Carousel>
       </section>
       {/* Carausel layar Kecil */}
-      <section className="container px-5 mx-auto py-10 -mt-6 h-[25rem] lg:hidden" data-aos="fade-down" data-aos-duration="1800" data-aos-easing="ease-in-out">
+      <section
+        className="container px-5 mx-auto py-10 -mt-6 h-[25rem] lg:hidden"
+        data-aos="fade-down"
+        data-aos-duration="1800"
+        data-aos-easing="ease-in-out"
+      >
         <Carousel loop={true} autoplay={true} className="rounded-xl">
           <img
             src="1.png"
@@ -51,12 +57,17 @@ const Jajan = () => {
         </Carousel>
       </section>
 
-      <section className="-mt-16 px-4 xl:px-28" >
+      <section className="-mt-16 px-4 xl:px-28">
         <div className="hero min-h-screen">
           <div className="text-center ">
             {/* Oleh-oleh Gerai Panglima */}
             <div>
-              <figure className="my-12" data-aos="fade-down" data-aos-duration="1500" data-aos-easing="ease-in-out">
+              <figure
+                className="my-12"
+                data-aos="fade-down"
+                data-aos-duration="1500"
+                data-aos-easing="ease-in-out"
+              >
                 <figcaption className="font-bold text-xl lg:text-5xl">
                   Produk OLeh-Oleh
                 </figcaption>
@@ -66,7 +77,12 @@ const Jajan = () => {
                 />
               </figure>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5">
-                <div className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-out">
+                <div
+                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
+                  data-aos="fade-right"
+                  data-aos-duration="1500"
+                  data-aos-easing="ease-in-out"
+                >
                   <figure>
                     <img
                       className="h-56 scale-150"
@@ -88,7 +104,12 @@ const Jajan = () => {
                     </div>
                   </div>
                 </div>
-                <div className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200" data-aos="fade-right" data-aos-duration="1400" data-aos-easing="ease-in-out">
+                <div
+                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
+                  data-aos="fade-right"
+                  data-aos-duration="1400"
+                  data-aos-easing="ease-in-out"
+                >
                   <figure>
                     <img
                       className="h-56 scale-150"
@@ -110,7 +131,12 @@ const Jajan = () => {
                     </div>
                   </div>
                 </div>
-                <div className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200" data-aos="fade-right" data-aos-duration="1300" data-aos-easing="ease-in-out">
+                <div
+                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
+                  data-aos="fade-right"
+                  data-aos-duration="1300"
+                  data-aos-easing="ease-in-out"
+                >
                   <figure>
                     <img
                       className="h-56 scale-150"
@@ -132,7 +158,12 @@ const Jajan = () => {
                     </div>
                   </div>
                 </div>
-                <div className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
+                <div
+                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
+                  data-aos="fade-right"
+                  data-aos-duration="1200"
+                  data-aos-easing="ease-in-out"
+                >
                   <figure>
                     <img
                       className="h-56 scale-150"
@@ -154,7 +185,12 @@ const Jajan = () => {
                     </div>
                   </div>
                 </div>
-                <div className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div
+                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                >
                   <figure>
                     <img
                       className="h-56 scale-150"
@@ -180,7 +216,11 @@ const Jajan = () => {
             </div>
             {/* Resto Panglima */}
             <div className="mt-12">
-              <figure data-aos="fade-down" data-aos-duration="1500" data-aos-easing="ease-in-out">
+              <figure
+                data-aos="fade-down"
+                data-aos-duration="1500"
+                data-aos-easing="ease-in-out"
+              >
                 <figcaption className="font-bold text-xl lg:text-5xl">
                   Produk Resto
                 </figcaption>
@@ -190,7 +230,12 @@ const Jajan = () => {
                 />
               </figure>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5">
-                <div className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-out">
+                <div
+                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
+                  data-aos="fade-right"
+                  data-aos-duration="1500"
+                  data-aos-easing="ease-in-out"
+                >
                   <figure>
                     <img
                       className="h-56 scale-150"
@@ -212,7 +257,12 @@ const Jajan = () => {
                     </div>
                   </div>
                 </div>
-                <div className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200" data-aos="fade-right" data-aos-duration="1400" data-aos-easing="ease-in-out">
+                <div
+                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
+                  data-aos="fade-right"
+                  data-aos-duration="1400"
+                  data-aos-easing="ease-in-out"
+                >
                   <figure>
                     <img
                       className="h-56 scale-150"
@@ -234,7 +284,12 @@ const Jajan = () => {
                     </div>
                   </div>
                 </div>
-                <div className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200" data-aos="fade-right" data-aos-duration="1300" data-aos-easing="ease-in-out">
+                <div
+                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
+                  data-aos="fade-right"
+                  data-aos-duration="1300"
+                  data-aos-easing="ease-in-out"
+                >
                   <figure>
                     <img
                       className="h-56 scale-150"
@@ -256,7 +311,12 @@ const Jajan = () => {
                     </div>
                   </div>
                 </div>
-                <div className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
+                <div
+                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
+                  data-aos="fade-right"
+                  data-aos-duration="1200"
+                  data-aos-easing="ease-in-out"
+                >
                   <figure>
                     <img
                       className="h-56 scale-150"
@@ -278,7 +338,12 @@ const Jajan = () => {
                     </div>
                   </div>
                 </div>
-                <div className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div
+                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                >
                   <figure>
                     <img
                       className="h-56 scale-150"
@@ -309,13 +374,23 @@ const Jajan = () => {
       <section className="hero bg-yellow-600 mt-10 -mb-10 lg:px-10">
         <div className="hero-content text-center mt-5">
           <div className="mt-5">
-            <h1 className="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-800" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <h1
+              className="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-800"
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+            >
               <span className="text-red-700">12 Tahun</span> Berdiri: Gerai
-              Panglima & Jajan Panglima, Mewujudkan Oleh-Oleh Kaltim Berkualitas
+              Panglima & Gerai Panglima, Mewujudkan Oleh-Oleh Kaltim Berkualitas
               dan Menguatkan UKM
             </h1>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-5 xl:mx-20 xl:gap-0 mt-6 mb-10 text-xs lg:text-base xl:text-base">
-              <div className="flex" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+              <div
+                className="flex"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+              >
                 <img
                   className="h-28 xl:h-40"
                   src="assets/keunggulan-home-1.png"
@@ -329,7 +404,12 @@ const Jajan = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex" data-aos="fade-right" data-aos-duration="1300" data-aos-easing="ease-in-out">
+              <div
+                className="flex"
+                data-aos="fade-right"
+                data-aos-duration="1300"
+                data-aos-easing="ease-in-out"
+              >
                 <img
                   className="h-28 xl:h-40"
                   src="assets/keunggulan-home-3.png"
@@ -343,7 +423,12 @@ const Jajan = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex ml-3" data-aos="fade-right" data-aos-duration="1600" data-aos-easing="ease-in-out">
+              <div
+                className="flex ml-3"
+                data-aos="fade-right"
+                data-aos-duration="1600"
+                data-aos-easing="ease-in-out"
+              >
                 <img
                   className="h-24 xl:h-36"
                   src="assets/keunggulan-home-2.png"
@@ -365,4 +450,4 @@ const Jajan = () => {
   );
 };
 
-export default Jajan;
+export default Gerai;

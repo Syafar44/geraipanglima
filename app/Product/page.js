@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "../components/Navbar";
 import {
   Card,
@@ -18,6 +18,7 @@ import {
 import Footer from "../components/Footer";
 import Wa from "@/app/components/Wa";
 
+// Daftar produk
 const products = [
   {
     id: 5,
@@ -280,40 +281,40 @@ const Product = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
 
+  // Menambahkan produk ke keranjang
   const addToCart = (product) => {
-    const existingProductIndex = cart.findIndex((p) => p.id === product.id);
-    let newCart;
-    if (existingProductIndex >= 0) {
-      newCart = cart.map((item, index) =>
-        index === existingProductIndex
-          ? { ...item, quantity: item.quantity + 1 }
-          : item
-      );
-    } else {
-      newCart = [...cart, { ...product, quantity: 1 }];
-    }
-    setCart(newCart);
-    localStorage.setItem("cart", JSON.stringify(newCart));
+    const updatedCart = cart.some((item) => item.id === product.id)
+      ? cart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      : [...cart, { ...product, quantity: 1 }];
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
+  // Mengurangi kuantitas produk di keranjang
   const decreaseQuantity = (productId) => {
-    const newCart = cart
+    const updatedCart = cart
       .map((item) =>
         item.id === productId ? { ...item, quantity: item.quantity - 1 } : item
       )
       .filter((item) => item.quantity > 0);
-    setCart(newCart);
-    localStorage.setItem("cart", JSON.stringify(newCart));
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
+  // Menambah kuantitas produk di keranjang
   const increaseQuantity = (productId) => {
-    const newCart = cart.map((item) =>
+    const updatedCart = cart.map((item) =>
       item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
     );
-    setCart(newCart);
-    localStorage.setItem("cart", JSON.stringify(newCart));
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
+  // Mengfilter produk berdasarkan filter dan pencarian
   const filteredProducts = products.filter(
     (product) =>
       (filter === "" || product.produk === filter) &&
@@ -321,6 +322,7 @@ const Product = () => {
         product.nama.toLowerCase().includes(search.toLowerCase()))
   );
 
+  // Paginasi produk
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentItems = filteredProducts.slice(
@@ -328,24 +330,18 @@ const Product = () => {
     startIndex + itemsPerPage
   );
 
-  const handlePrevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
+  const handlePrevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
+  const handleNextPage = () =>
+    setCurrentPage((prev) => Math.min(prev + 1, totalPages));
 
-  const handleNextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
+  // Mengatur filter produk
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
     setSearch("");
     setCurrentPage(1);
   };
 
+  // Mengatur pencarian produk
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
     setFilter("");
@@ -356,7 +352,7 @@ const Product = () => {
     <>
       <Navbar />
       <section className="mt-12 px-5 lg:px-20 xl:px-30 2xl:px-60">
-        <div className="lg:flex justify-between ">
+        <div className="lg:flex justify-between">
           <h1
             className="text-2xl lg:text-3xl xl:text-4xl font-bold"
             data-aos="fade-in"
@@ -380,9 +376,9 @@ const Product = () => {
             />
             <Menu>
               <MenuHandler>
-                <button className="bg-red-700 px-10 text-putih font-bold text-xl rounded-lg">
+                <Button className="bg-red-700 px-10 text-putih font-bold text-xl rounded-lg">
                   Filter
-                </button>
+                </Button>
               </MenuHandler>
               <MenuList>
                 <MenuItem onClick={() => handleFilterChange("oleh-oleh")}>
@@ -402,62 +398,53 @@ const Product = () => {
           </div>
         </div>
 
-        <>
-          <div className="grid grid-cols-2 lg:grid-cols-5 2xl:grid-cols-5 mt-6 gap-5 min-h-[calc(2*190px)] xl:min-h-[calc(2*230px)] 2xl:min-h-[calc(2*280px)]">
-            {currentItems.map((product) => {
-              const cartItem = cart.find((item) => item.id === product.id);
-              return (
-                <Card key={product.id} className="flex justify-between">
-                  <div>
-                    <CardHeader floated={false}>
-                      <img
-                        src={`./assets/produk/${product.gambar}`}
-                        alt={product.nama}
-                      />
-                    </CardHeader>
-                    <CardBody className="text-center">
-                      <Typography
-                        variant="h4"
-                        className="font-teko text-sm lg:text-base xl:text-xl"
-                      >
-                        {product.nama}
-                      </Typography>
-                      <Typography variant="h5" className="-mt-1 font-teko">
-                        Rp{product.harga}
-                      </Typography>
-                    </CardBody>
-                  </div>
-                  <CardFooter className="flex justify-center -mt-10">
-                    {cartItem ? (
-                      cartItem.quantity > 0 ? (
-                        <div className="flex transition ease-in-out gap-1 lg:gap-2 bg-kuning scale-[0.7] lg:scale-75 -mt-3 lg:-mt-2 -mb-3  lg:px-3 px-2 lg:mx-6 py-3 rounded-lg">
-                          <Button
-                            className="px-4"
-                            onClick={() => decreaseQuantity(product.id)}
-                          >
-                            -
-                          </Button>
-                          <Chip
-                            value={cartItem.quantity}
-                            variant="ghost"
-                            size="lg"
-                            className="rounded-lg text-putih"
-                          />
-                          <Button
-                            className="px-4"
-                            onClick={() => increaseQuantity(product.id)}
-                          >
-                            +
-                          </Button>
-                        </div>
-                      ) : (
+        <div className="grid grid-cols-2 lg:grid-cols-5 2xl:grid-cols-5 mt-6 gap-5 min-h-[calc(2*190px)] xl:min-h-[calc(2*230px)] 2xl:min-h-[calc(2*280px)]">
+          {currentItems.map((product) => {
+            const cartItem = cart.find((item) => item.id === product.id);
+            return (
+              <Card key={product.id} className="flex justify-between">
+                <div>
+                  <CardHeader floated={false}>
+                    <img
+                      src={`./assets/produk/${product.gambar}`}
+                      alt={product.nama}
+                    />
+                  </CardHeader>
+                  <CardBody className="text-center">
+                    <Typography
+                      variant="h4"
+                      className="font-teko text-sm lg:text-base xl:text-xl"
+                    >
+                      {product.nama}
+                    </Typography>
+                    <Typography variant="h5" className="-mt-1 font-teko">
+                      Rp{product.harga}
+                    </Typography>
+                  </CardBody>
+                </div>
+                <CardFooter className="flex justify-center -mt-10">
+                  {cartItem ? (
+                    cartItem.quantity > 0 ? (
+                      <div className="flex transition ease-in-out gap-1 lg:gap-2 bg-kuning scale-[0.7] lg:scale-75 -mt-3 lg:-mt-2 -mb-3 lg:px-3 px-2 lg:mx-6 py-3 rounded-lg">
                         <Button
-                          onClick={() => addToCart(product)}
-                          className="bg-kuning text-putih font-teko text-center"
+                          className="px-4"
+                          onClick={() => decreaseQuantity(product.id)}
                         >
-                          Tambah
+                          -
                         </Button>
-                      )
+                        <Chip
+                          value={cartItem.quantity}
+                          variant="ghost"
+                          size="lg"
+                          className="rounded-lg text-putih"
+                        />
+                        <Button
+                          className="px-4"
+                          onClick={() => increaseQuantity(product.id)}
+                        >
+                          +
+                        </Button>
+                      </div>
                     ) : (
                       <Button
                         onClick={() => addToCart(product)}
@@ -465,42 +452,49 @@ const Product = () => {
                       >
                         Tambah
                       </Button>
-                    )}
-                  </CardFooter>
-                </Card>
-              );
-            })}
+                    )
+                  ) : (
+                    <Button
+                      onClick={() => addToCart(product)}
+                      className="bg-kuning text-putih font-teko text-center"
+                    >
+                      Tambah
+                    </Button>
+                  )}
+                </CardFooter>
+              </Card>
+            );
+          })}
+        </div>
+        <div className="flex justify-between mt-6">
+          <Button
+            onClick={handlePrevPage}
+            disabled={currentPage === 1}
+            className="bg-red-700 text-putih font-bold"
+          >
+            Prev
+          </Button>
+          <div className="hidden lg:flex gap-2">
+            {Array.from({ length: totalPages }, (_, index) => (
+              <Button
+                key={index + 1}
+                onClick={() => setCurrentPage(index + 1)}
+                className={`${
+                  currentPage === index + 1 ? "bg-red-700" : "bg-gray-300"
+                } text-putih font-bold`}
+              >
+                {index + 1}
+              </Button>
+            ))}
           </div>
-          <div className="flex justify-between mt-6">
-            <Button
-              onClick={handlePrevPage}
-              disabled={currentPage === 1}
-              className="bg-red-700 text-putih font-bold"
-            >
-              Prev
-            </Button>
-            <div className="hidden lg:flex gap-2">
-              {Array.from({ length: totalPages }, (_, index) => (
-                <Button
-                  key={index + 1}
-                  onClick={() => setCurrentPage(index + 1)}
-                  className={`${
-                    currentPage === index + 1 ? "bg-red-700" : "bg-gray-300"
-                  } text-putih font-bold`}
-                >
-                  {index + 1}
-                </Button>
-              ))}
-            </div>
-            <Button
-              onClick={handleNextPage}
-              disabled={currentPage === totalPages}
-              className="bg-red-700 text-putih font-bold"
-            >
-              Next
-            </Button>
-          </div>
-        </>
+          <Button
+            onClick={handleNextPage}
+            disabled={currentPage === totalPages}
+            className="bg-red-700 text-putih font-bold"
+          >
+            Next
+          </Button>
+        </div>
       </section>
       <Footer />
       <Wa />

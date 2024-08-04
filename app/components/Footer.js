@@ -1,34 +1,35 @@
+"use client"
 import React from "react";
 
 const Footer = () => {
   return (
-    <footer class="mt-10 bg-kuning dark:bg-gray-900">
-      <div class="container p-6 mx-auto">
-        <div class="lg:flex gap-5">
-          <div class="w-full -mx-6 lg:w-2/5">
-            <div class="px-6">
+    <footer className="mt-10 bg-kuning dark:bg-gray-900">
+      <div className="container p-6 mx-auto">
+        <div className="lg:flex gap-5">
+          <div className="w-full -mx-6 lg:w-2/5">
+            <div className="px-6">
               <div className="flex gap-5">
                 <a href="/" className="bg-putih p-2 rounded-xl">
                   <img
-                    class="w-auto h-20"
+                    className="w-auto h-20"
                     src="https://raw.githubusercontent.com/Syafar44/assets/main/assets/image/LOGO%20GERAI%20PANGLIMA-02.png"
                     alt=""
                   />
                 </a>
                 <div className="bg-putih p-2 rounded-xl">
                   <img
-                    class="w-auto h-20"
+                    className="w-auto h-20"
                     src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Halal_Indonesia.svg"
                     alt=""
                   />
                 </div>
               </div>
 
-              <div class="flex mt-6 -mx-2">
+              <div className="flex mt-6 -mx-2">
                 <a
                   target="_blank"
                   href="https://www.instagram.com/jajanpanglima"
-                  class="mx-2 text-putih transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                  className="mx-2 text-putih transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                   aria-label="Reddit"
                 >
                   <svg
@@ -47,7 +48,7 @@ const Footer = () => {
                 <a
                   target="_blank"
                   href="https://www.youtube.com/channel/UCbl6mJTsu77ACwLFp6Nd8uw"
-                  class="mx-2 text-putih transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                  className="mx-2 text-putih transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                   aria-label="Facebook"
                 >
                   <svg
@@ -64,7 +65,7 @@ const Footer = () => {
                 <a
                   target="_blank"
                   href="https://www.facebook.com/jajanpanglima/"
-                  class="mx-2 text-putih transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                  className="mx-2 text-putih transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                   aria-label="Github"
                 >
                   <svg
@@ -81,7 +82,7 @@ const Footer = () => {
                 <a
                   target="_blank"
                   href="https://www.tiktok.com/@jajanpanglimasamarinda"
-                  class="mx-2 text-putih transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                  className="mx-2 text-putih transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                   aria-label="Github"
                 >
                   <svg
@@ -98,58 +99,58 @@ const Footer = () => {
             </div>
           </div>
 
-          <div class="mt-6 lg:mt-0 lg:flex-1">
-            <div class="grid grid-cols-1 gap-6  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="mt-6 lg:mt-0 lg:flex-1">
+            <div className="grid grid-cols-1 gap-6  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               <div>
-                <h3 class="text-gray-400 uppercase dark:text-white">About</h3>
+                <h3 className="text-gray-400 uppercase dark:text-white">About</h3>
                 <a
                   href="#"
-                  class="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
+                  className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
                 >
                   Home
                 </a>
                 <a
                   href="#"
-                  class="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
+                  className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
                 >
                   About
                 </a>
                 <a
                   href="#"
-                  class="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
+                  className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
                 >
                   Contact
                 </a>
               </div>
 
               <div>
-                <h3 class="text-gray-400 uppercase ">Products</h3>
+                <h3 className="text-gray-400 uppercase ">Products</h3>
                 <a
                   href="/Product/Gembung"
-                  class="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
+                  className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
                 >
                   Recomend
                 </a>
                 <a
                   href="/Product/Pizza"
-                  class="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
+                  className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
                 >
                   Best seller
                 </a>
                 <a
                   href="/Product/Donat"
-                  class="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
+                  className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
                 >
                   Hits
                 </a>
               </div>
 
               <div>
-                <h3 class="text-gray-400 uppercase dark:text-white">Contact</h3>
-                <span class="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline">
+                <h3 className="text-gray-400 uppercase dark:text-white">Contact</h3>
+                <span className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline">
                   +62 822 5085 1457
                 </span>
-                <span class="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline">
+                <span className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline">
                   panglima@panglima.com
                 </span>
               </div>
@@ -157,10 +158,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr class="h-px my-6 bg-putih border-none" />
+        <hr className="h-px my-6 bg-putih border-none" />
 
         <div>
-          <p class="text-center text-putih">
+          <p className="text-center text-putih">
             ©2024 Jajan Panglima. All Rights Reserved.
           </p>
         </div>

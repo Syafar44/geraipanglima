@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -7,28 +8,30 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <section className="hero mt-32 my-8 lg:my-10">
-        <header className="hero-content text-neutral-content text-center">
-          <figur className="flex items-center">
+      <section className="">
+        <header>
+          <figure className="flex items-center -mt-10">
             <img
-              className="w-60 lg:w-96"
-              src="https://raw.githubusercontent.com/Syafar44/assets/main/assets/image/LOGO%20GERAI%20PANGLIMA-02.png"
+              className="w-full"
+              src="https://raw.githubusercontent.com/Syafar44/assets/main/assets/image/bg-tentang-2.jpg"
             />
-          </figur>
+          </figure>
         </header>
       </section>
 
       <section>
-        <subsection className="hero bg-red-700">
+        <div className="hero bg-red-700">
           <div className="hero-content my-4 lg:my-20">
-            <div>
-              <h1 className="text-3xl lg:text-5xl font-bold text-center text-white">
-                Differentation
-              </h1>
-              <p className="text-xl lg:text-3xl text-gray-100 font-semibold text-center">
-                Gerai Panglima
-              </p>
-              <ul className="list-disc py-4 text-sm lg:text-xl text-gray-200 mx-5 ">
+            <div className="lg:flex gap-20 items-center">
+              <div data-aos="fade-right" data-aos-duration="1800" data-aos-easing="ease-in-out">
+                <h1 className="text-3xl lg:text-6xl font-bold text-center text-white">
+                  Differentation
+                </h1>
+                <p className="text-xl lg:text-3xl text-gray-100 font-semibold text-center">
+                  Gerai Panglima
+                </p>
+              </div>
+              <ul className="list-disc py-4 text-sm lg:text-2xl text-gray-200 mx-5 " data-aos="fade-left" data-aos-duration="1800" data-aos-easing="ease-in-out">
                 <li>Produk berkualitas wahid dengan pricing Value for Money</li>
                 <li>Rapid Experimentation new product</li>
                 <li>Strong Data Analytic to measure the Goals</li>
@@ -47,14 +50,14 @@ const About = () => {
               </ul>
             </div>
           </div>
-        </subsection>
+        </div>
       </section>
 
       <section>
         <div className="lg:hero my-4 lg:my-20">
-          <div className="hero-content flex-col lg:flex-row">
-            <img src="assets/img-gembung.png" className="lg:max-w-sm" />
-            <div>
+          <div className="hero-content flex-col lg:flex-row lg:gap-10 lg:items-center">
+            <img src="assets/img-gembung.png" className="w-3/4 lg:max-w-sm" data-aos="fade-right" data-aos-duration="1800" data-aos-easing="ease-in-out"/>
+            <div data-aos="fade-left" data-aos-duration="1800" data-aos-easing="ease-in-out">
               <h1 className="text-3xl lg:text-5xl font-bold">Marketing Mix</h1>
               <p className="text-xl lg:text-3xl font-semibold text-red-700">
                 Gerai Panglima
@@ -101,9 +104,9 @@ const About = () => {
       </section>
 
       <section>
-        <div className="hero bg-red-700 text-center -mb-20 lg:px-20">
-          <div className="hero-content my-4 lg:my-20">
-            <div>
+        <div className="hero bg-red-700 text-center -mb-10 lg:px-20" >
+          <div className="my-4 lg:my-20 px-10">
+            <div >
               <h1 className="text-3xl lg:text-5xl font-bold text-center text-white">
                 Position
               </h1>

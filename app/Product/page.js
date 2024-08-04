@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import {
   Card,
@@ -277,11 +277,8 @@ const Product = () => {
   const [cart, setCart] = useState([]);
   const [filter, setFilter] = useState("");
   const [search, setSearch] = useState("");
-
-  useEffect(() => {
-    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCart(savedCart);
-  }, []);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
 
   const addToCart = (product) => {
     const existingProductIndex = cart.findIndex((p) => p.id === product.id);
@@ -304,7 +301,7 @@ const Product = () => {
       .map((item) =>
         item.id === productId ? { ...item, quantity: item.quantity - 1 } : item
       )
-      .filter((item) => item.quantity > 0); // Remove item if quantity is 0
+      .filter((item) => item.quantity > 0);
     setCart(newCart);
     localStorage.setItem("cart", JSON.stringify(newCart));
   };
@@ -324,21 +321,62 @@ const Product = () => {
         product.nama.toLowerCase().includes(search.toLowerCase()))
   );
 
+  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentItems = filteredProducts.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handleFilterChange = (newFilter) => {
+    setFilter(newFilter);
+    setSearch("");
+    setCurrentPage(1);
+  };
+
+  const handleSearchChange = (e) => {
+    setSearch(e.target.value);
+    setFilter("");
+    setCurrentPage(1);
+  };
+
   return (
     <>
       <Navbar />
       <section className="mt-12 px-5 lg:px-20 xl:px-30 2xl:px-60">
         <div className="lg:flex justify-between ">
-          <h1 className="text-2xl lg:text-3xl xl:text-4xl font-bold">
+          <h1
+            className="text-2xl lg:text-3xl xl:text-4xl font-bold"
+            data-aos="fade-in"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+          >
             Product Gerai Panglima
           </h1>
-          <div className="flex gap-6 text-center">
+          <div
+            className="flex gap-6 text-center"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+          >
             <Input
               className="relative m-0 -mr-0.5 block min-w-0 flex-auto rounded-md bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3]"
               type="text"
               label="Search"
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={handleSearchChange}
             />
             <Menu>
               <MenuHandler>
@@ -347,63 +385,79 @@ const Product = () => {
                 </button>
               </MenuHandler>
               <MenuList>
-                <MenuItem onClick={() => setFilter("oleh-oleh")}>
+                <MenuItem onClick={() => handleFilterChange("oleh-oleh")}>
                   Oleh-oleh
                 </MenuItem>
-                <MenuItem onClick={() => setFilter("bakery")}>Bakery</MenuItem>
-                <MenuItem onClick={() => setFilter("resto")}>Resto</MenuItem>
-                <MenuItem onClick={() => setFilter("")}>Semua</MenuItem>
+                <MenuItem onClick={() => handleFilterChange("bakery")}>
+                  Bakery
+                </MenuItem>
+                <MenuItem onClick={() => handleFilterChange("resto")}>
+                  Resto
+                </MenuItem>
+                <MenuItem onClick={() => handleFilterChange("")}>
+                  Semua
+                </MenuItem>
               </MenuList>
             </Menu>
           </div>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 mt-6 gap-5">
-          {filteredProducts.map((product) => {
-            const cartItem = cart.find((item) => item.id === product.id);
-            return (
-              <Card key={product.id} className="flex justify-between">
-                <div>
-                  <CardHeader floated={false}>
-                    <img
-                      src={`./assets/produk/${product.gambar}`}
-                      alt={product.nama}
-                    />
-                  </CardHeader>
-                  <CardBody className="text-center">
-                    <Typography
-                      variant="h4"
-                      className="font-teko text-sm lg:text-base xl:text-xl"
-                    >
-                      {product.nama}
-                    </Typography>
-                    <Typography variant="h5" className="-mt-1 font-teko">
-                      Rp{product.harga}
-                    </Typography>
-                  </CardBody>
-                </div>
-                <CardFooter className="flex justify-center -mt-10">
-                  {cartItem ? (
-                    cartItem.quantity > 0 ? (
-                      <div className="flex transition ease-in-out gap-1 lg:gap-2 bg-kuning scale-[0.7] lg:scale-75 -mt-3 lg:-mt-2 -mb-3  lg:px-3 px-2 lg:mx-6 py-3 rounded-lg">
+
+        <>
+          <div className="grid grid-cols-2 lg:grid-cols-5 2xl:grid-cols-5 mt-6 gap-5 min-h-[calc(2*190px)] xl:min-h-[calc(2*230px)] 2xl:min-h-[calc(2*280px)]">
+            {currentItems.map((product) => {
+              const cartItem = cart.find((item) => item.id === product.id);
+              return (
+                <Card key={product.id} className="flex justify-between">
+                  <div>
+                    <CardHeader floated={false}>
+                      <img
+                        src={`./assets/produk/${product.gambar}`}
+                        alt={product.nama}
+                      />
+                    </CardHeader>
+                    <CardBody className="text-center">
+                      <Typography
+                        variant="h4"
+                        className="font-teko text-sm lg:text-base xl:text-xl"
+                      >
+                        {product.nama}
+                      </Typography>
+                      <Typography variant="h5" className="-mt-1 font-teko">
+                        Rp{product.harga}
+                      </Typography>
+                    </CardBody>
+                  </div>
+                  <CardFooter className="flex justify-center -mt-10">
+                    {cartItem ? (
+                      cartItem.quantity > 0 ? (
+                        <div className="flex transition ease-in-out gap-1 lg:gap-2 bg-kuning scale-[0.7] lg:scale-75 -mt-3 lg:-mt-2 -mb-3  lg:px-3 px-2 lg:mx-6 py-3 rounded-lg">
+                          <Button
+                            className="px-4"
+                            onClick={() => decreaseQuantity(product.id)}
+                          >
+                            -
+                          </Button>
+                          <Chip
+                            value={cartItem.quantity}
+                            variant="ghost"
+                            size="lg"
+                            className="rounded-lg text-putih"
+                          />
+                          <Button
+                            className="px-4"
+                            onClick={() => increaseQuantity(product.id)}
+                          >
+                            +
+                          </Button>
+                        </div>
+                      ) : (
                         <Button
-                          className="px-4"
-                          onClick={() => decreaseQuantity(product.id)}
+                          onClick={() => addToCart(product)}
+                          className="bg-kuning text-putih font-teko text-center"
                         >
-                          -
+                          Tambah
                         </Button>
-                        <Chip
-                          value={cartItem.quantity}
-                          variant="ghost"
-                          size="lg"
-                          className="rounded-lg text-putih"
-                        />
-                        <Button
-                          className="px-4"
-                          onClick={() => increaseQuantity(product.id)}
-                        >
-                          +
-                        </Button>
-                      </div>
+                      )
                     ) : (
                       <Button
                         onClick={() => addToCart(product)}
@@ -411,20 +465,42 @@ const Product = () => {
                       >
                         Tambah
                       </Button>
-                    )
-                  ) : (
-                    <Button
-                      onClick={() => addToCart(product)}
-                      className="bg-kuning text-putih font-teko text-center"
-                    >
-                      Tambah
-                    </Button>
-                  )}
-                </CardFooter>
-              </Card>
-            );
-          })}
-        </div>
+                    )}
+                  </CardFooter>
+                </Card>
+              );
+            })}
+          </div>
+          <div className="flex justify-between mt-6">
+            <Button
+              onClick={handlePrevPage}
+              disabled={currentPage === 1}
+              className="bg-red-700 text-putih font-bold"
+            >
+              Prev
+            </Button>
+            <div className="hidden lg:flex gap-2">
+              {Array.from({ length: totalPages }, (_, index) => (
+                <Button
+                  key={index + 1}
+                  onClick={() => setCurrentPage(index + 1)}
+                  className={`${
+                    currentPage === index + 1 ? "bg-red-700" : "bg-gray-300"
+                  } text-putih font-bold`}
+                >
+                  {index + 1}
+                </Button>
+              ))}
+            </div>
+            <Button
+              onClick={handleNextPage}
+              disabled={currentPage === totalPages}
+              className="bg-red-700 text-putih font-bold"
+            >
+              Next
+            </Button>
+          </div>
+        </>
       </section>
       <Footer />
       <Wa />

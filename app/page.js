@@ -1,12 +1,19 @@
-import dynamic from 'next/dynamic';
+"use client";
 import Footer from "./components/Footer";
 import Gerai from "./components/Gerai";
 import Navbar from "./components/Navbar";
+import Wa from "./components/Wa";
+import { useEffect } from "react";
 
-// Memuat komponen `Wa` secara dinamis tanpa rendering di server
-const Wa = dynamic(() => import('./components/Wa'), { ssr: false });
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -16,3 +23,9 @@ export default function Home() {
     </>
   );
 }
+
+
+
+
+
+

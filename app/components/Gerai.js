@@ -86,7 +86,8 @@ const Gerai = () => {
                   <figure>
                     <img
                       className="h-56 scale-150"
-                      src="assets/produk/ROTI-DURIAN-ORIGINAL.jpg"
+                      src="assets/produk/roti durian ori.jpg"
+
                       alt="Roti Durian Panglima"
                     />
                   </figure>
@@ -113,7 +114,7 @@ const Gerai = () => {
                   <figure>
                     <img
                       className="h-56 scale-150"
-                      src="assets/produk/ROTI-DURIAN-KEJU.jpg"
+                      src="assets/produk/roti durian keju.jpg"
                       alt="Roti Durian Panglima"
                     />
                   </figure>
@@ -140,13 +141,13 @@ const Gerai = () => {
                   <figure>
                     <img
                       className="h-56 scale-150"
-                      src="assets/produk/PIE-SUSU-COKLAT.jpg"
+                      src="assets/produk/bolen mix.jpg"
                       alt="Roti Durian Panglima"
                     />
                   </figure>
                   <div className="">
                     <h2 className="font-bold p-2 pt-2 text-sm lg:text-base">
-                      PIE SUSU COKLAT
+                      BOLEN MIX
                     </h2>
                     <div className="card-actions justify-center my-2">
                       <Link
@@ -167,7 +168,7 @@ const Gerai = () => {
                   <figure>
                     <img
                       className="h-56 scale-150"
-                      src="assets/produk/BROWNIES-ALMOND.jpg"
+                      src="assets/produk/brownies almond.jpg"
                       alt="Roti Durian Panglima"
                     />
                   </figure>
@@ -194,7 +195,7 @@ const Gerai = () => {
                   <figure>
                     <img
                       className="h-56 scale-150"
-                      src="assets/produk/BOLU-GULUNG-COKLAT.jpg"
+                      src="assets/produk/BOLU GULUNG COKLAT.jpg"
                       alt="Roti Durian Panglima"
                     />
                   </figure>

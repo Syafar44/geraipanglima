@@ -3,12 +3,83 @@ import React from "react";
 import Link from "next/link";
 import { Carousel } from "@material-tailwind/react";
 
+const gerai = [
+  {
+    id: 1001,
+    produk: "ROTI DURIAN ORIGINAL",
+    image: "assets/produk/roti durian ori.jpg",
+    duration: 1500,
+  },
+  {
+    id: 1002,
+    produk: "ROTI DURIAN KEJU",
+    image: "assets/produk/roti durian keju.jpg",
+    duration: 1400,
+  },
+  {
+    id: 1003,
+    produk: "BOLU GULUNG COKLAT",
+    image: "assets/produk/BOLU GULUNG COKLAT.jpg",
+    duration: 1300,
+  },
+  {
+    id: 1004,
+    produk: "KUKU MACAN",
+    image: "assets/produk/KUKU MACAN 150 Gr.jpg",
+    duration: 1200,
+  },
+  {
+    id: 1005,
+    produk: "KEMINTING DURIAN",
+    image: "assets/produk/keminting durian.jpg",
+    duration: 1100,
+  },
+];
+
+const resto = [
+  {
+    id: 2001,
+    produk: "MIE AYAM KALASAN",
+    image:
+      "assets/produk/Foto & Nama Makanan Gerai Panglima (MIE AYAM KALASAN).jpg",
+    duration: 1500,
+  },
+  {
+    id: 2001,
+    produk: "MIE AYAM KALASAN",
+    image:
+      "assets/produk/Foto & Nama Makanan Gerai Panglima (MIE AYAM KALASAN).jpg",
+    duration: 1400,
+  },
+  {
+    id: 2001,
+    produk: "MIE AYAM KALASAN",
+    image:
+      "assets/produk/Foto & Nama Makanan Gerai Panglima (MIE AYAM KALASAN).jpg",
+    duration: 1300,
+  },
+  {
+    id: 2001,
+    produk: "MIE AYAM KALASAN",
+    image:
+      "assets/produk/Foto & Nama Makanan Gerai Panglima (MIE AYAM KALASAN).jpg",
+    duration: 1200,
+  },
+  {
+    id: 2001,
+    produk: "MIE AYAM KALASAN",
+    image:
+      "assets/produk/Foto & Nama Makanan Gerai Panglima (MIE AYAM KALASAN).jpg",
+    duration: 1100,
+  },
+];
+
 const Gerai = () => {
   return (
     <>
       {/* Carausel layar Lebar */}
       <section
-        className="container mx-auto py-16 -mt-6 hidden lg:block lg:px-20 lg:h-[580px] xl:h-[700px] 2xl:h-[800px]"
+        className="container mx-auto py-16 -mt-6 hidden lg:block lg:h-[580px] xl:h-[700px] 2xl:h-[800px] z-10"
         data-aos="fade-down"
         data-aos-duration="1800"
         data-aos-easing="ease-in-out"
@@ -61,311 +132,93 @@ const Gerai = () => {
         <div className="hero min-h-screen">
           <div className="text-center ">
             {/* Oleh-oleh Gerai Panglima */}
-            <div>
-              <figure
-                className="my-12"
+            <div className="pt-20">
+            <h1
                 data-aos="fade-down"
                 data-aos-duration="1500"
                 data-aos-easing="ease-in-out"
+                className="py-10 font-bold text-xl lg:text-5xl"
               >
-                <figcaption className="font-bold text-xl lg:text-5xl">
-                  Produk OLeh-Oleh
-                </figcaption>
-                <img
-                  className="w-60 lg:w-80 mx-auto -mb-7"
-                  src="assets/logo/LOGO-GERAI-PANGLIMA-02.jpg"
-                />
-              </figure>
+                PRODUK BEST SELLER OLEH-OLEH
+              </h1>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5">
-                <div
-                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
-                  data-aos="fade-right"
-                  data-aos-duration="1500"
-                  data-aos-easing="ease-in-out"
-                >
-                  <figure>
-                    <img
-                      className="h-56 scale-150"
-                      src="assets/produk/roti durian ori.jpg"
-
-                      alt="Roti Durian Panglima"
-                    />
-                  </figure>
-                  <div>
-                    <h2 className="font-bold p-2 pt-2 text-sm lg:text-base">
-                      ROTI DURIAN ORIGINAL
-                    </h2>
-                    <div className="card-actions justify-center my-2">
-                      <Link
-                        href="/Product"
-                        className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-2 xl:px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-                      >
-                        Lihat Produk
-                      </Link>
+                {gerai.map((item) => {
+                  return (
+                    <div
+                      key={item.id}
+                      className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
+                      data-aos="fade-right"
+                      data-aos-duration={item.duration}
+                      data-aos-easing="ease-in-out"
+                    >
+                      <figure>
+                        <img
+                          className="h-56 scale-150"
+                          src={item.image}
+                          alt={item.produk}
+                        />
+                      </figure>
+                      <div>
+                        <h2 className="font-bold p-2 pt-2 text-sm lg:text-base">
+                          {item.produk}
+                        </h2>
+                        <div className="card-actions justify-center my-2">
+                          <Link
+                            href="/Product"
+                            className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-2 xl:px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+                          >
+                            Lihat Produk
+                          </Link>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div
-                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
-                  data-aos="fade-right"
-                  data-aos-duration="1400"
-                  data-aos-easing="ease-in-out"
-                >
-                  <figure>
-                    <img
-                      className="h-56 scale-150"
-                      src="assets/produk/roti durian keju.jpg"
-                      alt="Roti Durian Panglima"
-                    />
-                  </figure>
-                  <div className="">
-                    <h2 className="font-bold p-2 pt-2 text-sm lg:text-base">
-                      ROTI DURIAN KEJU
-                    </h2>
-                    <div className="card-actions justify-center my-2">
-                      <Link
-                        href="/Product"
-                        className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-2 xl:px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-                      >
-                        Lihat Produk
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
-                  data-aos="fade-right"
-                  data-aos-duration="1300"
-                  data-aos-easing="ease-in-out"
-                >
-                  <figure>
-                    <img
-                      className="h-56 scale-150"
-                      src="assets/produk/bolen mix.jpg"
-                      alt="Roti Durian Panglima"
-                    />
-                  </figure>
-                  <div className="">
-                    <h2 className="font-bold p-2 pt-2 text-sm lg:text-base">
-                      BOLEN MIX
-                    </h2>
-                    <div className="card-actions justify-center my-2">
-                      <Link
-                        href="/Product"
-                        className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-2 xl:px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-                      >
-                        Lihat Produk
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
-                  data-aos="fade-right"
-                  data-aos-duration="1200"
-                  data-aos-easing="ease-in-out"
-                >
-                  <figure>
-                    <img
-                      className="h-56 scale-150"
-                      src="assets/produk/brownies almond.jpg"
-                      alt="Roti Durian Panglima"
-                    />
-                  </figure>
-                  <div className="">
-                    <h2 className="font-bold p-2 pt-2 text-sm lg:text-base">
-                      BROWNIES ALMOND
-                    </h2>
-                    <div className="card-actions justify-center my-2">
-                      <Link
-                        href="/Product"
-                        className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-2 xl:px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-                      >
-                        Lihat Produk
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
-                  data-aos="fade-right"
-                  data-aos-duration="1000"
-                  data-aos-easing="ease-in-out"
-                >
-                  <figure>
-                    <img
-                      className="h-56 scale-150"
-                      src="assets/produk/BOLU GULUNG COKLAT.jpg"
-                      alt="Roti Durian Panglima"
-                    />
-                  </figure>
-                  <div className="">
-                    <h2 className="font-bold p-2 pt-2 text-sm lg:text-base">
-                      BOLU GULUNG COKLAT
-                    </h2>
-                    <div className="card-actions justify-center my-2">
-                      <Link
-                        href="/Product"
-                        className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-2 xl:px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-                      >
-                        Lihat Produk
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
             </div>
             {/* Resto Panglima */}
-            <div className="mt-12">
-              <figure
+            <div className="py-5">
+              <h1
                 data-aos="fade-down"
                 data-aos-duration="1500"
                 data-aos-easing="ease-in-out"
+                className="py-10 font-bold text-xl lg:text-5xl"
               >
-                <figcaption className="font-bold text-xl lg:text-5xl">
-                  Produk Resto
-                </figcaption>
-                <img
-                  className="w-60 lg:w-80 mx-auto mb-8"
-                  src="assets/logo/LOGO-GERAI-PANGLIMA-02.jpg"
-                />
-              </figure>
+                PRODUK BEST SELLER RESTO
+              </h1>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5">
-                <div
-                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
-                  data-aos="fade-right"
-                  data-aos-duration="1500"
-                  data-aos-easing="ease-in-out"
-                >
-                  <figure>
-                    <img
-                      className="h-56 scale-150"
-                      src="assets\produk\Nas-Campur-Ayam-cabe-Hijau.jpg"
-                      alt="Roti Durian Panglima"
-                    />
-                  </figure>
-                  <div className="">
-                    <h2 className="font-bold p-2 pt-2 text-sm lg:text-base">
-                      Nasi Campur Ayam Cabe Hijau
-                    </h2>
-                    <div className="card-actions justify-center my-2">
-                      <Link
-                        href="/Product"
-                        className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-2 xl:px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-                      >
-                        Lihat Produk
-                      </Link>
+                {resto.map((item) => {
+                  return (
+                    <div
+                      key={item.id}
+                      className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
+                      data-aos="fade-right"
+                      data-aos-duration={item.duration}
+                      data-aos-easing="ease-in-out"
+                    >
+                      <figure>
+                        <img
+                          className="h-56 scale-150"
+                          src={item.image}
+                          alt={item.produk}
+                        />
+                      </figure>
+                      <div className="">
+                        <h2 className="font-bold p-2 pt-2 text-sm lg:text-base">
+                          {item.produk}
+                        </h2>
+                        <div className="card-actions justify-center my-2">
+                          <Link
+                            href="/Product"
+                            className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-2 xl:px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+                          >
+                            Lihat Produk
+                          </Link>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div
-                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
-                  data-aos="fade-right"
-                  data-aos-duration="1400"
-                  data-aos-easing="ease-in-out"
-                >
-                  <figure>
-                    <img
-                      className="h-56 scale-150"
-                      src="assets\produk\Nas-Campur-Ayam-cabe-Hijau.jpg"
-                      alt="Roti Durian Panglima"
-                    />
-                  </figure>
-                  <div className="">
-                    <h2 className="font-bold p-2 pt-2 text-sm lg:text-base">
-                      Nasi Campur Ayam Cabe Hijau
-                    </h2>
-                    <div className="card-actions justify-center my-2">
-                      <Link
-                        href="/Product"
-                        className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-2 xl:px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-                      >
-                        Lihat Produk
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
-                  data-aos="fade-right"
-                  data-aos-duration="1300"
-                  data-aos-easing="ease-in-out"
-                >
-                  <figure>
-                    <img
-                      className="h-56 scale-150"
-                      src="assets\produk\Nas-Campur-Ayam-cabe-Hijau.jpg"
-                      alt="Roti Durian Panglima"
-                    />
-                  </figure>
-                  <div className="">
-                    <h2 className="font-bold p-2 pt-2 text-sm lg:text-base">
-                      Nasi Campur Ayam Cabe Hijau
-                    </h2>
-                    <div className="card-actions justify-center my-2">
-                      <Link
-                        href="/Product"
-                        className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-2 xl:px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-                      >
-                        Lihat Produk
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
-                  data-aos="fade-right"
-                  data-aos-duration="1200"
-                  data-aos-easing="ease-in-out"
-                >
-                  <figure>
-                    <img
-                      className="h-56 scale-150"
-                      src="assets\produk\Nas-Campur-Ayam-cabe-Hijau.jpg"
-                      alt="Roti Durian Panglima"
-                    />
-                  </figure>
-                  <div className="">
-                    <h2 className="font-bold p-2 pt-2 text-sm lg:text-base">
-                      Nasi Campur Ayam Cabe Hijau
-                    </h2>
-                    <div className="card-actions justify-center my-2">
-                      <Link
-                        href="/Product"
-                        className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-2 xl:px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-                      >
-                        Lihat Produk
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
-                  data-aos="fade-right"
-                  data-aos-duration="1000"
-                  data-aos-easing="ease-in-out"
-                >
-                  <figure>
-                    <img
-                      className="h-56 scale-150"
-                      src="assets\produk\Nas-Campur-Ayam-cabe-Hijau.jpg"
-                      alt="Roti Durian Panglima"
-                    />
-                  </figure>
-                  <div className="">
-                    <h2 className="font-bold p-2 pt-2 text-sm lg:text-base">
-                      Nasi Campur Ayam Cabe Hijau
-                    </h2>
-                    <div className="card-actions justify-center my-2">
-                      <Link
-                        href="/Product"
-                        className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-2 xl:px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-                      >
-                        Lihat Produk
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
             </div>
           </div>

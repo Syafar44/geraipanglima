@@ -6,7 +6,7 @@ import Wa from "../components/Wa";
 
 const About = () => {
   return (
-    <>
+    <div className="overflow-y-hidden">
       <Navbar />
       <section>
         <header>
@@ -107,7 +107,7 @@ const About = () => {
                   </p>
                 </li>
                 <li className="py-2">
-                  <h4 className="font-bold text-xl">Promotion</h4>
+                  <h4 className="font-bold text-xl">Promotion</h4> 
                   <ul className="list-disc ml-8">
                     <li>Sales promotion untuk umum & khusus member</li>
                     <li>Social media Facebook & Instagram</li>
@@ -131,11 +131,11 @@ const About = () => {
                 Position
               </h1>
               <p className="text-xl lg:text-3xl text-gray-100 font-semibold text-center">
-                Jajan Panglima
+                Gerai Panglima
               </p>
               <p className="py-4 text-sm lg:text-xl text-gray-200">
                 Untuk Middle Class Urban berusia 20-45 tahun yang sudah tinggal
-                di Kaltim ≻ 3 tahun, Jajan Panglima adalah Outlet Roti Gembung
+                di Kaltim &gt; 3 tahun, Jajan Panglima adalah Outlet Roti Gembung
                 Zaman Now yang menghadirkan produk berkualitas & Rapid
                 Experimentation New Product dengan strategi pricing Value for
                 Money
@@ -147,7 +147,7 @@ const About = () => {
 
       <Footer />
       <Wa />
-    </>
+    </div>
   );
 };
 

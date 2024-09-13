@@ -6,8 +6,7 @@ import Wa from "./components/Wa";
 import { useEffect } from "react";
 
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
 
 export default function Home() {
   useEffect(() => {

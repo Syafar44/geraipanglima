@@ -21,13 +21,17 @@ const Contact = () => {
       document.getElementById("my_modal").showModal();
     };
 
+    const openModalError = () => {
+      document.getElementById("my_moda2").showModal();
+    };
+
     if (userName && userEmail && message) {
       emailjs
         .sendForm(
-          "service_idf5xe9",
-          "template_f18yjva",
+          "service_1fuvlhb",
+          "template_hjg15rb",
           form.current,
-          "s-gUBrpAU8bY-veel"
+          "B8oVCTWwUh-g2gZ3Y"
         )
         .then(
           (result) => {
@@ -39,24 +43,34 @@ const Contact = () => {
           }
         );
     } else {
-      alert("harap isi semua data terlebih dahulu");
+      openModalError()
     }
   };
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Navbar />
       <section className="hero h-52 lg:h-72">
         <div className="hero-overlay bg-white"></div>
         <div className="hero-content text-neutral-content text-center">
           <div>
-            <h1 className="text-3xl lg:text-5xl font-bold text-red-700" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <h1
+              className="text-3xl lg:text-5xl font-bold text-red-700"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+            >
               Kontak Kami
             </h1>
-            <p className="lg:text-xl font-bold text-black" data-aos="fade-right" data-aos-duration="1100" data-aos-easing="ease-in-out">
+            <p
+              className="lg:text-xl font-bold text-black"
+              data-aos="fade-right"
+              data-aos-duration="1100"
+              data-aos-easing="ease-in-out"
+            >
               <span className="text-red-600">
                 Kami Selalu Sedia Melayani anda!.
-              </span>{" "}
+              </span>
               Silahkan kirimkan pertanyaan, masukkan atau pesan lainnya kepada
               kami.
             </p>
@@ -67,21 +81,41 @@ const Contact = () => {
       <section>
         <div className="px-5 lg:px-44 xl:mx-80 text-center mb-5 lg:mb-20">
           <div className="text-sm lg:text-base">
-            <h1 className="text-2xl lg:text-5xl font-bold text-center" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
+            <h1
+              className="text-2xl lg:text-5xl font-bold text-center"
+              data-aos="fade-right"
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out"
+            >
               Panglima Roqiiqu Group
             </h1>
-            <p className="py-2 text-gray-600 font-semibold" data-aos="fade-right" data-aos-duration="1300" data-aos-easing="ease-in-out">
+            <p
+              className="py-2 text-gray-600 font-semibold"
+              data-aos="fade-right"
+              data-aos-duration="1300"
+              data-aos-easing="ease-in-out"
+            >
               Panglima Roti Jl. Ir. H. Juanda No.55a, Sidodadi, Kec. Samarinda
               Ulu, Kota Samarinda, Kalimantan Timur 75124
             </p>
-            <p className="pb-2 lg:py-3 text-gray-600 font-bold" data-aos="fade-right" data-aos-duration="1400" data-aos-easing="ease-in-out">
+            <p
+              className="pb-2 lg:py-3 text-gray-600 font-bold"
+              data-aos="fade-right"
+              data-aos-duration="1400"
+              data-aos-easing="ease-in-out"
+            >
               Senin - Sabtu Pukul 08.00 - 17.00 WIB (Kecuali Hari Libur
               Nasional)
             </p>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-5 text-sm xl:text-xl font-bold" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-out">
+            <div
+              className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-5 text-sm xl:text-xl font-bold"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+              data-aos-easing="ease-in-out"
+            >
               <div>
                 <h3 className="lg:pb-3">Layanan Pelanggan :</h3>
-                <p>0822-9999-9999</p>
+                <p>08 222 000 2237</p>
               </div>
               <div>
                 <h3 className="lg:pb-3 ">Email :</h3>
@@ -94,12 +128,22 @@ const Contact = () => {
 
       <section className="mx-5 lg:mx-44 2xl:mx-80 border shadow-xl rounded-lg p-10">
         <div>
-          <h1 className="text-xl pb-2 font-bold" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-in-out">
+          <h1
+            className="text-xl pb-2 font-bold"
+            data-aos="fade-in"
+            data-aos-duration="2000"
+            data-aos-easing="ease-in-out"
+          >
             Alamat <span className="text-red-500">Gerai Panglima</span>
           </h1>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="card bg-base-100 image-full w-auto h-[17rem] -mx-5 lg:-mx-0 shadow-xl hover:scale-105 transition ease-in-out" data-aos="fade-up-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
+          <div
+            className="card bg-base-100 image-full w-auto h-[17rem] -mx-5 lg:-mx-0 shadow-xl hover:scale-105 transition ease-in-out"
+            data-aos="fade-up-left"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <figure>
               <img
                 className="scale-125 xl:scale-[2]"
@@ -121,7 +165,12 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="card bg-base-100 image-full w-auto h-[17rem] -mx-5 lg:-mx-0 shadow-xl hover:scale-105 transition ease-in-out" data-aos="fade-up-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+          <div
+            className="card bg-base-100 image-full w-auto h-[17rem] -mx-5 lg:-mx-0 shadow-xl hover:scale-105 transition ease-in-out"
+            data-aos="fade-up-right"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <figure>
               <img
                 className="scale-125 xl:scale-[2]"
@@ -151,7 +200,11 @@ const Contact = () => {
 
       <section className="py-6 lg:py-10 px-5 lg:px-40 ">
         <div className="flex gap-20 justify-center flex-col lg:flex-row">
-          <div data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-out">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+          >
             <h1 className="text-3xl lg:text-5xl font-bold text-red-700">
               Social Media
             </h1>
@@ -299,7 +352,12 @@ const Contact = () => {
               </li>
             </ul>
           </div>
-          <div className="flex items-center" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-in-out">
+          <div
+            className="flex items-center"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+          >
             <img
               src="assets/logo/LOGO-GERAI-PANGLIMA-02.jpg"
               className="w-[40rem] items-center"
@@ -310,14 +368,24 @@ const Contact = () => {
 
       <section className="flex xl:mt-20 lg:mb-32">
         <div className="flex flex-col lg:justify-center px-6 lg:px-20 py-4 mx-auto space-y-6 lg:h-[32rem] xl:py-16 lg:flex-row lg:items-center z-20 bg-white w-full">
-          <div className="flex items-center justify-end w-full h-96 lg:w-1/2" data-aos="fade-up-right" data-aos-duration="1500" data-aos-easing="ease-in-out">
+          <div
+            className="flex items-center justify-end w-full h-96 lg:w-1/2"
+            data-aos="fade-up-right"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+          >
             <img
               className=" w-full max-w-xl rounded-md"
               src="pesan.png"
               alt="message foto"
             />
           </div>
-          <div className="mt-8 lg:w-2/3 lg:mx-6" data-aos="fade-up-left" data-aos-duration="1500" data-aos-easing="ease-in-out">
+          <div
+            className="mt-8 lg:w-2/3 lg:mx-6"
+            data-aos="fade-up-left"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+          >
             <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-900 lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
               <form ref={form} onSubmit={sendEmail} className="mt-6">
                 <div className="flex-1">
@@ -372,7 +440,7 @@ const Contact = () => {
 
       <dialog id="my_modal" className="modal">
         <div className="modal-box">
-          <h3 className="font-bold text-xl text-kuning bg-hitam rounded-xl text-center py-2">
+          <h3 className="font-bold text-xl text-kuning border-4 border-red-700 rounded-xl text-center py-2">
             Hay Sobat Gerai Panglima
           </h3>
           <div className="py-4 font-semibold text-xl">
@@ -387,7 +455,21 @@ const Contact = () => {
           </div>
           <div className="modal-action">
             <form method="dialog">
-              <button className="btn bg-black text-kuning rounded-xl">
+              <button className="btn border-red-700 border-2 text-kuning rounded-xl">
+                Tutup
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      <dialog id="my_moda2" className="modal">
+        <div className="modal-box">
+          <h3 className="font-bold text-xl text-kuning text-center py-2">
+            Harap Lengkapi Forum Terlebih Dahulu!
+          </h3>
+          <div className="modal-action flex justify-center">
+            <form method="dialog">
+              <button className="btn  text-kuning rounded-xl">
                 Tutup
               </button>
             </form>
@@ -396,7 +478,7 @@ const Contact = () => {
       </dialog>
       <Footer />
       <Wa />
-    </>
+    </div>
   );
 };
 

@@ -6,9 +6,9 @@ import Wa from "../components/Wa";
 
 const About = () => {
   return (
-    <div className="overflow-y-hidden">
+    <>
       <Navbar />
-      <section>
+      <section className="overflow-x-hidden">
         <header>
           <figure className="flex items-center -mt-10">
             <img
@@ -147,7 +147,7 @@ const About = () => {
 
       <Footer />
       <Wa />
-    </div>
+    </>
   );
 };
 

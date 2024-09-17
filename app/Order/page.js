@@ -132,10 +132,10 @@ const Order = () => {
     (metod !== "Ambil di tempat" || pickupTime); // Menambahkan pengecekan untuk jam pengambilan
 
   return (
-    <div className="overflow-x-hidden">
+    <>
       <Navbar />
-      <Card className="lg:mx-20 xl:mx-52 2xl:mx-96">
-        <div className="p-5 lg:py-10 mb-2 bg-red-600 flex justify-between text-putih font-bold lg:px-7">
+      <Card className="lg:mx-20 xl:mx-52 2xl:mx-96 overflow-x-hidden mt-4" >
+        <div className="p-5 lg:py-10 mb-2 bg-kuning flex justify-between text-putih font-bold lg:px-7">
           <h1 className="text-sm lg:text-base">Produk</h1>
           <div className="flex gap-2 text-sm lg:text-base lg:gap-12">
             <h1>Harga Satuan</h1>
@@ -304,7 +304,7 @@ const Order = () => {
       </Card>
       <Wa />
       <Footer />
-    </div>
+    </>
   );
 };
 

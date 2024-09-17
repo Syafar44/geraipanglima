@@ -48,9 +48,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="overflow-x-hidden">
+    <>
       <Navbar />
-      <section className="hero h-52 lg:h-72">
+      <section className="hero h-52 lg:h-72 overflow-x-hidden">
         <div className="hero-overlay bg-white"></div>
         <div className="hero-content text-neutral-content text-center">
           <div>
@@ -478,7 +478,7 @@ const Contact = () => {
       </dialog>
       <Footer />
       <Wa />
-    </div>
+    </>
   );
 };
 

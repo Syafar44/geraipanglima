@@ -220,15 +220,21 @@ const Navbar = () => {
             </Link>
             <Link
               className="px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
+              href="/Gallery"
+            >
+              GALLERY
+            </Link>
+            <Link
+              className="px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
               href="/Contact"
             >
               CONTACT
             </Link>
           </div>
-          <div className="bg-white scale-[2.5] translate-y-7 border-2 p-2 border-kuning rounded-lg">
+          <div className="bg-white scale-[2.5] translate-y-7 border-2 p-2 border-kuning rounded-lg w-24">
             <Link href="/">
               <img
-                className="w-20 "
+                className="w-full"
                 src="https://raw.githubusercontent.com/Syafar44/assets/main/assets/image/LOGO%20GERAI%20PANGLIMA-02.png"
               />
             </Link>
@@ -244,7 +250,7 @@ const Navbar = () => {
               <Badge className="right-0" content={totalItems}>
                 <Link
                   href="/Order"
-                  className="px-6 py-2 bg-hitam rounded-lg flex items-center text-putih hover:shadow-[inset_2px_2px_4px_rgba(255,_255,_255,_1),inset_-2px_-2px_5px_rgba(255,_255,_255,_0.3)] transition duration-300 ease-linear "
+                  className="px-6 py-2 bg-white rounded-lg flex items-center text-red-700 hover:shadow-[inset_2px_2px_4px_rgba(255,_255,_255,_1),inset_-2px_-2px_5px_rgba(255,_255,_255,_0.3)] transition duration-300 ease-linear "
                 >
                   Order
                 </Link>
@@ -258,6 +264,12 @@ const Navbar = () => {
               </Link>
             )}
             <NavListMenu />
+            <Link
+              className="px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
+              href="/Karir"
+            >
+              KARIR
+            </Link>
           </div>
         </div>
       </nav>

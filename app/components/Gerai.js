@@ -7,31 +7,31 @@ const gerai = [
   {
     id: 1001,
     produk: "ROTI DURIAN ORIGINAL",
-    image: "assets/produk/roti durian ori.jpg",
+    image: "roti durian ori.jpg",
     duration: 1500,
   },
   {
     id: 1002,
     produk: "ROTI DURIAN KEJU",
-    image: "assets/produk/roti durian keju.jpg",
+    image: "roti durian keju.jpg",
     duration: 1400,
   },
   {
     id: 1003,
     produk: "BOLU GULUNG COKLAT",
-    image: "assets/produk/BOLU GULUNG COKLAT.jpg",
+    image: "BOLU GULUNG COKLAT.jpg",
     duration: 1300,
   },
   {
     id: 1004,
     produk: "KUKU MACAN",
-    image: "assets/produk/KUKU MACAN 150 Gr.jpg",
+    image: "KUKU MACAN 150 Gr.jpg",
     duration: 1200,
   },
   {
     id: 1005,
     produk: "KEMINTING DURIAN",
-    image: "assets/produk/keminting durian.jpg",
+    image: "keminting durian.jpg",
     duration: 1100,
   },
 ];
@@ -39,37 +39,32 @@ const gerai = [
 const resto = [
   {
     id: 2001,
-    produk: "MIE AYAM KALASAN",
-    image:
-      "assets/produk/Foto & Nama Makanan Gerai Panglima (MIE AYAM KALASAN).jpg",
+    produk: "GAMI AYAM",
+    image: "Gami Ayam.jpg",
     duration: 1500,
   },
   {
-    id: 2001,
-    produk: "MIE AYAM KALASAN",
-    image:
-      "assets/produk/Foto & Nama Makanan Gerai Panglima (MIE AYAM KALASAN).jpg",
+    id: 2002,
+    produk: "GAMI CUMI",
+    image: "Gami Cumi.jpg",
     duration: 1400,
   },
   {
-    id: 2001,
-    produk: "MIE AYAM KALASAN",
-    image:
-      "assets/produk/Foto & Nama Makanan Gerai Panglima (MIE AYAM KALASAN).jpg",
+    id: 2003,
+    produk: "GAMI MIE",
+    image: "Gami Mie.jpg",
     duration: 1300,
   },
   {
-    id: 2001,
-    produk: "MIE AYAM KALASAN",
-    image:
-      "assets/produk/Foto & Nama Makanan Gerai Panglima (MIE AYAM KALASAN).jpg",
+    id: 2004,
+    produk: "SOUP PANGLIMA",
+    image: "SOUP PANGLIMA.jpg",
     duration: 1200,
   },
   {
-    id: 2001,
-    produk: "MIE AYAM KALASAN",
-    image:
-      "assets/produk/Foto & Nama Makanan Gerai Panglima (MIE AYAM KALASAN).jpg",
+    id: 2005,
+    produk: "SOUP IGA",
+    image: "SOUP IGA.jpg",
     duration: 1100,
   },
 ];
@@ -133,7 +128,7 @@ const Gerai = () => {
           <div className="text-center ">
             {/* Oleh-oleh Gerai Panglima */}
             <div className="pt-20">
-            <h1
+              <h1
                 data-aos="fade-down"
                 data-aos-duration="1500"
                 data-aos-easing="ease-in-out"
@@ -154,7 +149,7 @@ const Gerai = () => {
                       <figure>
                         <img
                           className="h-56 scale-150"
-                          src={item.image}
+                          src={`assets/produk/${item.image}`}
                           alt={item.produk}
                         />
                       </figure>
@@ -198,8 +193,8 @@ const Gerai = () => {
                     >
                       <figure>
                         <img
-                          className="h-56 scale-150"
-                          src={item.image}
+                          className="h-56 scale-100"
+                          src={`assets/produk/${item.image}`}
                           alt={item.produk}
                         />
                       </figure>

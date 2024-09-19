@@ -119,7 +119,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="lg:pb-3 ">Email :</h3>
-                <p>panglima@panglimaroqiiqu-group.co.id</p>
+                <p>Geraipanglimaoleholeh@gmail.com</p>
               </div>
             </div>
           </div>

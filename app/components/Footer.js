@@ -103,22 +103,22 @@ const Footer = () => {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               <div>
                 <h3 className="text-gray-400 uppercase dark:text-white">
-                  About
+                  Pages
                 </h3>
                 <a
-                  href="#"
+                  href="/"
                   className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
                 >
                   Home
                 </a>
                 <a
-                  href="#"
+                  href="/About"
                   className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
                 >
                   About
                 </a>
                 <a
-                  href="#"
+                  href="/Contact"
                   className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
                 >
                   Contact
@@ -128,7 +128,7 @@ const Footer = () => {
               <div>
                 <h3 className="text-gray-400 uppercase">Products</h3>
                 <a
-                  href="/Product/Gembung"
+                  href="/Product"
                   className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
                 >
                   Recomend
@@ -152,10 +152,10 @@ const Footer = () => {
                   Contact
                 </h3>
                 <span className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline">
-                  +62 822 5085 1457
+                  08 222 000 2237
                 </span>
                 <span className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline">
-                  panglima@panglima.com
+                Geraipanglimaoleholeh@gmail.com
                 </span>
               </div>
             </div>

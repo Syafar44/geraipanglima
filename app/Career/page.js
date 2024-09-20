@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import React from "react";
 
-const Karir = () => {
+const Career = () => {
   return (
     <div className="h-s">
       <Navbar />
@@ -27,4 +27,4 @@ const Karir = () => {
   );
 };
 
-export default Karir;
+export default Career;

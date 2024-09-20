@@ -120,8 +120,11 @@ const Order = () => {
     return new Intl.NumberFormat("id-ID", {
       style: "currency",
       currency: "IDR",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
     }).format(number);
   };
+  
 
   const isFormComplete =
     name &&
@@ -165,7 +168,7 @@ const Order = () => {
                     value={product.quantity}
                     variant="ghost"
                     size="lg"
-                    className="rounded-lg"
+                    className="rounded-lg text- bg-white"
                   />
                   <Button
                     className="px-4"

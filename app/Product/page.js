@@ -639,7 +639,7 @@ const products = [
 ];
 
 const Product = () => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState([]); //
   const [filter, setFilter] = useState("");
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -648,6 +648,8 @@ const Product = () => {
   const itemsPerPage = 20;
 
   useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCart(savedCart);
     setIsLoading(false);
   }, []);
 
@@ -717,6 +719,17 @@ const Product = () => {
     setFilter("");
     setCurrentPage(1);
   };
+
+  // convert IDR
+  const rupiah = (number) => {
+    return new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(number);
+  };
+  
 
   return (
     <>
@@ -808,7 +821,7 @@ const Product = () => {
                       {product.nama}
                     </Typography>
                     <Typography variant="h5" className="-mt-1 font-teko">
-                      Rp{product.harga}
+                      {rupiah(product.harga)}
                     </Typography>
                   </CardBody>
                 </div>

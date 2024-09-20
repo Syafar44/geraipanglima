@@ -100,10 +100,10 @@ const Footer = () => {
           </div>
 
           <div className="mt-6 lg:mt-0 lg:flex-1">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:text-xl">
               <div>
                 <h3 className="text-gray-400 uppercase dark:text-white">
-                  Pages
+                  Dashboard
                 </h3>
                 <a
                   href="/"
@@ -126,24 +126,24 @@ const Footer = () => {
               </div>
 
               <div>
-                <h3 className="text-gray-400 uppercase">Products</h3>
+                <h3 className="text-gray-400 uppercase">Manajemen</h3>
                 <a
                   href="/Product"
                   className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
                 >
-                  Recomend
+                  Product
                 </a>
                 <a
-                  href="/Product/Pizza"
+                  href="/Order"
                   className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
                 >
-                  Best seller
+                  Order
                 </a>
                 <a
-                  href="/Product/Donat"
+                  href="/Gallery"
                   className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
                 >
-                  Hits
+                  Gallery
                 </a>
               </div>
 
@@ -151,11 +151,15 @@ const Footer = () => {
                 <h3 className="text-gray-400 uppercase dark:text-white">
                   Contact
                 </h3>
-                <span className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline">
+                <a
+                  href="https://api.whatsapp.com/send?phone=+6282220002237"
+                  target="_blank"
+                  className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
+                >
                   08 222 000 2237
-                </span>
+                </a>
                 <span className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline">
-                Geraipanglimaoleholeh@gmail.com
+                  Geraipanglimaoleholeh@gmail.com
                 </span>
               </div>
             </div>

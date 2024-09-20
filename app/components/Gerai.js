@@ -81,17 +81,17 @@ const Gerai = () => {
       >
         <Carousel loop={true} autoplay={true} className="rounded-xl">
           <img
-            src="1.png"
+            src="gallery/photo_2024-09-19_16-20-46.jpg"
             alt="image 1"
             className="h-full w-full object-cover object-top"
           />
           <img
-            src="2.png"
+            src="gallery/_DSC6935_1_1.jpg"
             alt="image 1"
             className="h-full w-full object-cover object-top"
           />
           <img
-            src="3.png"
+            src="gallery/_DSC9707.jpg"
             alt="image 1"
             className="h-full w-full object-cover object-top"
           />

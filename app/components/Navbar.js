@@ -216,7 +216,7 @@ const Navbar = () => {
               className="px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
               href="/About"
             >
-              ABOUTE
+              ABOUT
             </Link>
             <Link
               className="px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
@@ -252,7 +252,7 @@ const Navbar = () => {
                   href="/Order"
                   className="px-6 py-2 bg-white rounded-lg flex items-center text-red-700 hover:shadow-[inset_2px_2px_4px_rgba(255,_255,_255,_1),inset_-2px_-2px_5px_rgba(255,_255,_255,_0.3)] transition duration-300 ease-linear "
                 >
-                  Order
+                  🛒 ORDER
                 </Link>
               </Badge>
             ) : (
@@ -260,19 +260,22 @@ const Navbar = () => {
                 href="/Order"
                 className="px-6 py-2 bg-hitam rounded-lg flex items-center text-putih hover:shadow-[inset_2px_2px_4px_rgba(255,_255,_255,_1),inset_-2px_-2px_5px_rgba(255,_255,_255,_0.3)] transition duration-300 ease-linear "
               >
-                Order
+                🛒 ORDER
               </Link>
             )}
             <NavListMenu />
             <Link
               className="px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
-              href="/Karir"
+              href="/Career"
             >
-              KARIR
+              CAREER
             </Link>
           </div>
         </div>
       </nav>
+
+
+
       <nav className="lg:hidden bg-kuning p-2 block sticky top-0 z-50">
         <div className="flex justify-between mx-2">
           <div className="flex gap-3 justify-center items-center">
@@ -304,10 +307,10 @@ const Navbar = () => {
                   <div className="flex mr-5 items-center text-kuning font-bold bg-putih px-4 py-1 rounded-xl">
                     {totalItems > 0 ? (
                       <Badge className="-right-3" content={totalItems}>
-                        <Link href="/Order">Order</Link>
+                        <Link href="/Order">🛒 Order</Link>
                       </Badge>
                     ) : (
-                      <Link href="/Order">Order</Link>
+                      <Link href="/Order">🛒 Order</Link>
                     )}
                   </div>
                 </div>
@@ -379,8 +382,14 @@ const Navbar = () => {
                     <Link href="/About">
                       <ListItem>About</ListItem>
                     </Link>
+                    <Link href="/Gallery">
+                      <ListItem>Gallery</ListItem>
+                    </Link>
                     <Link href="/Contact">
                       <ListItem>Contact</ListItem>
+                    </Link>
+                    <Link href="/Career">
+                      <ListItem>Career</ListItem>
                     </Link>
                   </div>
                 </List>
@@ -396,10 +405,10 @@ const Navbar = () => {
           <div className="flex mr-5 items-center text-kuning font-bold bg-putih px-4 my-2 rounded-2xl">
             {totalItems > 0 ? (
               <Badge className="-right-3" content={totalItems}>
-                <Link href="/Order">Order</Link>
+                <Link href="/Order">🛒 Order</Link>
               </Badge>
             ) : (
-              <Link href="/Order">Order</Link>
+              <Link href="/Order">🛒 Order</Link>
             )}
           </div>
         </div>

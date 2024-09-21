@@ -13,8 +13,8 @@ const About = () => {
           <div className="hero-content my-4 lg:my-20">
             <div className="gap-20 items-center">
               <div
-                data-aos="fade-right"
-                data-aos-duration="1800"
+                data-aos="fade-in"
+                data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
               >
                 <p className="text-2xl font-bold text-white text-center">
@@ -25,8 +25,8 @@ const About = () => {
               </div>
               <div
                 className="list-disc py-4 text-sm lg:text-2xl text-gray-200 mx-5 text-center"
-                data-aos="fade-left"
-                data-aos-duration="1800"
+                data-aos="fade-in"
+                data-aos-duration="2000"
                 data-aos-easing="ease-in-out"
               >
                 <p>
@@ -94,7 +94,7 @@ const About = () => {
         <div className="lg:hero my-4 lg:my-20">
           <div className="hero-content lg:flex-row lg:gap-10 lg:items-center flex-col-reverse">
             <div
-              data-aos="fade-left"
+              data-aos="fade-right"
               data-aos-duration="1800"
               data-aos-easing="ease-in-out"
               className="text-xl flex flex-col gap-5"
@@ -114,7 +114,7 @@ const About = () => {
             <img
               src="gallery/photo_2024-09-19_16-20-46.jpg"
               className="w-3/4 lg:w-2/4 max-w-full rounded-lg object-cover object-center"
-              data-aos="fade-right"
+              data-aos="fade-left"
               data-aos-duration="1800"
               data-aos-easing="ease-in-out"
               alt="Image Gembung"

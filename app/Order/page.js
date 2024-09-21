@@ -124,7 +124,6 @@ const Order = () => {
       maximumFractionDigits: 0,
     }).format(number);
   };
-  
 
   const isFormComplete =
     name &&
@@ -137,58 +136,62 @@ const Order = () => {
   return (
     <>
       <Navbar />
-      <Card className="lg:mx-20 xl:mx-52 2xl:mx-96 overflow-x-hidden mt-4" >
-        <div className="p-5 lg:py-10 mb-2 bg-kuning flex justify-between text-putih font-bold lg:px-7">
-          <h1 className="text-sm lg:text-base">Produk</h1>
-          <div className="flex gap-2 text-sm lg:text-base lg:gap-12">
-            <h1>Harga Satuan</h1>
-            <h1 className="lg:px-14 px-2">Jumlah</h1>
-            <h1>Total Harga</h1>
-            <h1>Aksi</h1>
-          </div>
-        </div>
-        <List>
-          {cart.map((product, index) => (
-            <ListItem
-              className={`${teko.className} py-1 lg:pl-4`}
-              key={index}
-              ripple={false}
-            >
-              <h2 className="font-bold text-sm lg:text-xl">{product.nama}</h2>
-              <ListItemSuffix className="flex lg:gap-10">
-                <p className="text-sm lg:text-xl">{rupiah(product.harga)}</p>
-                <div className="flex gap-1 lg:gap-2 bg-kuning scale-[0.6] lg:scale-100 lg:px-3 lg:mx-6 py-2 rounded-lg -mx-4">
-                  <Button
-                    className="px-4"
-                    onClick={() => decreaseQuantity(product.id)}
-                  >
-                    -
-                  </Button>
-                  <Chip
-                    value={product.quantity}
-                    variant="ghost"
-                    size="lg"
-                    className="rounded-lg text- bg-white"
-                  />
-                  <Button
-                    className="px-4"
-                    onClick={() => increaseQuantity(product.id)}
-                  >
-                    +
-                  </Button>
-                </div>
-                <p className="text-sm lg:text-xl">
+      <Card className="mx-5 lg:mx-20 xl:mx-52 2xl:mx-96 overflow-x-hidden mt-10">
+        <table className="font-bold text-sm lg:text-lg">
+          <thead className="bg-red-700 text-white">
+            <tr>
+              <th className="text-sm lg:text-base py-5">Produk</th>
+              <th className="text-sm lg:text-base hidden lg:flex justify-center mt-5">
+                Harga Satuan
+              </th>
+              <th className="text-sm lg:text-base">Jumlah</th>
+              <th className="text-sm lg:text-base">Total Harga</th>
+              <th className="text-sm lg:text-base">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            {cart.map((product, index) => (
+              <tr key={index}>
+                <td className="pl-5 lg:text-xl">{product.nama}</td>
+                <td className="text-center p-2 hidden lg:block">
+                  {rupiah(product.harga)}
+                </td>
+                <td>
+                  <div className="flex justify-center scale-75 lg:scale-100">
+                    <Button
+                      className="px-4 bg-white text-black hover:bg-red-700 hover:text-white hover:border-red-700 border"
+                      onClick={() => decreaseQuantity(product.id)}
+                    >
+                      -
+                    </Button>
+                    <Chip
+                      value={product.quantity}
+                      variant="ghost"
+                      size="lg"
+                      className="rounded-lg bg-white"
+                    />
+                    <Button
+                      className="px-4 bg-white text-black hover:bg-red-700 hover:text-white hover:border-red-700 border"
+                      onClick={() => increaseQuantity(product.id)}
+                    >
+                      +
+                    </Button>
+                  </div>
+                </td>
+                <td className="text-center p-2">
                   {rupiah(product.harga * product.quantity)}
-                </p>
-                <IconButton variant="text" color="blue-gray" className="-mr-3">
-                  <span onClick={() => removeFromCart(product.id)}>
-                    <TrashIcon />
-                  </span>
-                </IconButton>
-              </ListItemSuffix>
-            </ListItem>
-          ))}
-        </List>
+                </td>
+                <td className="text-center p-2">
+                  <IconButton variant="text">
+                    <span onClick={() => removeFromCart(product.id)}>
+                      <TrashIcon />
+                    </span>
+                  </IconButton>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
         <div className="p-5">
           <div className="py-5 border-4 border-kuning rounded-xl flex justify-between text-kuning font-bold p-7 mb-5">
             <h1>Total Harga Keseluruhan</h1>
@@ -287,8 +290,7 @@ const Order = () => {
                   className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded-md leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-state"
                 >
-                  <option value="transfer bank">Transfer bank</option>
-                  <option value="kartu kredit/debit">Kartu kredit/debit</option>
+                  <option value="transfer bank">Transfer</option>
                   <option value="tunai">Tunai</option>
                 </select>
               </div>

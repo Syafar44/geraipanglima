@@ -141,7 +141,7 @@ const Gerai = () => {
                   return (
                     <div
                       key={item.id}
-                      className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
+                      className="card card-compact bg-white md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
                       data-aos="fade-right"
                       data-aos-duration={item.duration}
                       data-aos-easing="ease-in-out"
@@ -186,7 +186,7 @@ const Gerai = () => {
                   return (
                     <div
                       key={item.id}
-                      className="card card-compact bg-base-100 md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
+                      className="card card-compact bg-white md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
                       data-aos="fade-right"
                       data-aos-duration={item.duration}
                       data-aos-easing="ease-in-out"

@@ -6,21 +6,39 @@ const Career = () => {
   return (
     <div className="h-s">
       <Navbar />
-      <div className="flex-col p-20 flex gap-10">
-        <p className="text-center text-2xl font-bold">
-          PEMUDA yang RAJIN IBADAH, PEKERJA KERAS & Siap Berkembang jadi lebih
-          SHALIH ?
-        </p>
-        <ul className="flex justify-center">
-          <li className="border-4 border-red-700 rounded-2xl shadow-xl flex justify-center">
-            <a href="https://bit.ly/FormulirLamaranKerjaPRG" target="_blank">
-              <img
-                src="/assets/Karir/photo_2024-09-19_13-26-27.jpg"
-                className="w-[20rem] rounded-xl"
-              />
-            </a>
-          </li>
-        </ul>
+      <div className="flex justify-center items-center mt-[5%] mb-[5%] px-5">
+        <div className="p-10 bg-red-700 rounded-xl text-white">
+          <h1 className="text-xl font-bold">ASSISTANT COOK</h1>
+          <ul>
+            <li>
+              <p>Kualifikasi :</p>
+              <ul className="pl-5">
+                <li>1. Laki-Laki Maksimal 30 Tahun</li>
+                <li>
+                  2. Taat Beribadah Wajib & sunnah serta bersedia diatur sesuai
+                  Syariat Islam
+                </li>
+                <li>
+                  3. Pendidikan Minimal SMA/Sederajat (tidak sedang berkuliah)
+                </li>
+                <li>4. Fresh Graduate Silahkan Melamar</li>
+                <li>5. Wajib memiliki Smartphone</li>
+                <li>
+                  6. Memiliki kemampuan Interpesonal dan Komunikasi yang baik
+                </li>
+                <li>7. Jujur, Pekerja Keras & Terpercaya</li>
+                <li>8. Bersedia Bekerja Shift</li>
+                <li>9. Penempatan Samarinda</li>
+              </ul>
+            </li>
+            <li className="font-bold">
+              BENEFIT: GAJI POKOK, CUTI 18 HARI/TAHUN, FASILITAS KESEHATAN
+            </li>
+          </ul>
+          <button className="bg-white p-2 rounded-md w-full mt-2 text-red-700 font-bold">
+            Apply Now
+          </button>
+        </div>
       </div>
       <Footer />
     </div>

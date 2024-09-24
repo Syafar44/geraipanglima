@@ -43,7 +43,7 @@ const Contact = () => {
           }
         );
     } else {
-      openModalError()
+      openModalError();
     }
   };
 
@@ -137,7 +137,7 @@ const Contact = () => {
             Alamat <span className="text-red-500">Gerai Panglima</span>
           </h1>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-5">
           <div
             className="card bg-base-100 image-full w-auto h-[17rem] -mx-5 lg:-mx-0 shadow-xl hover:scale-105 transition ease-in-out"
             data-aos="fade-up-left"
@@ -179,7 +179,7 @@ const Contact = () => {
               />
             </figure>
             <div className="card-body">
-              <h2 className="card-title">Balikpapan</h2>
+              <h2 className="card-title">Bandara Balikpapan</h2>
               <p>
                 Sepinggan, Kecamatan Balikpapan Selatan, Kota Balikpapan,
                 Kalimantan Timur
@@ -193,6 +193,36 @@ const Contact = () => {
                   Open Maps
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="card bg-base-100 image-full w-auto h-[17rem] -mx-5 lg:-mx-0 shadow-xl hover:scale-105 transition ease-in-out"
+          data-aos="fade-up-right"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
+          <figure>
+            <img
+              className="scale-125 xl:scale-[4.1]"
+              src="assets/foto-gallery-1.jpg"
+              alt="Shoes"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Bandara Apt Samarinda</h2>
+            <p>
+              Jl. Poros Samarinda - Bontang, Sungai Siring, Kec. Samarinda
+              Utara, Kota Samarinda, Kalimantan Timur
+            </p>
+            <div className="card-actions justify-end">
+              <Link
+                target="_blank"
+                href="https://maps.app.goo.gl/S3gsBhcXgyzAMRGm8"
+                className="btn text-white bg-red-700 hover:bg-white hover:text-black"
+              >
+                Open Maps
+              </Link>
             </div>
           </div>
         </div>
@@ -462,6 +492,7 @@ const Contact = () => {
           </div>
         </div>
       </dialog>
+
       <dialog id="my_moda2" className="modal">
         <div className="modal-box">
           <h3 className="font-bold text-xl text-kuning text-center py-2">
@@ -469,9 +500,7 @@ const Contact = () => {
           </h3>
           <div className="modal-action flex justify-center">
             <form method="dialog">
-              <button className="btn  text-kuning rounded-xl">
-                Tutup
-              </button>
+              <button className="btn  text-kuning rounded-xl">Tutup</button>
             </form>
           </div>
         </div>

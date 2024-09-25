@@ -228,12 +228,12 @@ const Navbar = () => {
     <>
       <nav className="hidden lg:block lg:px-8 lg:py-4 bg-kuning sticky top-0 z-50">
         <div className="flex justify-center lg:gap-14 2xl:gap-20 font-bold">
-          <div className="flex items-center 2xl:gap-5">
+          <div className="flex items-center text-sm xl:text-base lg:gap-2 2xl:gap-5">
             {link1.map((item) => {
               return (
                 <Link
                   key={item.id}
-                  className="lg:px-5 2xl:px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
+                  className="lg:px-3 2xl:px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
                   href={item.link}
                 >
                   {item.title}
@@ -249,9 +249,9 @@ const Navbar = () => {
               />
             </Link>
           </div>
-          <div className="flex  2xlgap-5 items-center">
+          <div className="flex text-sm xl:text-base lg:gap-2 2xl:gap-5 items-center">
             <Link
-              className="lg:px-2 xl:px-3 2xl:px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
+              className="lg:px-3 xl:px-3 2xl:px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
               href="/Product"
             >
               PRODUCT

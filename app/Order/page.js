@@ -241,31 +241,13 @@ const Order = () => {
                         id="grid-state"
                       >
                         <option value="outlet jajan juanda">
-                          Outlet Jajan Juanda
+                          Gerai Panglima Juanda
                         </option>
                         <option value="outlet jajan suryanata">
-                          Outlet Jajan Suryanata
+                          Gerai Panglima Bandara Balikpapan
                         </option>
                         <option value="outlet jajan sempaja">
-                          Outlet Jajan Sempaja
-                        </option>
-                        <option value="outlet jajan lambung">
-                          Outlet Jajan Lambung
-                        </option>
-                        <option value="outlet jajan panjaitan">
-                          Outlet Jajan Panjaitan
-                        </option>
-                        <option value="outlet jajan sultan hasanudin">
-                          Outlet Jajan Sultan Hasanudin
-                        </option>
-                        <option value="outlet jajan sambutan">
-                          Outlet Jajan Sambutan
-                        </option>
-                        <option value="outlet jajan jakarta">
-                          Outlet Jajan Jakarta
-                        </option>
-                        <option value="outlet jajan bungtomo">
-                          Outlet Jajan Bungtomo
+                          Gerai Panglima Bandara Apt
                         </option>
                       </select>
                       <Input

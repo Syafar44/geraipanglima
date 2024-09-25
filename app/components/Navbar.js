@@ -201,37 +201,47 @@ const Navbar = () => {
     setTotalItems(total);
   }, []);
 
+  const link1 = [
+    {
+      id: 1,
+      title: "HOME",
+      link: "/",
+    },
+    {
+      id: 2,
+      title: "ABOUT",
+      link: "/About",
+    },
+    {
+      id: 3,
+      title: "GALLERY",
+      link: "/Gallery",
+    },
+    {
+      id: 4,
+      title: "CONTACT",
+      link: "/Contact",
+    },
+  ];
+
   return (
     <>
       <nav className="hidden lg:block lg:px-8 lg:py-4 bg-kuning sticky top-0 z-50">
-        <div className="flex justify-center gap-20 font-bold">
-          <div className="flex items-center gap-5">
-            <Link
-              className="px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
-              href="/"
-            >
-              HOME
-            </Link>
-            <Link
-              className="px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
-              href="/About"
-            >
-              ABOUT
-            </Link>
-            <Link
-              className="px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
-              href="/Gallery"
-            >
-              GALLERY
-            </Link>
-            <Link
-              className="px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
-              href="/Contact"
-            >
-              CONTACT
-            </Link>
+        <div className="flex justify-center lg:gap-14 2xl:gap-20 font-bold">
+          <div className="flex items-center 2xl:gap-5">
+            {link1.map((item) => {
+              return (
+                <Link
+                  key={item.id}
+                  className="lg:px-5 2xl:px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
+                  href={item.link}
+                >
+                  {item.title}
+                </Link>
+              );
+            })}
           </div>
-          <div className="bg-white scale-[2.5] translate-y-7 border-2 p-2 border-kuning rounded-lg w-24">
+          <div className="bg-white lg:scale-[1.7] xl:scale-[2] 2xl:scale-[2.5] xl:translate-y-5 2xl:translate-y-7 border-2 p-2 border-kuning rounded-lg w-24">
             <Link href="/">
               <img
                 className="w-full"
@@ -239,9 +249,9 @@ const Navbar = () => {
               />
             </Link>
           </div>
-          <div className="flex gap-5 items-center">
+          <div className="flex  2xlgap-5 items-center">
             <Link
-              className="px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
+              className="lg:px-2 xl:px-3 2xl:px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
               href="/Product"
             >
               PRODUCT
@@ -250,7 +260,7 @@ const Navbar = () => {
               <Badge className="right-0" content={totalItems}>
                 <Link
                   href="/Order"
-                  className="px-6 py-2 bg-white rounded-lg flex items-center text-red-700 hover:shadow-[inset_2px_2px_4px_rgba(255,_255,_255,_1),inset_-2px_-2px_5px_rgba(255,_255,_255,_0.3)] transition duration-300 ease-linear "
+                  className="lg:px-2 xl:px-3 2xl:px-6 py-2 bg-white rounded-lg flex items-center text-red-700 hover:shadow-[inset_2px_2px_4px_rgba(255,_255,_255,_1),inset_-2px_-2px_5px_rgba(255,_255,_255,_0.3)] transition duration-300 ease-linear "
                 >
                   🛒 ORDER
                 </Link>
@@ -258,14 +268,14 @@ const Navbar = () => {
             ) : (
               <Link
                 href="/Order"
-                className="px-6 py-2 bg-white rounded-lg flex items-center text-red-700 hover:shadow-[inset_2px_2px_4px_rgba(255,_255,_255,_1),inset_-2px_-2px_5px_rgba(255,_255,_255,_0.3)] transition duration-300 ease-linear "
+                className="lg:px-2 xl:px-3 2xl:px-6 py-2 bg-white rounded-lg flex items-center text-red-700 hover:shadow-[inset_2px_2px_4px_rgba(255,_255,_255,_1),inset_-2px_-2px_5px_rgba(255,_255,_255,_0.3)] transition duration-300 ease-linear "
               >
                 🛒 ORDER
               </Link>
             )}
             <NavListMenu />
             <Link
-              className="px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
+              className="lg:px-2 xl:px-3 2xl:px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
               href="/Career"
             >
               CAREER
@@ -273,8 +283,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-
-
 
       <nav className="lg:hidden bg-kuning p-2 block sticky top-0 z-50">
         <div className="flex justify-between mx-2">

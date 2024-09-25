@@ -357,13 +357,6 @@ const products = [
     produk: "oleh-oleh",
   },
   {
-    id: 49,
-    nama: "GREEN TEA LATTE",
-    harga: 0,
-    gambar: "GREEN TEA LATTE.jpg",
-    produk: "minuman",
-  },
-  {
     id: 50,
     nama: "HAZELNUT LATTE",
     harga: 23000,
@@ -471,7 +464,7 @@ const products = [
   {
     id: 65,
     nama: "MILK TEA PANGLIMA",
-    harga: 0,
+    harga: 15000,
     gambar: "Milk Tea Panglima.jpg",
     produk: "minuman",
   },

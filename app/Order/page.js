@@ -4,9 +4,6 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { useState, useEffect } from "react";
 import {
-  List,
-  ListItem,
-  ListItemSuffix,
   Card,
   IconButton,
   Chip,

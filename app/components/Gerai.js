@@ -74,10 +74,7 @@ const Gerai = () => {
     <>
       {/* Carausel layar Lebar */}
       <section
-        className="container mx-auto py-16 -mt-6 hidden lg:block lg:h-[580px] xl:h-[700px] 2xl:h-[800px] z-10"
-        data-aos="fade-down"
-        data-aos-duration="1800"
-        data-aos-easing="ease-in-out"
+        className="container mx-auto px-28 2xl:px-0 pt-16 -mt-6 hidden lg:block lg:h-[480px] xl:h-[550px] 2xl:h-[800px] z-10"
       >
         <Carousel loop={true} autoplay={true} className="rounded-xl">
           <img
@@ -100,9 +97,6 @@ const Gerai = () => {
       {/* Carausel layar Kecil */}
       <section
         className="container px-5 mx-auto py-10 -mt-6 h-[25rem] lg:hidden"
-        data-aos="fade-down"
-        data-aos-duration="1800"
-        data-aos-easing="ease-in-out"
       >
         <Carousel loop={true} autoplay={true} className="rounded-xl">
           <img

@@ -79,7 +79,7 @@ const Contact = () => {
       </section>
 
       <section>
-        <div className="px-5 lg:px-44 xl:mx-80 text-center mb-5 lg:mb-20">
+        <div className="px-5 lg:px-44 2xl:mx-80 text-center mb-5 lg:mb-20">
           <div className="text-sm lg:text-base">
             <h1
               className="text-2xl lg:text-5xl font-bold text-center"
@@ -109,7 +109,7 @@ const Contact = () => {
             </p>
             <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-5 text-sm xl:text-xl font-bold"
-              data-aos="fade-right"
+              data-aos="fade-up"
               data-aos-duration="1500"
               data-aos-easing="ease-in-out"
             >
@@ -140,7 +140,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-5">
           <div
             className="card bg-base-100 image-full w-auto h-[17rem] -mx-5 lg:-mx-0 shadow-xl hover:scale-105 transition ease-in-out"
-            data-aos="fade-up-left"
+            data-aos="fade-up-right"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
           >
@@ -167,7 +167,7 @@ const Contact = () => {
           </div>
           <div
             className="card bg-base-100 image-full w-auto h-[17rem] -mx-5 lg:-mx-0 shadow-xl hover:scale-105 transition ease-in-out"
-            data-aos="fade-up-right"
+            data-aos="fade-up-left"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
           >
@@ -198,7 +198,7 @@ const Contact = () => {
         </div>
         <div
           className="card bg-base-100 image-full w-auto h-[17rem] -mx-5 lg:-mx-0 shadow-xl hover:scale-105 transition ease-in-out"
-          data-aos="fade-up-right"
+          data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"
         >
@@ -212,7 +212,7 @@ const Contact = () => {
           <div className="card-body">
             <h2 className="card-title">Bandara Apt Samarinda</h2>
             <p>
-              Jl. Poros Samarinda - Bontang, Sungai Siring, Kec. Samarinda
+              Bontang, Sungai Siring, Kec. Samarinda
               Utara, Kota Samarinda, Kalimantan Timur
             </p>
             <div className="card-actions justify-end">

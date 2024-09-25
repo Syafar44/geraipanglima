@@ -11,9 +11,9 @@ const About = () => {
       <section className="overflow-x-hidden">
         <div className="hero bg-red-700">
           <div className="hero-content my-4 lg:my-20">
-            <div className="gap-20 items-center">
+            <div className="gap-20 items-center px-24">
               <div
-                data-aos="fade-in"
+                data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
               >
@@ -25,7 +25,7 @@ const About = () => {
               </div>
               <div
                 className="list-disc py-4 text-sm lg:text-2xl text-gray-200 mx-5 text-center"
-                data-aos="fade-in"
+                data-aos="fade-up"
                 data-aos-duration="2000"
                 data-aos-easing="ease-in-out"
               >
@@ -50,7 +50,7 @@ const About = () => {
       </section>
 
       <section>
-        <div className="lg:hero my-4 lg:my-20">
+        <div className="lg:hero my-4 lg:my-20 px-24">
           <div className="hero-content flex-col lg:flex-row lg:gap-10 lg:items-center">
             <img
               src="gallery/_DSC9707.jpg"
@@ -65,7 +65,6 @@ const About = () => {
               data-aos-duration="1800"
               data-aos-easing="ease-in-out"
               className="text-xl flex flex-col gap-5"
-
             >
               <h1 className="text-3xl lg:text-5xl font-bold">Oleh-oleh</h1>
               <p className="text-xl lg:text-3xl font-semibold text-red-700">
@@ -91,7 +90,7 @@ const About = () => {
       </section>
 
       <section>
-        <div className="lg:hero my-4 lg:my-20">
+        <div className="lg:hero my-4 lg:my-20 px-24">
           <div className="hero-content lg:flex-row lg:gap-10 lg:items-center flex-col-reverse">
             <div
               data-aos="fade-right"

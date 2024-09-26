@@ -1,6 +1,7 @@
 import { Teko } from "next/font/google";
 import "./globals.css";
 import "animate.css";
+import GoogleAnalytics from "./analytics"; // Pastikan path ini sesuai
 
 const teko = Teko({
   weight: ["300", "700"],
@@ -21,7 +22,10 @@ export default function RootLayout({ children }) {
           href="https://raw.githubusercontent.com/Syafar44/assets/main/assets/image/LOGO%20GERAI%20PANGLIMA-01.png"
         />
       </head>
-      <body className={teko.className}>{children}</body>
+      <body className={teko.className}>
+        <GoogleAnalytics />
+        {children}
+      </body>
     </html>
   );
 }

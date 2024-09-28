@@ -256,6 +256,14 @@ const Navbar = () => {
             >
               PRODUCT
             </Link>
+
+            <NavListMenu />
+            <Link
+              className="lg:px-2 xl:px-3 2xl:px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
+              href="/Career"
+            >
+              CAREER
+            </Link>
             {totalItems > 0 ? (
               <Badge className="right-0" content={totalItems}>
                 <Link
@@ -273,13 +281,6 @@ const Navbar = () => {
                 🛒 ORDER
               </Link>
             )}
-            <NavListMenu />
-            <Link
-              className="lg:px-2 xl:px-3 2xl:px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
-              href="/Career"
-            >
-              CAREER
-            </Link>
           </div>
         </div>
       </nav>

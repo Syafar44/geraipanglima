@@ -9,30 +9,35 @@ const gerai = [
     produk: "ROTI DURIAN ORIGINAL",
     image: "roti durian ori.jpg",
     duration: 1500,
+    file: "oleh-oleh",
   },
   {
     id: 1002,
     produk: "ROTI DURIAN KEJU",
     image: "roti durian keju.jpg",
     duration: 1400,
+    file: "oleh-oleh",
   },
   {
     id: 1003,
     produk: "BOLU GULUNG COKLAT",
     image: "BOLU GULUNG COKLAT.jpg",
     duration: 1300,
+    file: "oleh-oleh",
   },
   {
     id: 1004,
     produk: "KUKU MACAN",
     image: "KUKU MACAN 150 Gr.jpg",
     duration: 1200,
+    file: "oleh-oleh",
   },
   {
     id: 1005,
     produk: "KEMINTING DURIAN",
     image: "keminting durian.jpg",
     duration: 1100,
+    file: "oleh-oleh",
   },
 ];
 
@@ -42,30 +47,35 @@ const resto = [
     produk: "GAMI AYAM",
     image: "Gami Ayam.jpg",
     duration: 1500,
+    file: "makanan",
   },
   {
     id: 2002,
     produk: "GAMI CUMI",
     image: "Gami Cumi.jpg",
     duration: 1400,
+    file: "makanan",
   },
   {
     id: 2003,
     produk: "GAMI MIE",
     image: "Gami Mie.jpg",
     duration: 1300,
+    file: "makanan",
   },
   {
     id: 2004,
     produk: "SOUP PANGLIMA",
     image: "SOUP PANGLIMA.jpg",
     duration: 1200,
+    file: "makanan",
   },
   {
     id: 2005,
     produk: "SOUP IGA",
     image: "SOUP IGA.jpg",
     duration: 1100,
+    file: "makanan",
   },
 ];
 
@@ -73,9 +83,7 @@ const Gerai = () => {
   return (
     <>
       {/* Carausel layar Lebar */}
-      <section
-        className="container mx-auto px-28 2xl:px-0 pt-16 -mt-6 hidden lg:block lg:h-[480px] xl:h-[550px] 2xl:h-[800px] z-10"
-      >
+      <section className="container mx-auto px-28 2xl:px-0 pt-16 -mt-6 hidden lg:block lg:h-[480px] xl:h-[550px] 2xl:h-[800px] z-10">
         <Carousel loop={true} autoplay={true} className="rounded-xl">
           <img
             src="gallery/photo_2024-09-19_16-20-46.jpg"
@@ -95,9 +103,7 @@ const Gerai = () => {
         </Carousel>
       </section>
       {/* Carausel layar Kecil */}
-      <section
-        className="container px-5 mx-auto py-10 -mt-6 h-[25rem] lg:hidden"
-      >
+      <section className="container px-5 mx-auto py-10 -mt-6 h-[25rem] lg:hidden">
         <Carousel loop={true} autoplay={true} className="rounded-xl">
           <img
             src="gallery/photo_2024-09-19_16-20-46.jpg"
@@ -143,7 +149,7 @@ const Gerai = () => {
                       <figure>
                         <img
                           className="h-56 scale-150"
-                          src={`assets/produk/${item.image}`}
+                          src={`assets/produk/${item.file}/${item.image}`}
                           alt={item.produk}
                         />
                       </figure>
@@ -188,7 +194,7 @@ const Gerai = () => {
                       <figure>
                         <img
                           className="h-56 scale-100"
-                          src={`assets/produk/${item.image}`}
+                          src={`assets/produk/${item.file}/${item.image}`}
                           alt={item.produk}
                         />
                       </figure>

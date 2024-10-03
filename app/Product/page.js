@@ -789,7 +789,7 @@ const Product = () => {
                           <div className="skeleton h-60 lg:h-64 xl:h-96 absolute inset-0"></div>
                         )}
                         <img
-                          src={`./assets/produk/${product.gambar}`}
+                          src={`./assets/produk/${product.produk}/${product.gambar}`}
                           alt={product.nama}
                           onLoad={() =>
                             setImageLoaded((prev) => ({

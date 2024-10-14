@@ -393,21 +393,21 @@ const products = [
   },
   {
     id: 55,
-    nama: "KUKU MACAN 50 Gr (ISI 12)",
+    nama: "AMPLANG 50 Gr (ISI 12)",
     harga: 109000,
     gambar: "KUKU MACAN 50 Gr ( Isi 12).jpg",
     produk: "oleh-oleh",
   },
   {
     id: 56,
-    nama: "KUKU MACAN 50 Gr",
+    nama: "AMPLANG 50 Gr",
     harga: 9000,
     gambar: "KUKU MACAN 50 Gr.jpg",
     produk: "oleh-oleh",
   },
   {
     id: 57,
-    nama: "KUKU MACAN 150 Gr",
+    nama: "AMPLANG 150 Gr",
     harga: 27000,
     gambar: "KUKU MACAN 150 Gr.jpg",
     produk: "oleh-oleh",
@@ -722,7 +722,6 @@ const Product = () => {
       maximumFractionDigits: 0,
     }).format(number);
   };
-  
 
   return (
     <>

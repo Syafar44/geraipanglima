@@ -212,8 +212,8 @@ const Contact = () => {
           <div className="card-body">
             <h2 className="card-title">Bandara Apt Samarinda</h2>
             <p>
-              Bontang, Sungai Siring, Kec. Samarinda
-              Utara, Kota Samarinda, Kalimantan Timur
+              Bontang, Sungai Siring, Kec. Samarinda Utara, Kota Samarinda,
+              Kalimantan Timur
             </p>
             <div className="card-actions justify-end">
               <Link
@@ -383,14 +383,14 @@ const Contact = () => {
             </ul>
           </div>
           <div
-            className="flex items-center"
+            className="flex items-center h-[10rem]"
             data-aos="fade-left"
             data-aos-duration="1500"
             data-aos-easing="ease-in-out"
           >
             <img
-              src="assets/logo/LOGO-GERAI-PANGLIMA-02.jpg"
-              className="w-[40rem] items-center"
+              src="assets/logo/LOGO-GERAI-PANGLIMA-01.jpg"
+              className="w-[40rem]"
             />
           </div>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { Carousel } from "@material-tailwind/react";
+import { Carousel, IconButton } from "@material-tailwind/react";
 
 const gerai = [
   {
@@ -79,47 +79,168 @@ const resto = [
   },
 ];
 
+const posterDesktop = [
+  {
+    id: 1,
+    image: "./poster/Stiker Amplang Kuku Macan 116.7 X 54.2.jpg",
+    alt: "poster gerai panglima",
+  },
+  {
+    id: 2,
+    image: "./poster/Stiker Roti Durian 116.7 X 54.2.jpg",
+    alt: "poster gerai panglima",
+  },
+];
+
+const posterMobile = [
+  {
+    id: 1,
+    image: "./poster/abcc-01.jpg",
+    alt: "poster gerai panglima",
+  },
+  {
+    id: 2,
+    image: "./poster/abcc-02.jpg",
+    alt: "poster gerai panglima",
+  },
+];
+
 const Gerai = () => {
   return (
     <>
-      {/* Carausel layar Lebar */}
+      {/* Carausel Desktop */}
       <section className="container mx-auto px-28 2xl:px-0 pt-16 -mt-6 hidden lg:block lg:h-[480px] xl:h-[550px] 2xl:h-[800px] z-10">
-        <Carousel loop={true} autoplay={true} className="rounded-xl">
-          <img
-            src="gallery/photo_2024-09-19_16-20-46.jpg"
-            alt="image 1"
-            className="h-full w-full object-cover object-top"
-          />
-          <img
-            src="gallery/_DSC6935_1_1.jpg"
-            alt="image 1"
-            className="h-full w-full object-cover object-top"
-          />
-          <img
-            src="gallery/_DSC9707.jpg"
-            alt="image 1"
-            className="h-full w-full object-cover object-top"
-          />
+        <Carousel
+          loop={true}
+          autoplay={true}
+          className="rounded-xl shadow-xl"
+          prevArrow={({ handlePrev }) => (
+            <IconButton
+              variant="text"
+              color="black"
+              size="lg"
+              onClick={handlePrev}
+              className="!absolute top-2/4 left-4 -translate-y-2/4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="h-6 w-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                />
+              </svg>
+            </IconButton>
+          )}
+          nextArrow={({ handleNext }) => (
+            <IconButton
+              variant="text"
+              color="black"
+              size="lg"
+              onClick={handleNext}
+              className="!absolute top-2/4 !right-4 -translate-y-2/4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="h-6 w-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </IconButton>
+          )}
+        >
+          {posterDesktop.map((poster) => {
+            return (
+              <img
+                key={poster.id}
+                src={poster.image}
+                alt={poster.alt}
+                className="w-full object-cover object-top"
+              />
+            );
+          })}
         </Carousel>
       </section>
-      {/* Carausel layar Kecil */}
+
+      {/* Carausel Mobile */}
       <section className="container px-5 mx-auto py-10 -mt-6 h-[25rem] lg:hidden">
-        <Carousel loop={true} autoplay={true} className="rounded-xl">
-          <img
-            src="gallery/photo_2024-09-19_16-20-46.jpg"
-            alt="image 1"
-            className="h-full w-full object-cover object-top"
-          />
-          <img
-            src="gallery/_DSC6935_1_1.jpg"
-            alt="image 1"
-            className="h-full w-full object-cover object-top"
-          />
-          <img
-            src="gallery/_DSC9707.jpg"
-            alt="image 1"
-            className="h-full w-full object-cover object-top"
-          />
+        <Carousel
+          loop={true}
+          autoplay={true}
+          className="rounded-xl"
+          prevArrow={({ handlePrev }) => (
+            <IconButton
+              variant="text"
+              color="black"
+              size="md"
+              onClick={handlePrev}
+              className="!absolute top-2/4 left-4 -translate-y-2/4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="h-6 w-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                />
+              </svg>
+            </IconButton>
+          )}
+          nextArrow={({ handleNext }) => (
+            <IconButton
+              variant="text"
+              color="black"
+              size="md"
+              onClick={handleNext}
+              className="!absolute top-2/4 !right-4 -translate-y-2/4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="h-6 w-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </IconButton>
+          )}
+        >
+          {posterMobile.map((poster) => {
+            return (
+              <img
+                key={poster.id}
+                src={poster.image}
+                alt={poster.alt}
+                className="w-full object-cover object-top"
+              />
+            );
+          })}
         </Carousel>
       </section>
 

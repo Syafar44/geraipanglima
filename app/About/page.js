@@ -11,7 +11,7 @@ const About = () => {
       <section className="overflow-x-hidden">
         <div className="hero bg-red-700">
           <div className="hero-content my-4 lg:my-20">
-            <div className="gap-20 items-center px-24">
+            <div className="gap-20 items-center text-sm md:text-base md:px-24">
               <div
                 data-aos="fade-up"
                 data-aos-duration="1000"
@@ -50,7 +50,7 @@ const About = () => {
       </section>
 
       <section>
-        <div className="lg:hero my-4 lg:my-20 px-24">
+        <div className="lg:hero my-4 lg:my-20 md:px-24">
           <div className="hero-content flex-col lg:flex-row lg:gap-10 lg:items-center">
             <img
               src="gallery/_DSC9707.jpg"
@@ -90,7 +90,7 @@ const About = () => {
       </section>
 
       <section>
-        <div className="lg:hero my-4 lg:my-20 px-24">
+        <div className="lg:hero my-4 lg:my-20 md:px-24">
           <div className="hero-content lg:flex-row lg:gap-10 lg:items-center flex-col-reverse">
             <div
               data-aos="fade-right"

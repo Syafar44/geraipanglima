@@ -152,7 +152,7 @@ const Contact = () => {
               />
             </figure>
             <div className="card-body">
-              <h2 className="card-title">Juanda Samarinda</h2>
+              <h2 className="card-title">Gerai Utama Juanda Samarinda</h2>
               <p>Jl Juanda no. 55A Samarinda, Kalimantan Timur</p>
               <div className="card-actions justify-end">
                 <Link
@@ -212,7 +212,7 @@ const Contact = () => {
           <div className="card-body">
             <h2 className="card-title">Bandara Apt Samarinda</h2>
             <p>
-              Bontang, Sungai Siring, Kec. Samarinda Utara, Kota Samarinda,
+              Samarinda, Sungai Siring, Kec. Samarinda Utara, Kota Samarinda,
               Kalimantan Timur
             </p>
             <div className="card-actions justify-end">

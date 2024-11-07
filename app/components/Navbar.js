@@ -382,9 +382,6 @@ const Navbar = () => {
                     <Link href="/About">
                       <ListItem>About</ListItem>
                     </Link>
-                    <Link href="/Gallery">
-                      <ListItem>Gallery</ListItem>
-                    </Link>
                     <Link href="/Contact">
                       <ListItem>Contact</ListItem>
                     </Link>
@@ -402,14 +399,17 @@ const Navbar = () => {
               />
             </Link>
           </div>
-          <div className="flex mr-5 items-center text-kuning font-bold bg-putih px-4 my-2 rounded-2xl">
-            {totalItems > 0 ? (
-              <Badge className="-right-3" content={totalItems}>
-                <Link href="/Order">🛒 Order</Link>
-              </Badge>
-            ) : (
-              <Link href="/Order">🛒 Order</Link>
-            )}
+          <div className="flex gap-4 items-center">
+            <Link className="bg-white px-5 pt-1 rounded-lg text-xl font-bold" href="/Product">Produk</Link>
+            <div className="flex mr-5 items-center text-kuning font-bold bg-putih px-4 my-2 rounded-2xl">
+              {totalItems > 0 ? (
+                <Badge className="-right-3" content={totalItems}>
+                  <Link href="/Order">🛒</Link>
+                </Badge>
+              ) : (
+                <Link href="/Order">🛒</Link>
+              )}
+            </div>
           </div>
         </div>
       </nav>

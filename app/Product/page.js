@@ -789,6 +789,7 @@ const Product = () => {
                         )}
                         <img
                           src={`./assets/produk/${product.produk}/${product.gambar}`}
+                          loading="lazy"
                           alt={product.nama}
                           onLoad={() =>
                             setImageLoaded((prev) => ({

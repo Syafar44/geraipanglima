@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="mt-10 bg-kuning">
+    <footer className="mt-10 bg-kuning font-sans">
       <div className="container p-6 mx-auto">
         <div className="lg:flex gap-5">
           <div className="w-full -mx-6 lg:w-2/5">
@@ -100,55 +100,56 @@ const Footer = () => {
           </div>
 
           <div className="mt-6 lg:mt-0 lg:flex-1">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:text-xl">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:text-lg">
               <div>
-                <h3 className="text-gray-400 uppercase dark:text-white">
+                <h3 className="text-gray-300 uppercase dark:text-white">
                   Dashboard
                 </h3>
                 <a
                   href="/"
-                  className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
+                  className="block mt-2 text-sm text-putih hover:underline"
                 >
                   Home
                 </a>
                 <a
                   href="/About"
-                  className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
+                  className="block mt-2 text-sm text-putih hover:underline"
                 >
                   About
                 </a>
                 <a
                   href="/Contact"
-                  className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
+                  className="block mt-2 text-sm text-putih hover:underline"
                 >
                   Contact
                 </a>
               </div>
 
               <div>
-                <h3 className="text-gray-400 uppercase">Manajemen</h3>
+                <h3 className="text-gray-300 uppercase">Manajemen</h3>
                 <a
                   href="/Product"
-                  className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
+                  className="block mt-2 text-sm text-putih hover:underline"
                 >
                   Product
                 </a>
                 <a
                   href="/Order"
-                  className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
+                  className="block mt-2 text-sm text-putih hover:underline"
                 >
                   Order
-                </a>
-                <a
-                  href="/Gallery"
-                  className="block mt-2 text-sm text-putih dark:text-gray-400 hover:underline"
-                >
-                  Gallery
                 </a>
               </div>
 
               <div>
-                <h3 className="text-gray-400 uppercase dark:text-white">
+                <h3 className="text-gray-300 uppercase">JAM OPERASIONAL</h3>
+                <span className="block mt-2 text-sm text-putih hover:underline">
+                  08.00 - 21.00 WITA
+                </span>
+              </div>
+
+              <div>
+                <h3 className="text-gray-300 uppercase dark:text-white">
                   Contact
                 </h3>
                 <a

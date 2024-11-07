@@ -8,43 +8,125 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <section className="overflow-x-hidden">
-        <div className="hero bg-red-700">
-          <div className="hero-content my-4 lg:my-20">
-            <div className="gap-20 items-center text-sm md:text-base md:px-24">
-              <div
-                data-aos="fade-up"
-                data-aos-duration="1000"
+
+      <section>
+        <div className="lg:hero lg:pt-20 md:px-24 bg-red-700">
+          <div className="hero-content flex-col lg:flex-row lg:gap-10 lg:items-center relative">
+            <img
+              src="visiMisi.jpg"
+              className="w-3/4 lg:w-2/4 max-w-full rounded-lg object-cover object-center"
+              data-aos="fade-right"
+              data-aos-duration="1800"
+              data-aos-easing="ease-in-out"
+              alt="Image Gembung"
+              loading="lazy"
+            />
+            <div className="mt-8 md:mt-0 px-2 md:pl-5 xl:pl-32 xl:mt-0 text-white text-sm xl:text-base">
+              <h3
+                className="text-3xl font-semibold mt-6"
+                data-aos="fade-left"
+                data-aos-duration="1400"
                 data-aos-easing="ease-in-out"
               >
-                <p className="text-2xl font-bold text-white text-center">
-                  Panglima Roqiiqu Gorup (PRG) merupakan perusahaan yang
-                  bergerak di bidang industri Consumer Product dimana saat ini
-                  banyak mengeluarkan produk Oleh-Oleh & Daily Consume.
-                </p>
-              </div>
-              <div
-                className="list-disc py-4 text-sm lg:text-2xl text-gray-200 mx-5 text-center"
-                data-aos="fade-up"
+                Visi
+              </h3>
+              <p
+                className="max-w-lg  text-white"
+                data-aos="fade-left"
+                data-aos-duration="1600"
+                data-aos-easing="ease-in-out"
+              >
+                Menginspirasi Indonesia! Menjadi Perusahaan Syariah Kelas Dunia
+                Yang Dicintai, Berperan Dalam Peradaban Mulia, Dan Bermanfaat
+                Bagi Semua.
+              </p>
+              <h3
+                className="text-3xl font-semibold mt-3"
+                data-aos="fade-left"
+                data-aos-duration="1800"
+                data-aos-easing="ease-in-out"
+              >
+                Misi
+              </h3>
+              <ul
+                className="list-disc text-white ml-4"
+                data-aos="fade-left"
                 data-aos-duration="2000"
                 data-aos-easing="ease-in-out"
               >
-                <p>
-                  Didirikan pada Februari 2011 di Samarinda, Kalimantan Timur
-                  dengan niatan untuk membangun usaha yang dilandaskan pada
-                  prinsip syariah, maka perusahaan ini didirikan dengan
-                  menggunakan pola syirkah mudharabah, dimana terdapat pengelola
-                  (mudharib) dan penanam modal (shahibul maal).
-                </p>
-                <p>
-                  Dalam pengelolaan bisnis, komitmen bahwa perusahaan ini
-                  dikelola & dikembangkan sesuai prinsip syariah menjadi pijakan
-                  & kekuatan dalam perkembangan perusahaan. PRG saat ini
-                  memiliki 2 brand ternama yaitu Gerai Panglima & Jajan
-                  Panglima.
-                </p>
-              </div>
+                <li>
+                  Mengelola perusahaan Murni sesuai Syariat Islam oleh individu
+                  yang Saleh dengan standart Kelas Dunia
+                </li>
+                <li>
+                  Menyediakan produk yang halal, berkualitas dan memberi nilai
+                  yang terbaik bagi pelanggan
+                </li>
+                <li>
+                  Menyebar manfaat serta berperan nyata dalam peradaban mulia
+                </li>
+                <li>
+                  Bertumbuh dengan Cepat dan Berkesinambungan sehingga dapat
+                  Semakin Bermanfaat Bagi Semua
+                </li>
+              </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="lg:hero lg:py-20 md:px-24 bg-red-700">
+          <div className="hero-content lg:flex-row lg:gap-10 lg:items-center flex-col-reverse relative">
+            {/* <h1 className="absolute -top-10 left-20 text-4xl font-bold text-white">Value Gerai Panglima</h1> */}
+            <div className="xl:px-10 lg:mt-0 text-white">
+              <ul className="text-white text-2xl lg:text-4xl 2xl:text-5xl font-bold p-2">
+                <li
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                >
+                  Syar&apos;i
+                </li>
+                <li
+                  data-aos="fade-right"
+                  data-aos-duration="1300"
+                  data-aos-easing="ease-in-out"
+                >
+                  Profesional
+                </li>
+                <li
+                  data-aos="fade-right"
+                  data-aos-duration="1500"
+                  data-aos-easing="ease-in-out"
+                >
+                  Customer Centric
+                </li>
+                <li
+                  data-aos="fade-right"
+                  data-aos-duration="1700"
+                  data-aos-easing="ease-in-out"
+                >
+                  Innovation
+                </li>
+                <li
+                  data-aos="fade-right"
+                  data-aos-duration="1900"
+                  data-aos-easing="ease-in-out"
+                >
+                  Helpful
+                </li>
+              </ul>
+            </div>
+            <img
+              src="value.jpg"
+              className="w-3/4 lg:w-2/4 max-w-full rounded-lg object-cover object-center"
+              data-aos="fade-left"
+              data-aos-duration="1800"
+              data-aos-easing="ease-in-out"
+              alt="Image Gembung"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
@@ -59,6 +141,7 @@ const About = () => {
               data-aos-duration="1800"
               data-aos-easing="ease-in-out"
               alt="Image Gembung"
+              loading="lazy"
             />
             <div
               data-aos="fade-left"
@@ -117,6 +200,7 @@ const About = () => {
               data-aos-duration="1800"
               data-aos-easing="ease-in-out"
               alt="Image Gembung"
+              loading="lazy"
             />
           </div>
         </div>

@@ -170,6 +170,7 @@ const Gerai = () => {
                 src={poster.image}
                 alt={poster.alt}
                 className="w-full object-cover object-top"
+                loading="lazy"
               />
             );
           })}
@@ -238,6 +239,7 @@ const Gerai = () => {
                 src={poster.image}
                 alt={poster.alt}
                 className="w-full object-cover object-top"
+                loading="lazy"
               />
             );
           })}
@@ -272,6 +274,7 @@ const Gerai = () => {
                           className="h-56 scale-150"
                           src={`assets/produk/${item.file}/${item.image}`}
                           alt={item.produk}
+                          loading="lazy"
                         />
                       </figure>
                       <div>
@@ -317,6 +320,7 @@ const Gerai = () => {
                           className="h-56 scale-100"
                           src={`assets/produk/${item.file}/${item.image}`}
                           alt={item.produk}
+                          loading="lazy"
                         />
                       </figure>
                       <div className="">
@@ -364,6 +368,7 @@ const Gerai = () => {
                 <img
                   className="h-28 xl:h-40"
                   src="assets/keunggulan-home-1.png"
+                  loading="lazy"
                 />
                 <div className="bg-[#a42023] ml-4 p-3 rounded-[30px] text-white">
                   <h6 className="font-bold text-xl mb-1">Alami</h6>
@@ -383,6 +388,7 @@ const Gerai = () => {
                 <img
                   className="h-28 xl:h-40"
                   src="assets/keunggulan-home-3.png"
+                  loading="lazy"
                 />
                 <div className="bg-[#a42023] ml-4 p-3 rounded-[30px] text-white">
                   <h6 className="font-bold text-xl mb-1">Berkualitas Tinggi</h6>
@@ -402,6 +408,7 @@ const Gerai = () => {
                 <img
                   className="h-24 xl:h-36"
                   src="assets/keunggulan-home-2.png"
+                  loading="lazy"
                 />
                 <div className="bg-[#a42023] ml-4 p-3 rounded-[30px] text-white">
                   <h6 className="font-bold text-xl">Pelayanan 24/7</h6>

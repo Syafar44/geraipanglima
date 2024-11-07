@@ -150,7 +150,7 @@ const Order = () => {
             {cart.map((product, index) => (
               <tr key={index}>
                 <td className="pl-5 lg:text-xl">{product.nama}</td>
-                <td className="text-center p-2 hidden lg:block">
+                <td className="text-center pt-4 hidden lg:block">
                   {rupiah(product.harga)}
                 </td>
                 <td>

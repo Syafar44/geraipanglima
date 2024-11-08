@@ -226,7 +226,7 @@ const products = [
   {
     id: 30,
     nama: "FLOSS ROLL",
-    harga: 72000,
+    harga: 60000,
     gambar: "floss roll.jpg",
     produk: "oleh-oleh",
   },

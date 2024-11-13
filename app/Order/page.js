@@ -243,12 +243,6 @@ const Order = () => {
                         <option value="outlet jajan juanda">
                           Gerai Panglima Juanda
                         </option>
-                        <option value="outlet jajan suryanata">
-                          Gerai Panglima Bandara Balikpapan
-                        </option>
-                        <option value="outlet jajan sempaja">
-                          Gerai Panglima Bandara Apt
-                        </option>
                       </select>
                       <Input
                         type="time"

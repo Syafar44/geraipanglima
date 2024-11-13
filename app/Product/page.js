@@ -17,6 +17,8 @@ import {
 } from "@material-tailwind/react";
 import Footer from "../components/Footer";
 import Wa from "@/app/components/Wa";
+import useCart from "../utils/cart-handler";
+import rupiah from "../utils/rupiah";
 
 // Daftar produk
 const products = [
@@ -632,7 +634,6 @@ const products = [
 ];
 
 const Product = () => {
-  const [cart, setCart] = useState([]); //
   const [filter, setFilter] = useState("");
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -640,44 +641,11 @@ const Product = () => {
   const [imageLoaded, setImageLoaded] = React.useState({});
   const itemsPerPage = 20;
 
+  const { cart, addToCart, decreaseQuantity, increaseQuantity } = useCart();
+
   useEffect(() => {
-    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCart(savedCart);
     setIsLoading(false);
   }, []);
-
-  // Menambahkan produk ke keranjang
-  const addToCart = (product) => {
-    const updatedCart = cart.some((item) => item.id === product.id)
-      ? cart.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        )
-      : [...cart, { ...product, quantity: 1 }];
-    setCart(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-  };
-
-  // Mengurangi kuantitas produk di keranjang
-  const decreaseQuantity = (productId) => {
-    const updatedCart = cart
-      .map((item) =>
-        item.id === productId ? { ...item, quantity: item.quantity - 1 } : item
-      )
-      .filter((item) => item.quantity > 0);
-    setCart(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-  };
-
-  // Menambah kuantitas produk di keranjang
-  const increaseQuantity = (productId) => {
-    const updatedCart = cart.map((item) =>
-      item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
-    );
-    setCart(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-  };
 
   // Mengfilter produk berdasarkan filter dan pencarian
   const filteredProducts = products.filter(
@@ -711,16 +679,6 @@ const Product = () => {
     setSearch(e.target.value);
     setFilter("");
     setCurrentPage(1);
-  };
-
-  // convert IDR
-  const rupiah = (number) => {
-    return new Intl.NumberFormat("id-ID", {
-      style: "currency",
-      currency: "IDR",
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(number);
   };
 
   return (
@@ -775,6 +733,8 @@ const Product = () => {
 
         <div className="grid grid-cols-2 lg:grid-cols-5 2xl:grid-cols-5 mt-6 gap-5 min-h-[calc(2*190px)] xl:min-h-[calc(2*230px)] 2xl:min-h-[calc(2*280px)]">
           {currentItems.map((product) => {
+            console.log(product);
+
             const cartItem = cart.find((item) => item.id === product.id);
             return (
               <Card key={product.id} className="flex justify-between">
@@ -862,6 +822,7 @@ const Product = () => {
             );
           })}
         </div>
+
         <div className="flex justify-between mt-6">
           <a href="#top">
             <Button

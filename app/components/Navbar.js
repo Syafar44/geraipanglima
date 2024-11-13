@@ -106,6 +106,24 @@ const navListMenuItems = [
   },
 ];
 
+const navListProdukItems = [
+  {
+    id: 1,
+    title: "Produk Gerai",
+    link: "/Product",
+  },
+  // {
+  //   id: 2,
+  //   title: "Snack Box",
+  //   link: "/Snack-box",
+  // },
+  {
+    id: 3,
+    title: "Lanch Box",
+    link: "/Lanch-box",
+  },
+];
+
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -184,6 +202,60 @@ function NavListMenu() {
   );
 }
 
+function NavListMenuProduk() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const renderItems = navListProdukItems.map(({ title, link }, id) => (
+    <a className="text-black" href={link} key={id}>
+      <MenuItem className="flex justify-center items-center border hover:bg-red-800 hover:text-white py-6 shadow-md">
+        <div>
+          <Typography
+            variant="h6"
+            className="flex items-center text-base font-bold"
+          >
+            {title}
+          </Typography>
+        </div>
+      </MenuItem>
+    </a>
+  ));
+
+  return (
+    <React.Fragment>
+      <Menu
+        open={isMenuOpen}
+        handler={setIsMenuOpen}
+        offset={{ mainAxis: 20 }}
+        placement="bottom"
+        allowHover={true}
+      >
+        <MenuHandler>
+          <Typography as="div" variant="small" className="font-medium">
+            <ListItem
+              className="flex items-center gap-2 py-2 pr-4 font-bold text-lg text-white"
+              selected={isMenuOpen || isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+            >
+              Produk
+              <ChevronDownIcon
+                strokeWidth={2.5}
+                className={`h-3 w-3 transition-transform ${
+                  isMenuOpen ? "rotate-180" : ""
+                }`}
+              />
+            </ListItem>
+          </Typography>
+        </MenuHandler>
+        <MenuList className="rounded">
+          <ul className="grid grid-cols-1 gap-2 outline-none outline-0 w-[20rem]">
+            {renderItems}
+          </ul>
+        </MenuList>
+      </Menu>
+    </React.Fragment>
+  );
+}
+
 const Navbar = () => {
   const [open, setOpen] = React.useState(0);
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
@@ -248,12 +320,13 @@ const Navbar = () => {
           </div>
           <div className="flex text-sm xl:text-base lg:gap-2 2xl:gap-5 items-center">
             <NavListMenu />
-            <Link
+            <NavListMenuProduk />
+            {/* <Link
               className="lg:px-3 xl:px-3 2xl:px-6 py-2 rounded-lg flex items-center text-putih hover:shadow-[inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] transition duration-300 ease-linear "
               href="/Product"
             >
               PRODUCT
-            </Link>
+            </Link> */}
 
             {totalItems > 0 ? (
               <Badge className="right-0" content={totalItems}>
@@ -277,7 +350,7 @@ const Navbar = () => {
       </nav>
 
       <nav className="lg:hidden bg-kuning p-2 block sticky top-0 z-50">
-        <div className="flex justify-between mx-2">
+        <div className="flex justify-between">
           <div className="flex gap-3 justify-center items-center">
             <IconButton variant="text" size="lg" onClick={openDrawer}>
               {isDrawerOpen ? (
@@ -331,6 +404,55 @@ const Navbar = () => {
                     <ListItem className="p-0" selected={open === 1}>
                       <AccordionHeader
                         onClick={() => handleOpen(1)}
+                        className="border-b-0 p-3"
+                      >
+                        <Typography className="mr-auto font-normal text-putih">
+                          Produk
+                        </Typography>
+                      </AccordionHeader>
+                    </ListItem>
+                    <AccordionBody className="py-1">
+                      <List className="p-0 text-putih">
+                        {navListProdukItems.map((item) => {
+                          return (
+                            <Link
+                              key={item.id}
+                              href={item.link}
+                              target="_blank"
+                            >
+                              <ListItem>
+                                <ListItemPrefix>
+                                  <ChevronRightIcon
+                                    strokeWidth={3}
+                                    className="h-3 w-5"
+                                  />
+                                </ListItemPrefix>
+                                <hr className="my-2 border-putih" />
+                                {item.title}
+                              </ListItem>
+                            </Link>
+                          );
+                        })}
+                      </List>
+                    </AccordionBody>
+                  </Accordion>
+                  <hr className="my-1 border-none" />
+
+                  <Accordion
+                    className="border border-putih rounded-xl"
+                    open={open === 2}
+                    icon={
+                      <ChevronDownIcon
+                        strokeWidth={2.5}
+                        className={`mx-auto h-4 w-4 transition-transform ${
+                          open === 1 ? "rotate-180" : ""
+                        }`}
+                      />
+                    }
+                  >
+                    <ListItem className="p-0" selected={open === 1}>
+                      <AccordionHeader
+                        onClick={() => handleOpen(2)}
                         className="border-b-0 p-3"
                       >
                         <Typography className="mr-auto font-normal text-putih">
@@ -400,7 +522,8 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="flex gap-4 items-center">
-            <Link className="bg-white px-5 pt-1 rounded-lg text-xl font-bold" href="/Product">Produk</Link>
+            <NavListMenuProduk />
+
             <div className="flex mr-5 items-center text-kuning font-bold bg-putih px-4 my-2 rounded-2xl">
               {totalItems > 0 ? (
                 <Badge className="-right-3" content={totalItems}>

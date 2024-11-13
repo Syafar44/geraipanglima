@@ -6,6 +6,7 @@ import useCart from "@/app/utils/cart-handler";
 import { Button, Chip } from "@material-tailwind/react";
 import rupiah from "@/app/utils/rupiah";
 import Link from "next/link";
+import Wa from "@/app/components/Wa";
 
 const lanchBox = [
   {
@@ -109,7 +110,12 @@ const LanchBox25 = () => {
             );
           })}
         </div>
+        <p className="text-center text-2xl pt-10 font-semibold text-gray-700">
+          <span className='font-bold text-black'>Minimal order: </span>10 pax | Pemesanan minimal di lakukan 1
+          hari sebelumnya
+        </p>
       </section>
+      <Wa />
       <Footer />
     </>
   );

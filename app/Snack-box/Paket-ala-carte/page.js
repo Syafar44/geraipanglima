@@ -101,16 +101,16 @@ const SnackBox15 = () => {
               return (
                 <div
                   key={snack.id}
-                  className="flex px-5 justify-between mb-3 bg-red-700 py-2 md:py-6 rounded-lg text-white relative"
+                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-3 rounded-lg relative border border-red-700"
                 >
-                  <h3 className="md:text-2xl font-semibold">{snack.nama}</h3>
+                  <h3 className="md:text-xl font-semibold">{snack.nama}</h3>
                   <div className="flex items-center gap-5">
-                    <p className="text-lg font-semibold pr-20 md:pr-32">
+                    <p className="text-lg font-semibold pr-20 md:pr-28">
                       {rupiah(snack.harga)}
                     </p>
                     {cartItem ? (
                       cartItem.quantity > 0 ? (
-                        <div className="flex bg-white items-center px-2 py-2 rounded-xl gap-2 scale-50 md:scale-75 absolute -right-7 md:right-0">
+                        <div className="flex bg-white items-center px-2 py-2 rounded-xl gap-2 scale-50 md:scale-75 absolute -right-7 md:-right-3">
                           <Button
                             className="px-4 bg-red-700"
                             onClick={() => decreaseQuantity(snack.id)}
@@ -133,7 +133,7 @@ const SnackBox15 = () => {
                       ) : (
                         <button
                           onClick={() => addToCart(snack)}
-                          className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-5 rounded-lg"
+                          className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-2 rounded-lg"
                         >
                           Tambah
                         </button>
@@ -141,7 +141,7 @@ const SnackBox15 = () => {
                     ) : (
                       <button
                         onClick={() => addToCart(snack)}
-                        className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-5 rounded-lg active:"
+                        className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-2 rounded-lg"
                       >
                         Tambah
                       </button>
@@ -158,16 +158,16 @@ const SnackBox15 = () => {
               return (
                 <div
                   key={snack.id}
-                  className="flex px-5 justify-between mb-3 bg-red-700 py-2 md:py-6 rounded-lg text-white relative"
+                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-3 rounded-lg relative border border-red-700"
                 >
-                  <h3 className="md:text-2xl font-semibold">{snack.nama}</h3>
+                  <h3 className="md:text-xl font-semibold">{snack.nama}</h3>
                   <div className="flex items-center gap-5">
                     <p className="text-lg font-semibold pr-20 md:pr-32">
                       {rupiah(snack.harga)}
                     </p>
                     {cartItem ? (
                       cartItem.quantity > 0 ? (
-                        <div className="flex bg-white items-center px-2 py-2 rounded-xl gap-2 scale-50 md:scale-75 absolute -right-7 md:right-0">
+                        <div className="flex bg-white items-center px-2 py-2 rounded-xl gap-2 scale-50 md:scale-75 absolute -right-7 md:-right-3">
                           <Button
                             className="px-4 bg-red-700"
                             onClick={() => decreaseQuantity(snack.id)}
@@ -190,7 +190,7 @@ const SnackBox15 = () => {
                       ) : (
                         <button
                           onClick={() => addToCart(snack)}
-                          className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-5 rounded-lg"
+                          className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-2 rounded-lg"
                         >
                           Tambah
                         </button>
@@ -198,7 +198,7 @@ const SnackBox15 = () => {
                     ) : (
                       <button
                         onClick={() => addToCart(snack)}
-                        className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-5 rounded-lg"
+                        className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-2 rounded-lg"
                       >
                         Tambah
                       </button>
@@ -217,16 +217,16 @@ const SnackBox15 = () => {
               return (
                 <div
                   key={snack.id}
-                  className="flex px-5 justify-between mb-3 bg-red-700 py-2 md:py-6 rounded-lg text-white relative"
+                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-3 rounded-lg relative border border-red-700"
                 >
-                  <h3 className="md:text-2xl font-semibold">{snack.nama}</h3>
+                  <h3 className="md:text-xl font-semibold">{snack.nama}</h3>
                   <div className="flex items-center gap-5">
                     <p className="text-lg font-semibold pr-20 md:pr-32">
                       {rupiah(snack.harga)}
                     </p>
                     {cartItem ? (
                       cartItem.quantity > 0 ? (
-                        <div className="flex bg-white items-center px-2 py-2 rounded-xl gap-2 scale-50 md:scale-75 absolute -right-7 md:right-0">
+                        <div className="flex bg-white items-center px-2 py-2 rounded-xl gap-2 scale-50 md:scale-75 absolute -right-7 md:-right-3">
                           <Button
                             className="px-4 bg-red-700"
                             onClick={() => decreaseQuantity(snack.id)}
@@ -249,7 +249,7 @@ const SnackBox15 = () => {
                       ) : (
                         <button
                           onClick={() => addToCart(snack)}
-                          className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-5 rounded-lg"
+                          className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-2 rounded-lg"
                         >
                           Tambah
                         </button>
@@ -257,7 +257,7 @@ const SnackBox15 = () => {
                     ) : (
                       <button
                         onClick={() => addToCart(snack)}
-                        className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-5 rounded-lg"
+                        className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-2 rounded-lg"
                       >
                         Tambah
                       </button>
@@ -275,16 +275,16 @@ const SnackBox15 = () => {
               return (
                 <div
                   key={snack.id}
-                  className="flex px-5 justify-between mb-3 bg-red-700 py-2 md:py-6 rounded-lg text-white relative"
+                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-3 rounded-lg relative border border-red-700"
                 >
-                  <h3 className="md:text-2xl font-semibold">{snack.nama}</h3>
+                  <h3 className="md:text-xl font-semibold">{snack.nama}</h3>
                   <div className="flex items-center gap-5">
                     <p className="text-lg font-semibold pr-20 md:pr-32">
                       {rupiah(snack.harga)}
                     </p>
                     {cartItem ? (
                       cartItem.quantity > 0 ? (
-                        <div className="flex bg-white items-center px-2 py-2 rounded-xl gap-2 scale-50 md:scale-75 absolute -right-7 md:right-0">
+                        <div className="flex bg-white items-center px-2 py-2 rounded-xl gap-2 scale-50 md:scale-75 absolute -right-7 md:-right-3">
                           <Button
                             className="px-4 bg-red-700"
                             onClick={() => decreaseQuantity(snack.id)}
@@ -307,7 +307,7 @@ const SnackBox15 = () => {
                       ) : (
                         <button
                           onClick={() => addToCart(snack)}
-                          className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-5 rounded-lg"
+                          className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-2 rounded-lg"
                         >
                           Tambah
                         </button>
@@ -315,7 +315,7 @@ const SnackBox15 = () => {
                     ) : (
                       <button
                         onClick={() => addToCart(snack)}
-                        className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-5 rounded-lg"
+                        className="bg-white text-red-700 md:text-lg font-teko text-center py-1 px-5 md:py-2 md:px-9 absolute right-2 md:right-2 rounded-lg"
                       >
                         Tambah
                       </button>

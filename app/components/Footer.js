@@ -144,6 +144,9 @@ const Footer = () => {
               <div>
                 <h3 className="text-gray-300 uppercase">JAM OPERASIONAL</h3>
                 <span className="block mt-2 text-sm text-putih hover:underline">
+                  Buka Setiap Hari
+                </span>
+                <span className="block mt-2 text-sm text-putih hover:underline">
                   07.00 - 21.00 WITA
                 </span>
               </div>

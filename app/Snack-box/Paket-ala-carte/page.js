@@ -101,11 +101,11 @@ const SnackBox15 = () => {
               return (
                 <div
                   key={snack.id}
-                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-3 rounded-lg relative border border-red-700"
+                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700"
                 >
-                  <h3 className="md:text-xl font-semibold">{snack.nama}</h3>
+                  <h3 className="md:text-lg font-semibold">{snack.nama}</h3>
                   <div className="flex items-center gap-5">
-                    <p className="text-lg font-semibold pr-20 md:pr-28">
+                    <p className="font-semibold pr-20 md:pr-28">
                       {rupiah(snack.harga)}
                     </p>
                     {cartItem ? (
@@ -158,7 +158,7 @@ const SnackBox15 = () => {
               return (
                 <div
                   key={snack.id}
-                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-3 rounded-lg relative border border-red-700"
+                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700"
                 >
                   <h3 className="md:text-xl font-semibold">{snack.nama}</h3>
                   <div className="flex items-center gap-5">
@@ -217,7 +217,7 @@ const SnackBox15 = () => {
               return (
                 <div
                   key={snack.id}
-                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-3 rounded-lg relative border border-red-700"
+                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700"
                 >
                   <h3 className="md:text-xl font-semibold">{snack.nama}</h3>
                   <div className="flex items-center gap-5">
@@ -275,7 +275,7 @@ const SnackBox15 = () => {
               return (
                 <div
                   key={snack.id}
-                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-3 rounded-lg relative border border-red-700"
+                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700"
                 >
                   <h3 className="md:text-xl font-semibold">{snack.nama}</h3>
                   <div className="flex items-center gap-5">

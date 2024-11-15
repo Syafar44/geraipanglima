@@ -327,7 +327,7 @@ const SnackBox15 = () => {
           </div>
         </div>
         <p className="text-center md:text-2xl pt-10  text-gray-700">
-          <span className="font-bold text-black">Minimal order: </span>10 pax |
+          <span className="text-black">Minimal order: </span>10 pax |
           Pemesanan minimal di lakukan 1 hari sebelumnya
         </p>
       </section>

@@ -1,31 +1,31 @@
-"use client";
-import React from "react";
-import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
-import useCart from "@/app/utils/cart-handler";
-import { Button, Chip } from "@material-tailwind/react";
-import rupiah from "@/app/utils/rupiah";
-import Link from "next/link";
-import Wa from "@/app/components/Wa";
+'use client';
+import React from 'react';
+import Navbar from '@/app/components/Navbar';
+import Footer from '@/app/components/Footer';
+import useCart from '@/app/utils/cart-handler';
+import { Button, Chip } from '@material-tailwind/react';
+import rupiah from '@/app/utils/rupiah';
+import Link from 'next/link';
+import Wa from '@/app/components/Wa';
 
 const lanchBox = [
   {
     id: 650,
-    nama: "Lanch Box 45 Paket A",
+    nama: 'Lanch Box 45 Paket A',
     harga: 45000,
-    image: "../assets/lanch-box/45-a.jpg",
+    image: '../assets/lanch-box/45-a.jpg',
   },
   {
     id: 974,
-    nama: "Lanch Box 45 Paket B",
+    nama: 'Lanch Box 45 Paket B',
     harga: 45000,
-    image: "../assets/lanch-box/45-b.jpg",
+    image: '../assets/lanch-box/45-b.jpg',
   },
   {
     id: 308,
-    nama: "Lanch Box 45 Paket C",
+    nama: 'Lanch Box 45 Paket C',
     harga: 45000,
-    image: "../assets/lanch-box/45-c.jpg",
+    image: '../assets/lanch-box/45-c.jpg',
   },
 ];
 
@@ -37,10 +37,10 @@ const LanchBox45 = () => {
       <Navbar />
       <section className="px-5 py-10 md:px-20 md:py-10 lg:px-32 lg:py-24 2xl:px-80">
         <h1 className="text-center text-4xl pb-10 font-bold">
-          Pilih Paket{" "}
+          Pilih Paket{' '}
           <Link href="/Lanch-box" className="text-red-700 hover:text-red-900">
             Lanch Box
-          </Link>{" "}
+          </Link>{' '}
           Sesuai Kebutuhan Anda
         </h1>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -110,9 +110,9 @@ const LanchBox45 = () => {
             );
           })}
         </div>
-        <p className="text-center text-2xl pt-10 font-semibold text-gray-700">
-          <span className='font-bold text-black'>Minimal order: </span>10 pax | Pemesanan minimal di lakukan 1
-          hari sebelumnya
+        <p className="text-center md:text-2xl pt-10  text-gray-700">
+          <span className="text-black">Minimal order: </span>10 pax | Pemesanan
+          minimal di lakukan 1 hari sebelumnya
         </p>
       </section>
       <Wa />

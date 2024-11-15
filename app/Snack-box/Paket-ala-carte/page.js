@@ -103,9 +103,9 @@ const SnackBox15 = () => {
                   key={snack.id}
                   className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700"
                 >
-                  <h3 className="md:text-lg font-semibold">{snack.nama}</h3>
+                  <h3 className="md:text-lg ">{snack.nama}</h3>
                   <div className="flex items-center gap-5">
-                    <p className="font-semibold pr-20 md:pr-28">
+                    <p className=" pr-20 md:pr-28">
                       {rupiah(snack.harga)}
                     </p>
                     {cartItem ? (
@@ -160,9 +160,9 @@ const SnackBox15 = () => {
                   key={snack.id}
                   className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700"
                 >
-                  <h3 className="md:text-xl font-semibold">{snack.nama}</h3>
+                  <h3 className="md:text-lg ">{snack.nama}</h3>
                   <div className="flex items-center gap-5">
-                    <p className="text-lg font-semibold pr-20 md:pr-32">
+                    <p className=" pr-20 md:pr-32">
                       {rupiah(snack.harga)}
                     </p>
                     {cartItem ? (
@@ -219,9 +219,9 @@ const SnackBox15 = () => {
                   key={snack.id}
                   className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700"
                 >
-                  <h3 className="md:text-xl font-semibold">{snack.nama}</h3>
+                  <h3 className="md:text-lg ">{snack.nama}</h3>
                   <div className="flex items-center gap-5">
-                    <p className="text-lg font-semibold pr-20 md:pr-32">
+                    <p className=" pr-20 md:pr-32">
                       {rupiah(snack.harga)}
                     </p>
                     {cartItem ? (
@@ -277,9 +277,9 @@ const SnackBox15 = () => {
                   key={snack.id}
                   className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700"
                 >
-                  <h3 className="md:text-xl font-semibold">{snack.nama}</h3>
+                  <h3 className="md:text-lg ">{snack.nama}</h3>
                   <div className="flex items-center gap-5">
-                    <p className="text-lg font-semibold pr-20 md:pr-32">
+                    <p className=" pr-20 md:pr-32">
                       {rupiah(snack.harga)}
                     </p>
                     {cartItem ? (
@@ -326,7 +326,7 @@ const SnackBox15 = () => {
             })}
           </div>
         </div>
-        <p className="text-center md:text-2xl pt-10 font-semibold text-gray-700">
+        <p className="text-center md:text-2xl pt-10  text-gray-700">
           <span className="font-bold text-black">Minimal order: </span>10 pax |
           Pemesanan minimal di lakukan 1 hari sebelumnya
         </p>

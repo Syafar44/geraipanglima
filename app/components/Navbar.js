@@ -1,7 +1,7 @@
-"use client";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { Teko } from "next/font/google";
+'use client';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import { Teko } from 'next/font/google';
 import {
   IconButton,
   Typography,
@@ -19,11 +19,11 @@ import {
   MenuHandler,
   MenuList,
   Collapse,
-} from "@material-tailwind/react";
+} from '@material-tailwind/react';
 
 const teko = Teko({
-  weight: ["300", "700"],
-  subsets: ["latin"],
+  weight: ['300', '700'],
+  subsets: ['latin'],
 });
 
 import {
@@ -31,7 +31,7 @@ import {
   ChevronDownIcon,
   Bars3Icon,
   XMarkIcon,
-} from "@heroicons/react/24/outline";
+} from '@heroicons/react/24/outline';
 
 const Shopee = () => {
   return (
@@ -93,34 +93,34 @@ const Tiktok = () => {
 
 const navListMenuItems = [
   {
-    title: "Shopee",
-    description: "Ayo belanja Oleh-oleh di gerai panglima",
+    title: 'Shopee',
+    description: 'Ayo belanja Oleh-oleh di gerai panglima',
     icon: Shopee,
-    link: "https://shopee.co.id/geraipanglima",
+    link: 'https://shopee.co.id/geraipanglima',
   },
   {
-    title: "Tiktok",
-    description: "Gerai Panglima Samarinda",
+    title: 'Tiktok',
+    description: 'Gerai Panglima Samarinda',
     icon: Tiktok,
-    link: "https://vt.tiktok.com/ZSYTfd4An/?page=Mall",
+    link: 'https://vt.tiktok.com/ZSYTfd4An/?page=Mall',
   },
 ];
 
 const navListProdukItems = [
   {
     id: 1,
-    title: "Produk Gerai",
-    link: "/Product",
+    title: 'Produk Gerai',
+    link: '/Product',
   },
-  // {
-  //   id: 2,
-  //   title: "Snack Box",
-  //   link: "/Snack-box",
-  // },
+  {
+    id: 2,
+    title: 'Snack Box',
+    link: '/Snack-box',
+  },
   {
     id: 3,
-    title: "Lanch Box",
-    link: "/Lanch-box",
+    title: 'Lunch Box',
+    link: '/Lanch-box',
   },
 ];
 
@@ -132,10 +132,10 @@ function NavListMenu() {
       <a href="#" key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
           <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
-            {" "}
+            {' '}
             {React.createElement(icon, {
               strokeWidth: 2,
-              className: "h-6 text-gray-900 w-6",
+              className: 'h-6 text-gray-900 w-6',
             })}
           </div>
           <div>
@@ -177,13 +177,13 @@ function NavListMenu() {
               <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`hidden h-3 w-3 transition-transform lg:block ${
-                  isMenuOpen ? "rotate-180" : ""
+                  isMenuOpen ? 'rotate-180' : ''
                 }`}
               />
               <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`block h-3 w-3 transition-transform lg:hidden ${
-                  isMobileMenuOpen ? "rotate-180" : ""
+                  isMobileMenuOpen ? 'rotate-180' : ''
                 }`}
               />
             </ListItem>
@@ -232,7 +232,7 @@ function NavListMenuProduk() {
         <MenuHandler>
           <Typography as="div" variant="small" className="font-medium">
             <ListItem
-              className="flex items-center gap-2 py-2 pr-4 font-bold text-lg text-white"
+              className={`flex items-center gap-2 py-2 pr-4 font-bold text-lg text-white ${teko.className}`}
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -240,7 +240,7 @@ function NavListMenuProduk() {
               <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`h-3 w-3 transition-transform ${
-                  isMenuOpen ? "rotate-180" : ""
+                  isMenuOpen ? 'rotate-180' : ''
                 }`}
               />
             </ListItem>
@@ -268,7 +268,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
     const total = savedCart.reduce((sum, product) => sum + product.quantity, 0);
     setTotalItems(total);
   }, []);
@@ -276,18 +276,18 @@ const Navbar = () => {
   const link1 = [
     {
       id: 1,
-      title: "HOME",
-      link: "/",
+      title: 'HOME',
+      link: '/',
     },
     {
       id: 2,
-      title: "ABOUT",
-      link: "/About",
+      title: 'ABOUT',
+      link: '/About',
     },
     {
       id: 3,
-      title: "CONTACT",
-      link: "/Contact",
+      title: 'CONTACT',
+      link: '/Contact',
     },
   ];
 
@@ -396,7 +396,7 @@ const Navbar = () => {
                       <ChevronDownIcon
                         strokeWidth={2.5}
                         className={`mx-auto h-4 w-4 transition-transform ${
-                          open === 1 ? "rotate-180" : ""
+                          open === 1 ? 'rotate-180' : ''
                         }`}
                       />
                     }
@@ -445,7 +445,7 @@ const Navbar = () => {
                       <ChevronDownIcon
                         strokeWidth={2.5}
                         className={`mx-auto h-4 w-4 transition-transform ${
-                          open === 1 ? "rotate-180" : ""
+                          open === 1 ? 'rotate-180' : ''
                         }`}
                       />
                     }
@@ -495,9 +495,6 @@ const Navbar = () => {
                   </Accordion>
                   <hr className="my-2 border-putih" />
                   <div className="font-bold text-putih">
-                    <Link href="/Product">
-                      <ListItem>Product</ListItem>
-                    </Link>
                     <Link href="/">
                       <ListItem>Home</ListItem>
                     </Link>

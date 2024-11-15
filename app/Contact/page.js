@@ -98,15 +98,6 @@ const Contact = () => {
               Panglima Roti Jl. Ir. H. Juanda No.55a, Sidodadi, Kec. Samarinda
               Ulu, Kota Samarinda, Kalimantan Timur 75124
             </p>
-            <p
-              className="pb-2 lg:py-3 text-gray-600 font-bold"
-              data-aos="fade-right"
-              data-aos-duration="1400"
-              data-aos-easing="ease-in-out"
-            >
-              Senin - Sabtu Pukul 08.00 - 17.00 WIB (Kecuali Hari Libur
-              Nasional)
-            </p>
             <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-5 text-sm xl:text-xl font-bold"
               data-aos="fade-up"

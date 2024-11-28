@@ -109,8 +109,13 @@ const navListMenuItems = [
 const navListProdukItems = [
   {
     id: 1,
-    title: 'Produk Gerai',
-    link: '/Product',
+    title: 'Oleh-Oleh',
+    link: '/Oleh-Oleh',
+  },
+  {
+    id: 1,
+    title: 'Resto',
+    link: '/Resto',
   },
   {
     id: 2,

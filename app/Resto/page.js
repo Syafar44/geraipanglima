@@ -375,7 +375,7 @@ const products = [
   {
     id: 85,
     nama: 'TELUR DADAR PENYET',
-    harga: 35000,
+    harga: 20000,
     gambar: 'TELUR DADAR PENYET.jpg',
     produk: 'makanan',
   },
@@ -501,7 +501,7 @@ const Resto = () => {
           {currentItems.map((product) => {
             const cartItem = cart.find((item) => item.id === product.id);
             return (
-              <Card key={product.id} className="flex justify-between">
+              <Card key={product.id} className="flex justify-between hover:scale-110 hover:z-40 transition-all ease-in-out">
                 <div>
                   <CardHeader floated={false}>
                     {isLoading ? (

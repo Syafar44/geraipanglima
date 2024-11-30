@@ -21,7 +21,7 @@ const products = [
   {
     id: 6,
     nama: 'BANANA CAKE COKLAT',
-    harga: 32000,
+    harga: 39000,
     gambar: 'BANANA CAKE COKLAT.jpg',
     produk: 'oleh-oleh',
   },
@@ -35,7 +35,7 @@ const products = [
   {
     id: 8,
     nama: 'BANANA CAKE ORIGINAL',
-    harga: 39000,
+    harga: 32000,
     gambar: 'BANANA CAKE ORIGINAL.jpg',
     produk: 'oleh-oleh',
   },
@@ -332,7 +332,7 @@ const OlehOleh = () => {
           {currentItems.map((product) => {
             const cartItem = cart.find((item) => item.id === product.id);
             return (
-              <Card key={product.id} className="flex justify-between">
+              <Card key={product.id} className="flex justify-between hover:scale-110 hover:z-40 transition-all ease-in-out">
                 <div>
                   <CardHeader floated={false}>
                     {isLoading ? (

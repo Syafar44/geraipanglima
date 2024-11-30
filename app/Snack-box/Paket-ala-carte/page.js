@@ -101,13 +101,11 @@ const SnackBox15 = () => {
               return (
                 <div
                   key={snack.id}
-                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700"
+                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700 hover:scale-105 hover:z-40 transition-all ease-in-out"
                 >
                   <h3 className="md:text-lg ">{snack.nama}</h3>
                   <div className="flex items-center gap-5">
-                    <p className=" pr-20 md:pr-28">
-                      {rupiah(snack.harga)}
-                    </p>
+                    <p className=" pr-20 md:pr-28">{rupiah(snack.harga)}</p>
                     {cartItem ? (
                       cartItem.quantity > 0 ? (
                         <div className="flex bg-white items-center px-2 py-2 rounded-xl gap-2 scale-50 md:scale-75 absolute -right-7 md:-right-3">
@@ -158,13 +156,11 @@ const SnackBox15 = () => {
               return (
                 <div
                   key={snack.id}
-                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700"
+                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700 hover:scale-105 hover:z-40 transition-all ease-in-out"
                 >
                   <h3 className="md:text-lg ">{snack.nama}</h3>
                   <div className="flex items-center gap-5">
-                    <p className=" pr-20 md:pr-32">
-                      {rupiah(snack.harga)}
-                    </p>
+                    <p className=" pr-20 md:pr-32">{rupiah(snack.harga)}</p>
                     {cartItem ? (
                       cartItem.quantity > 0 ? (
                         <div className="flex bg-white items-center px-2 py-2 rounded-xl gap-2 scale-50 md:scale-75 absolute -right-7 md:-right-3">
@@ -217,13 +213,11 @@ const SnackBox15 = () => {
               return (
                 <div
                   key={snack.id}
-                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700"
+                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700 hover:scale-105 hover:z-40 transition-all ease-in-out"
                 >
                   <h3 className="md:text-lg ">{snack.nama}</h3>
                   <div className="flex items-center gap-5">
-                    <p className=" pr-20 md:pr-32">
-                      {rupiah(snack.harga)}
-                    </p>
+                    <p className=" pr-20 md:pr-32">{rupiah(snack.harga)}</p>
                     {cartItem ? (
                       cartItem.quantity > 0 ? (
                         <div className="flex bg-white items-center px-2 py-2 rounded-xl gap-2 scale-50 md:scale-75 absolute -right-7 md:-right-3">
@@ -275,13 +269,11 @@ const SnackBox15 = () => {
               return (
                 <div
                   key={snack.id}
-                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700"
+                  className="flex px-5 md:px-6 justify-between mb-3 py-2 md:py-2 rounded-lg relative border border-red-700 hover:scale-105 hover:z-40 transition-all ease-in-out"
                 >
                   <h3 className="md:text-lg ">{snack.nama}</h3>
                   <div className="flex items-center gap-5">
-                    <p className=" pr-20 md:pr-32">
-                      {rupiah(snack.harga)}
-                    </p>
+                    <p className=" pr-20 md:pr-32">{rupiah(snack.harga)}</p>
                     {cartItem ? (
                       cartItem.quantity > 0 ? (
                         <div className="flex bg-white items-center px-2 py-2 rounded-xl gap-2 scale-50 md:scale-75 absolute -right-7 md:-right-3">
@@ -327,8 +319,8 @@ const SnackBox15 = () => {
           </div>
         </div>
         <p className="text-center md:text-2xl pt-10  text-gray-700">
-          <span className="text-black">Minimal order: </span>10 pax |
-          Pemesanan minimal di lakukan 1 hari sebelumnya
+          <span className="text-black">Minimal order: </span>10 pax | Pemesanan
+          minimal di lakukan 1 hari sebelumnya
         </p>
       </section>
       <Wa />

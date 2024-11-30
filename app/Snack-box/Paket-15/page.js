@@ -66,7 +66,7 @@ const SnackBox15 = () => {
             return (
               <div
                 key={snack.id}
-                className="bg-red-700 text-white p-5 shadow-xl rounded-xl"
+                className="bg-red-700 text-white p-5 shadow-xl rounded-xl hover:scale-110 hover:z-40 transition-all ease-in-out"
 
               >
                 <div className="pb-5 flex flex-col gap-3 items-center">

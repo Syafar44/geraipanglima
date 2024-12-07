@@ -26,7 +26,7 @@ const products = [
     id: 1,
     nama: 'AIR MINERAL',
     harga: 7000,
-    gambar: 'Air Mineral.jpg',
+    gambar: 'AIR MINERAL.jpg',
     produk: 'minuman',
   },
   {
@@ -96,14 +96,14 @@ const products = [
     id: 24,
     nama: 'CHOCO HAZELNUT MILK TEA',
     harga: 25000,
-    gambar: 'Choco Hazelnut Milk Tea.jpg',
+    gambar: 'CHOCO HAZELNUT MILK TEA.jpg',
     produk: 'minuman',
   },
   {
     id: 25,
     nama: 'CHOCO VANILLA',
     harga: 25000,
-    gambar: 'Choco Vanilla.jpg',
+    gambar: 'CHOCO VANILLA.jpg',
     produk: 'minuman',
   },
   {
@@ -449,6 +449,8 @@ const Resto = () => {
     setFilter('');
     setCurrentPage(1);
   };
+
+  console.log(products);
 
   return (
     <>

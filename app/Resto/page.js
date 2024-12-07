@@ -26,7 +26,7 @@ const products = [
     id: 1,
     nama: 'AIR MINERAL',
     harga: 7000,
-    gambar: 'AIR MINERAL.jpg',
+    gambar: 'Air Mineral.jpg',
     produk: 'minuman',
   },
   {
@@ -96,21 +96,21 @@ const products = [
     id: 24,
     nama: 'CHOCO HAZELNUT MILK TEA',
     harga: 25000,
-    gambar: 'CHOCO HAZELNUT MILK TEA.jpg',
+    gambar: 'Choco Hazelnut Milk Tea.jpg',
     produk: 'minuman',
   },
   {
     id: 25,
     nama: 'CHOCO VANILLA',
     harga: 25000,
-    gambar: 'CHOCO VANILLA.jpg',
+    gambar: 'Choco Vanilla.jpg',
     produk: 'minuman',
   },
   {
     id: 26,
     nama: 'CREAM COFFEE',
     harga: 20000,
-    gambar: 'Cream Coffe.jpg',
+    gambar: 'Cream Coffee.jpg',
     produk: 'minuman',
   },
   {
@@ -124,14 +124,14 @@ const products = [
     id: 31,
     nama: 'FRESH ICE ORANGE',
     harga: 10000,
-    gambar: 'FRESH ICE ORANGE.jpg',
+    gambar: 'Fresh Ice Orange.jpg',
     produk: 'minuman',
   },
   {
     id: 32,
     nama: 'FRESH ICE TEA',
     harga: 10000,
-    gambar: 'FRESH ICE TEA.jpg',
+    gambar: 'Fresh Ice Tea.jpg',
     produk: 'minuman',
   },
   {
@@ -501,7 +501,10 @@ const Resto = () => {
           {currentItems.map((product) => {
             const cartItem = cart.find((item) => item.id === product.id);
             return (
-              <Card key={product.id} className="flex justify-between hover:scale-110 hover:z-40 transition-all ease-in-out">
+              <Card
+                key={product.id}
+                className="flex justify-between hover:scale-110 hover:z-40 transition-all ease-in-out"
+              >
                 <div>
                   <CardHeader floated={false}>
                     {isLoading ? (

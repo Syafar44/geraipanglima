@@ -51,7 +51,7 @@ const LanchBox45 = () => {
             return (
               <div
                 key={lanch.id}
-                className="bg-red-700 text-white rounded-b-xl shadow-xl hover:scale-110 hover:z-40 transition-all ease-in-out"
+                className="bg-red-700 text-white rounded-b-xl shadow-xl hover:scale-110 hover:z-40 transition-all ease-in-out "
               >
                 <div className="pb-5 flex flex-col gap-3">
                   <img

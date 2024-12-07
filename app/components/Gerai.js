@@ -1,107 +1,107 @@
-"use client";
-import React from "react";
-import Link from "next/link";
-import { Carousel, IconButton } from "@material-tailwind/react";
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import { Carousel, IconButton } from '@material-tailwind/react';
 
 const gerai = [
   {
     id: 1001,
-    produk: "ROTI DURIAN ORIGINAL",
-    image: "roti durian ori.jpg",
+    produk: 'ROTI DURIAN ORIGINAL',
+    image: 'roti durian ori.jpg',
     duration: 1500,
-    file: "oleh-oleh",
+    file: 'oleh-oleh',
   },
   {
     id: 1002,
-    produk: "ROTI DURIAN KEJU",
-    image: "roti durian keju.jpg",
+    produk: 'ROTI DURIAN KEJU',
+    image: 'roti durian keju.jpg',
     duration: 1400,
-    file: "oleh-oleh",
+    file: 'oleh-oleh',
   },
   {
     id: 1003,
-    produk: "BOLU GULUNG COKLAT",
-    image: "BOLU GULUNG COKLAT.jpg",
+    produk: 'BOLU GULUNG COKLAT',
+    image: 'BOLU GULUNG COKLAT.jpg',
     duration: 1300,
-    file: "oleh-oleh",
+    file: 'oleh-oleh',
   },
   {
     id: 1004,
-    produk: "KUKU MACAN",
-    image: "KUKU MACAN 150 Gr.jpg",
+    produk: 'KUKU MACAN',
+    image: 'KUKU MACAN 150 Gr.jpg',
     duration: 1200,
-    file: "oleh-oleh",
+    file: 'oleh-oleh',
   },
   {
     id: 1005,
-    produk: "KEMINTING DURIAN",
-    image: "keminting durian.jpg",
+    produk: 'KEMINTING DURIAN',
+    image: 'keminting durian.jpg',
     duration: 1100,
-    file: "oleh-oleh",
+    file: 'oleh-oleh',
   },
 ];
 
 const resto = [
   {
     id: 2001,
-    produk: "GAMI AYAM",
-    image: "Gami Ayam.jpg",
+    produk: 'GAMI AYAM',
+    image: 'Gami Ayam.jpg',
     duration: 1500,
-    file: "makanan",
+    file: 'makanan',
   },
   {
     id: 2002,
-    produk: "GAMI CUMI",
-    image: "Gami Cumi.jpg",
+    produk: 'GAMI CUMI',
+    image: 'Gami Cumi.jpg',
     duration: 1400,
-    file: "makanan",
+    file: 'makanan',
   },
   {
     id: 2003,
-    produk: "GAMI MIE",
-    image: "Gami Mie.jpg",
+    produk: 'GAMI MIE',
+    image: 'Gami Mie.jpg',
     duration: 1300,
-    file: "makanan",
+    file: 'makanan',
   },
   {
     id: 2004,
-    produk: "SOUP PANGLIMA",
-    image: "SOUP PANGLIMA.jpg",
+    produk: 'SOUP PANGLIMA',
+    image: 'SOUP PANGLIMA.jpg',
     duration: 1200,
-    file: "makanan",
+    file: 'makanan',
   },
   {
     id: 2005,
-    produk: "SOUP IGA",
-    image: "SOUP IGA.jpg",
+    produk: 'SOUP IGA',
+    image: 'SOUP IGA.jpg',
     duration: 1100,
-    file: "makanan",
+    file: 'makanan',
   },
 ];
 
 const posterDesktop = [
   {
     id: 1,
-    image: "./poster/Stiker Amplang Kuku Macan 116.7 X 54.2.jpg",
-    alt: "poster gerai panglima",
+    image: './poster/Stiker Amplang Kuku Macan 116.7 X 54.2.jpg',
+    alt: 'poster gerai panglima',
   },
   {
     id: 2,
-    image: "./poster/Stiker Roti Durian 116.7 X 54.2.jpg",
-    alt: "poster gerai panglima",
+    image: './poster/Stiker Roti Durian 116.7 X 54.2.jpg',
+    alt: 'poster gerai panglima',
   },
 ];
 
 const posterMobile = [
   {
     id: 1,
-    image: "./poster/abcc-01.jpg",
-    alt: "poster gerai panglima",
+    image: './poster/abcc-01.jpg',
+    alt: 'poster gerai panglima',
   },
   {
     id: 2,
-    image: "./poster/abcc-02.jpg",
-    alt: "poster gerai panglima",
+    image: './poster/abcc-02.jpg',
+    alt: 'poster gerai panglima',
   },
 ];
 
@@ -251,12 +251,7 @@ const Gerai = () => {
           <div className="text-center ">
             {/* Oleh-oleh Gerai Panglima */}
             <div className="pt-20">
-              <h1
-                data-aos="fade-down"
-                data-aos-duration="1500"
-                data-aos-easing="ease-in-out"
-                className="py-10 font-bold text-xl lg:text-5xl"
-              >
+              <h1 className="py-10 font-bold text-xl lg:text-5xl">
                 PRODUK BEST SELLER OLEH-OLEH
               </h1>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5">
@@ -265,9 +260,6 @@ const Gerai = () => {
                     <div
                       key={item.id}
                       className="card card-compact bg-white md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
-                      data-aos="fade-right"
-                      data-aos-duration={item.duration}
-                      data-aos-easing="ease-in-out"
                     >
                       <figure>
                         <img
@@ -297,12 +289,7 @@ const Gerai = () => {
             </div>
             {/* Resto Panglima */}
             <div className="py-5">
-              <h1
-                data-aos="fade-down"
-                data-aos-duration="1500"
-                data-aos-easing="ease-in-out"
-                className="py-10 font-bold text-xl lg:text-5xl"
-              >
+              <h1 className="py-10 font-bold text-xl lg:text-5xl">
                 PRODUK BEST SELLER RESTO
               </h1>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5">
@@ -311,9 +298,6 @@ const Gerai = () => {
                     <div
                       key={item.id}
                       className="card card-compact bg-white md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
-                      data-aos="fade-right"
-                      data-aos-duration={item.duration}
-                      data-aos-easing="ease-in-out"
                     >
                       <figure>
                         <img

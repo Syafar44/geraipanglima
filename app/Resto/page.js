@@ -124,14 +124,14 @@ const products = [
     id: 31,
     nama: 'FRESH ICE ORANGE',
     harga: 10000,
-    gambar: 'Fresh Ice Orange.jpg',
+    gambar: 'FRESH ICE ORANGE.jpg',
     produk: 'minuman',
   },
   {
     id: 32,
     nama: 'FRESH ICE TEA',
     harga: 10000,
-    gambar: 'Fresh Ice Tea.jpg',
+    gambar: 'FRESH ICE TEA.jpg',
     produk: 'minuman',
   },
   {

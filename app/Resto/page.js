@@ -23,34 +23,6 @@ import rupiah from '../utils/rupiah';
 // Daftar produk
 const products = [
   {
-    id: 1,
-    nama: 'AIR MINERAL',
-    harga: 7000,
-    gambar: 'AIR MINERAL.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 2,
-    nama: 'AMERICANO',
-    harga: 15000,
-    gambar: 'Americano.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 3,
-    nama: 'AVOCADO CARAMEL',
-    harga: 25000,
-    gambar: 'Avocado Caramel.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 4,
-    nama: 'AVOCADO LATTE',
-    harga: 23000,
-    gambar: 'AVOCADO LATTE.jpg',
-    produk: 'minuman',
-  },
-  {
     id: 5,
     nama: 'AYAM KAMPUNG PENYET',
     harga: 40000,
@@ -63,76 +35,6 @@ const products = [
     harga: 45000,
     gambar: 'BEBEK PENYET.jpg',
     produk: 'makanan',
-  },
-  {
-    id: 12,
-    nama: 'BLUE REVEALED',
-    harga: 20000,
-    gambar: 'Blue Revealed.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 21,
-    nama: 'CAFE LATTE',
-    harga: 20000,
-    gambar: 'Cafe Latte.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 22,
-    nama: 'CAPPUCCINO',
-    harga: 20000,
-    gambar: 'Cappuccino.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 23,
-    nama: 'CARAMEL MACCHIATO',
-    harga: 25000,
-    gambar: 'Caramel Macchiato.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 24,
-    nama: 'CHOCO HAZELNUT MILK TEA',
-    harga: 25000,
-    gambar: 'CHOCO HAZELNUT MILK TEA.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 25,
-    nama: 'CHOCO VANILLA',
-    harga: 25000,
-    gambar: 'CHOCO VANILLA.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 26,
-    nama: 'CREAM COFFEE',
-    harga: 20000,
-    gambar: 'Cream Coffee.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 27,
-    nama: 'DEPTH PURPLE',
-    harga: 25000,
-    gambar: 'Depth Purple.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 31,
-    nama: 'FRESH ICE ORANGE',
-    harga: 10000,
-    gambar: 'FRESH ICE ORANGE.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 32,
-    nama: 'FRESH ICE TEA',
-    harga: 10000,
-    gambar: 'FRESH ICE TEA.jpg',
-    produk: 'minuman',
   },
   {
     id: 33,
@@ -212,27 +114,6 @@ const products = [
     produk: 'makanan',
   },
   {
-    id: 50,
-    nama: 'HAZELNUT LATTE',
-    harga: 23000,
-    gambar: 'Hazelnut Latte.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 54,
-    nama: 'KOPI AREN PANGLIMA',
-    harga: 18000,
-    gambar: 'Kopi Aren Panglima.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 58,
-    nama: 'MATCHA LATTE',
-    harga: 23000,
-    gambar: 'MATCHA LATTE.jpg',
-    produk: 'minuman',
-  },
-  {
     id: 59,
     nama: 'MIE AYAM KALASAN',
     harga: 35000,
@@ -275,34 +156,6 @@ const products = [
     produk: 'makanan',
   },
   {
-    id: 65,
-    nama: 'MILK TEA PANGLIMA',
-    harga: 15000,
-    gambar: 'Milk Tea Panglima.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 66,
-    nama: 'MILO COFFEE',
-    harga: 23000,
-    gambar: 'Milo Coffee.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 67,
-    nama: 'MILO FULLO',
-    harga: 20000,
-    gambar: 'MILO FULLO.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 68,
-    nama: 'MOCHACCINO',
-    harga: 25000,
-    gambar: 'Mochaccino.jpg',
-    produk: 'minuman',
-  },
-  {
     id: 69,
     nama: 'NASI GORENG AYAM KALASAN',
     harga: 35000,
@@ -322,20 +175,6 @@ const products = [
     harga: 25000,
     gambar: 'NASI GORENG TELUR DADAR.jpg',
     produk: 'makanan',
-  },
-  {
-    id: 76,
-    nama: 'RASPBERRY LEMONADE',
-    harga: 18000,
-    gambar: 'RASPBERRY LEMONADE.jpg',
-    produk: 'minuman',
-  },
-  {
-    id: 77,
-    nama: 'RED REVEALED',
-    harga: 23000,
-    gambar: 'Red Revealed.jpg',
-    produk: 'minuman',
   },
   {
     id: 80,
@@ -386,6 +225,191 @@ const products = [
     gambar: 'Tempe Mendoan.jpg',
     produk: 'makanan',
   },
+
+  {
+    id: 1,
+    nama: 'AIR MINERAL',
+    harga: 7000,
+    gambar: 'AIR MINERAL.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 2,
+    nama: 'AMERICANO',
+    harga: 15000,
+    gambar: 'Americano.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 3,
+    nama: 'AVOCADO CARAMEL',
+    harga: 25000,
+    gambar: 'Avocado Caramel.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 4,
+    nama: 'AVOCADO LATTE',
+    harga: 23000,
+    gambar: 'AVOCADO LATTE.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 12,
+    nama: 'BLUE REVEALED',
+    harga: 20000,
+    gambar: 'Blue Revealed.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 21,
+    nama: 'CAFE LATTE',
+    harga: 20000,
+    gambar: 'Cafe Latte.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 22,
+    nama: 'CAPPUCCINO',
+    harga: 20000,
+    gambar: 'Cappuccino.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 23,
+    nama: 'CARAMEL MACCHIATO',
+    harga: 25000,
+    gambar: 'Caramel Macchiato.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 24,
+    nama: 'CHOCO HAZELNUT MILK TEA',
+    harga: 25000,
+    gambar: 'CHOCO HAZELNUT MILK TEA.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 25,
+    nama: 'CHOCO VANILLA',
+    harga: 25000,
+    gambar: 'CHOCO VANILLA.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 26,
+    nama: 'CREAM COFFEE',
+    harga: 20000,
+    gambar: 'Cream Coffee.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 27,
+    nama: 'DEPTH PURPLE',
+    harga: 25000,
+    gambar: 'Depth Purple.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 31,
+    nama: 'FRESH ICE ORANGE',
+    harga: 10000,
+    gambar: 'FRESH ICE ORANGE.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 32,
+    nama: 'FRESH ICE TEA',
+    harga: 10000,
+    gambar: 'FRESH ICE TEA.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 50,
+    nama: 'HAZELNUT LATTE',
+    harga: 23000,
+    gambar: 'Hazelnut Latte.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 54,
+    nama: 'KOPI AREN PANGLIMA',
+    harga: 18000,
+    gambar: 'Kopi Aren Panglima.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 58,
+    nama: 'MATCHA LATTE',
+    harga: 23000,
+    gambar: 'MATCHA LATTE.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 65,
+    nama: 'MILK TEA PANGLIMA',
+    harga: 15000,
+    gambar: 'Milk Tea Panglima.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 66,
+    nama: 'MILO COFFEE',
+    harga: 23000,
+    gambar: 'Milo Coffee.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 67,
+    nama: 'MILO FULLO',
+    harga: 20000,
+    gambar: 'MILO FULLO.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 68,
+    nama: 'MOCHACCINO',
+    harga: 25000,
+    gambar: 'Mochaccino.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 76,
+    nama: 'RASPBERRY LEMONADE',
+    harga: 18000,
+    gambar: 'RASPBERRY LEMONADE.jpg',
+    produk: 'minuman',
+  },
+
+  {
+    id: 77,
+    nama: 'RED REVEALED',
+    harga: 23000,
+    gambar: 'Red Revealed.jpg',
+    produk: 'minuman',
+  },
+
   {
     id: 87,
     nama: 'VANILLA LATTE',
@@ -393,6 +417,7 @@ const products = [
     gambar: 'Vanilla Latte.jpg',
     produk: 'minuman',
   },
+
   {
     id: 88,
     nama: 'WATERMELON LATTE',
@@ -449,8 +474,6 @@ const Resto = () => {
     setFilter('');
     setCurrentPage(1);
   };
-
-  console.log(products);
 
   return (
     <>

@@ -23,20 +23,6 @@ import rupiah from '../utils/rupiah';
 // Daftar produk
 const products = [
   {
-    id: 5,
-    nama: 'AYAM KAMPUNG PENYET',
-    harga: 40000,
-    gambar: 'AYAM KAMPUNG PENYET.jpg',
-    produk: 'makanan',
-  },
-  {
-    id: 11,
-    nama: 'BEBEK PENYET',
-    harga: 45000,
-    gambar: 'BEBEK PENYET.jpg',
-    produk: 'makanan',
-  },
-  {
     id: 33,
     nama: 'GAMI AYAM',
     harga: 40000,
@@ -93,13 +79,6 @@ const products = [
     produk: 'makanan',
   },
   {
-    id: 41,
-    nama: 'GAMI TEMPE',
-    harga: 15000,
-    gambar: 'Gami Tempe.jpg',
-    produk: 'makanan',
-  },
-  {
     id: 42,
     nama: 'GAMI TERONG',
     harga: 15000,
@@ -111,6 +90,62 @@ const products = [
     nama: 'GAMI UDANG',
     harga: 45000,
     gambar: 'Gami Udang.jpg',
+    produk: 'makanan',
+  },
+  {
+    id: 61,
+    nama: 'MIE AYAM KATZU',
+    harga: 35000,
+    gambar: 'Mie Ayam Katzu.jpg',
+    produk: 'makanan',
+  },
+  {
+    id: 86,
+    nama: 'TEMPE MENDOAN',
+    harga: 10000,
+    gambar: 'Tempe Mendoan.jpg',
+    produk: 'makanan',
+  },
+  {
+    id: 63,
+    nama: 'MIE AYAM KRISPY SAOS MADU',
+    harga: 35000,
+    gambar: 'Mie ayam krispy saos madu.jpg',
+    produk: 'makanan',
+  },
+  {
+    id: 83,
+    nama: 'TAHU CRISPY LADA GARAM',
+    harga: 10000,
+    gambar: 'Tahu Crispy Lada Garam.jpg',
+    produk: 'makanan',
+  },
+  {
+    id: 64,
+    nama: 'MIE AYAM TALIWANG',
+    harga: 35000,
+    gambar: 'MIE AYAM TALIWANG.jpg',
+    produk: 'makanan',
+  },
+  {
+    id: 41,
+    nama: 'GAMI TEMPE',
+    harga: 15000,
+    gambar: 'Gami Tempe.jpg',
+    produk: 'makanan',
+  },
+  {
+    id: 5,
+    nama: 'AYAM KAMPUNG PENYET',
+    harga: 40000,
+    gambar: 'AYAM KAMPUNG PENYET.jpg',
+    produk: 'makanan',
+  },
+  {
+    id: 11,
+    nama: 'BEBEK PENYET',
+    harga: 45000,
+    gambar: 'BEBEK PENYET.jpg',
     produk: 'makanan',
   },
   {
@@ -128,34 +163,6 @@ const products = [
     produk: 'makanan',
   },
   {
-    id: 61,
-    nama: 'MIE AYAM KATZU',
-    harga: 35000,
-    gambar: 'Mie Ayam Katzu.jpg',
-    produk: 'makanan',
-  },
-  {
-    id: 62,
-    nama: 'MIE AYAM KLATEN',
-    harga: 35000,
-    gambar: 'MIE AYAM KLATEN.jpg',
-    produk: 'makanan',
-  },
-  {
-    id: 63,
-    nama: 'MIE AYAM KRISPY SAOS MADU',
-    harga: 35000,
-    gambar: 'Mie ayam krispy saos madu.jpg',
-    produk: 'makanan',
-  },
-  {
-    id: 64,
-    nama: 'MIE AYAM TALIWANG',
-    harga: 35000,
-    gambar: 'MIE AYAM TALIWANG.jpg',
-    produk: 'makanan',
-  },
-  {
     id: 69,
     nama: 'NASI GORENG AYAM KALASAN',
     harga: 35000,
@@ -167,6 +174,13 @@ const products = [
     nama: 'NASI GORENG AYAM TALIWANG',
     harga: 35000,
     gambar: 'NASI GORENG AYAM TALIWANG.jpg',
+    produk: 'makanan',
+  },
+  {
+    id: 62,
+    nama: 'MIE AYAM KLATEN',
+    harga: 35000,
+    gambar: 'MIE AYAM KLATEN.jpg',
     produk: 'makanan',
   },
   {
@@ -198,17 +212,10 @@ const products = [
     produk: 'makanan',
   },
   {
-    id: 83,
-    nama: 'TAHU CRISPY LADA GARAM',
-    harga: 10000,
-    gambar: 'Tahu crispy lada garam.jpg',
-    produk: 'makanan',
-  },
-  {
     id: 84,
     nama: 'TAMBAHAN NASI',
     harga: 7000,
-    gambar: 'TAMBAHAN NASI.jpg',
+    gambar: 'Tambah Nasi.png',
     produk: 'makanan',
   },
   {
@@ -218,14 +225,6 @@ const products = [
     gambar: 'TELUR DADAR PENYET.jpg',
     produk: 'makanan',
   },
-  {
-    id: 86,
-    nama: 'TEMPE MENDOAN',
-    harga: 10000,
-    gambar: 'Tempe Mendoan.jpg',
-    produk: 'makanan',
-  },
-
   {
     id: 1,
     nama: 'AIR MINERAL',

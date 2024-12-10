@@ -124,7 +124,7 @@ const products = [
     id: 83,
     nama: 'TAHU CRISPY LADA GARAM',
     harga: 10000,
-    gambar: 'TAHU CRISPY LADA GARAM.jpg',
+    gambar: 'Tahu Crispy Lada Garam.jpg',
     produk: 'makanan',
   },
   {

@@ -103,6 +103,11 @@ const posterMobile = [
     image: './poster/abcc-02.jpg',
     alt: 'poster gerai panglima',
   },
+  {
+    id: 3,
+    image: './poster/paket-rawon.jpg',
+    alt: 'poster gerai panglima',
+  },
 ];
 
 const Gerai = () => {

@@ -94,6 +94,11 @@ const posterDesktop = [
 
 const posterMobile = [
   {
+    id: 3,
+    image: './poster/paket-rawon.jpg',
+    alt: 'poster gerai panglima',
+  },
+  {
     id: 1,
     image: './poster/abcc-01.jpg',
     alt: 'poster gerai panglima',
@@ -101,11 +106,6 @@ const posterMobile = [
   {
     id: 2,
     image: './poster/abcc-02.jpg',
-    alt: 'poster gerai panglima',
-  },
-  {
-    id: 3,
-    image: './poster/paket-rawon.jpg',
     alt: 'poster gerai panglima',
   },
 ];
@@ -117,7 +117,6 @@ const Gerai = () => {
       <section className="container mx-auto px-28 2xl:px-0 pt-16 -mt-6 hidden lg:block lg:h-[480px] xl:h-[550px] 2xl:h-[800px] z-10">
         <Carousel
           loop={true}
-          autoplay={true}
           className="rounded-xl shadow-xl"
           prevArrow={({ handlePrev }) => (
             <IconButton
@@ -186,12 +185,11 @@ const Gerai = () => {
       <section className="container px-5 mx-auto py-10 -mt-6 h-[25rem] lg:hidden">
         <Carousel
           loop={true}
-          autoplay={true}
           className="rounded-xl"
           prevArrow={({ handlePrev }) => (
             <IconButton
               variant="text"
-              color="black"
+              color="white"
               size="md"
               onClick={handlePrev}
               className="!absolute top-2/4 left-4 -translate-y-2/4"
@@ -215,7 +213,7 @@ const Gerai = () => {
           nextArrow={({ handleNext }) => (
             <IconButton
               variant="text"
-              color="black"
+              color="white"
               size="md"
               onClick={handleNext}
               className="!absolute top-2/4 !right-4 -translate-y-2/4"

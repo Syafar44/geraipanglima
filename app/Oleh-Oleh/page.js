@@ -167,7 +167,7 @@ const products = [
   },
   {
     id: 51,
-    nama: 'IKAN BANDENG 100 Gr',
+    nama: 'AMPLANG IKAN BANDENG 100 Gr',
     harga: 22000,
     gambar: 'IKAN BANDENG 100 Gr.jpg',
     produk: 'oleh-oleh',

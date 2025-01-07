@@ -94,6 +94,11 @@ const posterDesktop = [
 
 const posterMobile = [
   {
+    id: 4,
+    image: './poster/Feed Soto Banjar-01.jpg',
+    alt: 'poster gerai panglima',
+  },
+  {
     id: 3,
     image: './poster/paket-rawon.jpg',
     alt: 'poster gerai panglima',

@@ -41,44 +41,6 @@ const gerai = [
   },
 ];
 
-const resto = [
-  {
-    id: 2001,
-    produk: 'GAMI AYAM',
-    image: 'Gami Ayam.jpg',
-    duration: 1500,
-    file: 'makanan',
-  },
-  {
-    id: 2002,
-    produk: 'GAMI CUMI',
-    image: 'Gami Cumi.jpg',
-    duration: 1400,
-    file: 'makanan',
-  },
-  {
-    id: 2003,
-    produk: 'GAMI MIE',
-    image: 'Gami Mie.jpg',
-    duration: 1300,
-    file: 'makanan',
-  },
-  {
-    id: 2004,
-    produk: 'SOUP PANGLIMA',
-    image: 'SOUP PANGLIMA.jpg',
-    duration: 1200,
-    file: 'makanan',
-  },
-  {
-    id: 2005,
-    produk: 'SOUP IGA',
-    image: 'SOUP IGA.jpg',
-    duration: 1100,
-    file: 'makanan',
-  },
-];
-
 const posterDesktop = [
   {
     id: 1,
@@ -278,44 +240,6 @@ const Gerai = () => {
                         />
                       </figure>
                       <div>
-                        <h2 className="font-bold p-2 pt-2 text-sm lg:text-base">
-                          {item.produk}
-                        </h2>
-                        <div className="card-actions justify-center my-2">
-                          <Link
-                            href="/Product"
-                            className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-2 xl:px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-                          >
-                            Lihat Produk
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-            {/* Resto Panglima */}
-            <div className="py-5">
-              <h1 className="py-10 font-bold text-xl lg:text-5xl">
-                PRODUK BEST SELLER RESTO
-              </h1>
-              <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5">
-                {resto.map((item) => {
-                  return (
-                    <div
-                      key={item.id}
-                      className="card card-compact bg-white md:w-56 shadow-xl transition ease-in-out hover:scale-105 duration-200"
-                    >
-                      <figure>
-                        <img
-                          className="h-56 scale-100"
-                          src={`assets/produk/${item.file}/${item.image}`}
-                          alt={item.produk}
-                          loading="lazy"
-                        />
-                      </figure>
-                      <div className="">
                         <h2 className="font-bold p-2 pt-2 text-sm lg:text-base">
                           {item.produk}
                         </h2>

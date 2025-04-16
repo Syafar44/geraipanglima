@@ -189,21 +189,21 @@ const products = [
   {
     id: 55,
     nama: 'AMPLANG 50 Gr (ISI 12)',
-    harga: 109000,
+    harga: 120000,
     gambar: 'KUKU MACAN 50 Gr ( Isi 12).jpg',
     produk: 'oleh-oleh',
   },
   {
     id: 56,
     nama: 'AMPLANG 50 Gr',
-    harga: 9000,
+    harga: 11000,
     gambar: 'KUKU MACAN 50 Gr.jpg',
     produk: 'oleh-oleh',
   },
   {
     id: 57,
     nama: 'AMPLANG 150 Gr',
-    harga: 27000,
+    harga: 30000,
     gambar: 'KUKU MACAN 150 Gr.jpg',
     produk: 'oleh-oleh',
   },
@@ -225,7 +225,7 @@ const products = [
     id: 74,
     nama: 'PIE SUSU MIX',
     harga: 22000,
-    gambar: 'PIE SUSU MIX.jpg', 
+    gambar: 'PIE SUSU MIX.jpg',
     produk: 'oleh-oleh',
   },
   {
@@ -332,7 +332,10 @@ const OlehOleh = () => {
           {currentItems.map((product) => {
             const cartItem = cart.find((item) => item.id === product.id);
             return (
-              <Card key={product.id} className="flex justify-between hover:scale-110 hover:z-40 transition-all ease-in-out">
+              <Card
+                key={product.id}
+                className="flex justify-between hover:scale-110 hover:z-40 transition-all ease-in-out"
+              >
                 <div>
                   <CardHeader floated={false}>
                     {isLoading ? (

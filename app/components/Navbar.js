@@ -113,19 +113,9 @@ const navListProdukItems = [
     link: '/Oleh-Oleh',
   },
   {
-    id: 1,
-    title: 'Resto',
-    link: '/Resto',
-  },
-  {
     id: 2,
     title: 'Snack Box',
     link: '/Snack-box',
-  },
-  {
-    id: 3,
-    title: 'Lunch Box',
-    link: '/Lanch-box',
   },
 ];
 
